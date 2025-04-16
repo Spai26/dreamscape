@@ -1,0 +1,41 @@
+@import url("./normalice.css");
+@import url("./variables.css");
+
+body{
+    width: auto;
+    height: 100vh;
+    background-color: var(--background-color);
+    font-size: var(--text-size-base);
+    font-family: var(--font-family);
+    padding: 0 min(3.5rem,8%);        
+}
+
+header,
+footer {
+    min-height: 5rem;    
+}
+
+/* header */
+header{    
+}
+
+/* end header */
+
+/* main */
+main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/* end header */
+
+
+/* footer */
+footer{
+    
+}
+/* end footer */
+
+
+/* media queries */
+/* movile*/
