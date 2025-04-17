@@ -16,8 +16,8 @@
     --font-primary: 'Inter', sans-serif;
     --font-subheading: "Poppins", sans-serif;
     --font-size-base: clamp(1rem,1rem+ 0vw, 1rem);
-    --heading-title:48px;
-    --heading-subtitle:clamp(1.5rem, 1.1436rem + 2.3762vw, 3rem);    /* min24px max 36px*/
+    --heading-title: clamp(1.5rem, 1.1436rem + 2.3762vw, 3rem);
+    --heading-subtitle:clamp(1.5rem, 1.3218rem + 1.1881vw, 2.25rem);    /* min24px max 36px*/    
     --heading-subtitle-line: 3rem;
     --border-radius-sm:2px;
     --border-radius-md:4px;

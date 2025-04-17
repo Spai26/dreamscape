@@ -172,8 +172,7 @@ body{
 
 .btn{
     height: var(--hbutton);
-    text-align: center;
-    background-color: var(--secondary-red-button);
+    text-align: center;    
     color: var(--text-color);
     border-radius: var(--border-radius-md);
     font-family: var(--font-primary);    
@@ -182,13 +181,25 @@ body{
 .btn-primary{
     width: var(--wbutton-primary);
     font-weight: medium;
+    background-color: var(--secondary-red-button);
     letter-spacing: var(--button-letter-spacing);
 }
 
 .btn-secundary{
     width: var(--wbutton-secondary);        
     font-weight: 600;
+    background-color: var(--secondary-red-button);
     letter-spacing: var(--button-letter-spacing);
+}
+
+.btn-third{    
+    height: var(--hbutton);
+    width: 170px;
+    text-align: center;
+    font-family: var(--font-subheading);
+    font-weight: 600;
+    background-color: var(--secondary-green-button);
+    line-height: 24px;
 }
 
 .btn-primary:hover,
@@ -270,4 +281,62 @@ body{
     font-weight: 600;
 }
 /* ----------------------------- */
- 
+
+/*---------- banner section ----------*/
+.promo-banner {
+    background-color: #000000;
+    padding: 3.125rem  3.75rem;
+}
+
+.section-label{
+    color: var(--secondary-green-button);
+    font-family: var(--font-subheading);
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.section-title{
+    font-size: var(--heading-title);
+    color: var(--text-color);
+    line-height: 60px;
+    letter-spacing: 4px;
+    text-size-adjust: auto;
+}
+
+.promo-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;    
+}
+
+/*---------- banner timer ----------*/
+.timer-container {
+    width: 320px;
+    height: 62px;
+    color: var(--text-color);
+}
+.timer-circle{    
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    color: #070707;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-subheading);
+}
+
+.timer-circle p:first-child{
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.timer-circle p:last-child{
+    font-weight: 400;
+    line-height: 18px;
+    font-size: 11px;
+    text-transform: capitalize;
+}
