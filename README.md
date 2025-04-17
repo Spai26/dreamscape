@@ -39,7 +39,7 @@
 
 # 👺 To-dos:
 
-- ⌛️ Maquetación de la pagina
+- ✅ Maquetación de la pagina
 - ⌛️ Creación de header con sus componentes html    
 - ⌛️ Creación de aside con su portada de imagen
 - ⌛️ Creación de pagina de contacto
@@ -47,7 +47,7 @@
 - ⌛️ Creación de pagina de registro
 - ⌛️ Creación de pagina de login
 - ⌛️ Creación de footer con sus componentes html
-- ⌛️ Section de los productos de venta rapida
+- ✅ Section de los productos de venta rapida
 - ✅ Section navegacion de categorias
 - ✅ Section de los productos mejor vendidos
 - ⌛️ section visualizar todos los productos

@@ -180,16 +180,14 @@ body{
 
 .btn-primary{
     width: var(--wbutton-primary);
-    font-weight: medium;
+    font-weight: 600;
     background-color: var(--secondary-red-button);
-    letter-spacing: var(--button-letter-spacing);
 }
 
 .btn-secundary{
     width: var(--wbutton-secondary);        
     font-weight: 600;
     background-color: var(--secondary-red-button);
-    letter-spacing: var(--button-letter-spacing);
 }
 
 .btn-third{    
@@ -215,15 +213,18 @@ body{
 .cards{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 1.5rem;
+    gap: 2rem;
+    align-items: stretch;
 }
 
 .product-card{
     border-radius: var(--border-radius-md);
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3 ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);    
     position: relative;
+    height: 100%;
+    display: flex;
+    transition: transform 0.3s ease, box-shadow 0.3s ease
 }
 
 .product-card:hover {
@@ -245,9 +246,16 @@ body{
 }
 
 .product-image{
-    width: auto;
-    height: auto;    
+    width: 100%;
+    height: 200px;    
     background-color: var(--secondary-color);
+}
+
+.product-image > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1rem;
 }
 
 .product-info > h3{
@@ -340,3 +348,46 @@ body{
     font-size: 11px;
     text-transform: capitalize;
 }
+
+/*---------- Our products ----------*/
+
+.pricing  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: var(--font-subheading);
+    font-weight: 600;
+    color: var(--text-color-2);
+}
+
+.pricing span:first-child{
+    color: var(--secondary-red-button);
+    padding-right: 0.8rem;
+}
+
+.pricing span:last-child{
+    color: var(--text-color-1); 
+}
+
+
+.stars{
+    padding-right: 0.8rem;    
+    color: var(--text-color-3);
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 0.7rem;
+    background-color: var(--text-color-2);
+    color: var(--text-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    line-height: 24px;
+  }
+  
+  .add-to-cart:hover {
+    background-color: var(--secondary-green-button);
+  }
