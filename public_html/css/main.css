@@ -1,4 +1,3 @@
-@import url("./normalice.css");
 @import url("./variables.css");
 
 body{
@@ -25,6 +24,9 @@ body{
 .flex-row{
     flex-direction: row;
 }
+.justify-center{
+    justify-content: center;
+}
 
 .space-between{
     justify-content: space-between;
@@ -34,9 +36,6 @@ body{
     align-items: center;
 }
 
-.justify-between{
-    justify-content: space-between;
-}
 
 .gap-1 {
     gap: 1rem;
@@ -48,6 +47,10 @@ body{
 
 .pt-1{
     padding-top: 1rem;
+}
+
+.pt-2{
+    padding-top:2rem;
 }
 
 .pt-5{
@@ -168,7 +171,7 @@ body{
 /* buttons */
 
 .btn{
-    height: 56px;
+    height: var(--hbutton);
     text-align: center;
     background-color: var(--secondary-red-button);
     color: var(--text-color);
@@ -176,16 +179,95 @@ body{
     font-family: var(--font-primary);    
 }
 
+.btn-primary{
+    width: var(--wbutton-primary);
+    font-weight: medium;
+    letter-spacing: var(--button-letter-spacing);
+}
+
 .btn-secundary{
-    width: 160px;    
-    letter-spacing: 4px;
+    width: var(--wbutton-secondary);        
+    font-weight: 600;
+    letter-spacing: var(--button-letter-spacing);
+}
+
+.btn-primary:hover,
+.btn-secundary:hover{
+    background-color: var(--secondary-hover-red-button);
+    color: var(--primary-color-white);    
+}
+/* ----------------------------- */
+
+
+/*-------cards--------*/
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-card{
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3 ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(54, 55, 56, 0.15);
+}
+
+.product-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--secondary-red-button);
+    color: var(--text-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.product-image{
+    width: auto;
+    height: auto;    
+    background-color: var(--secondary-color);
+}
+
+.product-info > h3{
+    font-family: var(--primary-color-black);
+    color: var(--text-color-2);
+    
+}
+
+.product-pricing{
+    font-family: var(--font-subheading);
     font-weight: 600;
 }
 
+.product-pricing span:first-child{
+    color: var(--secondary-red-button);
+    padding-right: 0.8rem;
+}
 
-.btn-secundary:hover{
-    background-color: var(--text-color-2);
-    color: var(--text-color);
-    transition: all 0.3s ease-in-out;    
+.product-pricing span:last-child{
+    color: var(--text-color-1);
+    text-decoration: line-through;
+}
+
+.product-rating{
+    letter-spacing: 2px;
+    color: var(--text-color-3);
+}
+
+.product-rating span{
+    color: var(--text-color-1);
+    font-weight: 600;
 }
 /* ----------------------------- */
+ 

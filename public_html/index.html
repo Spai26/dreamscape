@@ -26,7 +26,7 @@
             <section class="flex flex-column gap-1 py-5 line" aria-labelledby="categories-title">
                 <header class="flex flex-column gap-1" >
                     <h3 class="subheading flex">Categories</h3>
-                <div class="flex flex-row justify-between items-center">
+                <div class="flex flex-row space-between items-center">
                     <h2 class="subtitle" id="categories-title">Browser By Category</h2>
                     <div class="flex flex-row gap-2 items-center">
                         <button aria-label="Scroll categories left">
@@ -80,10 +80,96 @@
                     </ul>
                 </nav>                                
             </section>
-            <!-- -->
+            <!-- ------------ -->
 
-           
-            
+            <!-- Card Product -->
+            <section class="felx flex-column gap-1 py-5">
+                <header class="flex flex-column gap-1" >
+                    <h3 class="subheading flex">this month</h3>
+                <div class="flex flex-row space-between items-center">
+                    <h2 class="subtitle" id="best-selling-products">Best Selling Products</h2>
+                   <button class="btn btn-secundary" arial-label="View all best sellin Products">
+                    View All
+                   </button>
+                </div>
+                </header>    
+                <div class="cards pt-2" itemscope>
+                    <!-- product 1 -->
+                    <article class="product-card flex flex-column gap-1" itemprop="itemListElement">
+                        <div class="product-badge" itemprop="offers" itemscope>
+                            <meta itemprop="price" content="280">
+                            <meta itemprop="priceCurrency" content="USD">
+                            <link itemprop="availability" href="http://schema.org/InStock">            
+                            -22%</div>
+                        <div class="product-image flex items-center  justify-center">
+                            <img src="./images/products/Light-The-North-Face-x-Gucci-coat-1.webp" alt="The North Face winter coat" itemprop="image">
+                        </div>
+                        
+                        <div class="flex flex-column gap-1 product-info">
+                            <h3 itemprop="name">The north coat</h3>
+                            <div class="product-pricing">
+                                <span itemprop="price" data-price="280">$280</span>
+                                <span >$360</span>
+                            </div>
+                            <div class="product-rating">
+                                ★★★★★ <span>(65)</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card flex flex-column gap-1">
+                        <div class="product-badge">-22%</div>
+                        <div class="product-image flex items-center  justify-center">
+                            <img src="./images/products/Light-Gucci-Savoy-medium-duffle-bag-1.webp" alt="Gucci duffle bag" itemprop="image">
+                        </div>
+                        <div class="flex flex-column gap-1 product-info">
+                            <h3>Gucci duffle bag</h3>
+                            <div class="product-pricing">
+                                <span >$960</span>
+                                <span >$1160</span>
+                            </div>
+                            <div class="product-rating">
+                                ★★★★★ <span>(65)</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card flex flex-column gap-1">
+                        <div class="product-badge">-22%</div>
+                        <div class="product-image flex items-center  justify-center">
+                            <img src="./images/products/gammaxx-l240-argb-1-500x500-1.webp" alt="RGB liquid CPU Cooler" itemprop="image">
+                        </div>
+                        <div class="flex flex-column gap-1 product-info">
+                            <h3>RGB liquid CPU Cooler</h3>
+                            <div class="product-pricing">
+                                <span >$160</span>
+                                <span >$170</span>
+                            </div>
+                            <div class="product-rating">
+                                ★★★★★ <span>(32)</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card flex flex-column gap-1">
+                        <div class="product-badge">-22%</div>
+                        <div class="product-image flex items-center  justify-center">
+                            <img src="./images/products/sam-moghadam-khamseh.webp" alt="The north coat" 
+                            itemprop="image">    
+                        </div>
+                        
+                        <div class="flex flex-column gap-1 product-info">
+                            <h3 class="product-title">The north coat</h3>
+                            <div class="product-pricing">
+                                <span class="current-price">$280</span>
+                                <span class="original-price">$360</span>
+                            </div>
+                            <div class="product-rating">
+                                ★★★★★ <span>(20)</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>            
+            </section>
+            <!-- ------------ -->
         </main>
         <!-- #end content -->
 

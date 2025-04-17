@@ -11,7 +11,8 @@
     --background-color: #FFFFFF; 
     --text-color: #FAFAFA;
     --text-color-1: #7D8184; 
-    --text-color-2:#1c1919;    
+    --text-color-2:#1c1919;   
+    --text-color-3: #ffad33;
     --font-primary: 'Inter', sans-serif;
     --font-subheading: "Poppins", sans-serif;
     --font-size-base: clamp(1rem,1rem+ 0vw, 1rem);
@@ -21,6 +22,10 @@
     --border-radius-sm:2px;
     --border-radius-md:4px;
     --border-radius-lg:10px;
+    --hbutton: 56px;
+    --wbutton-primary:235px;
+    --wbutton-secondary:160px;
+    --button-letter-spacing: 4px;
 }
 
 
