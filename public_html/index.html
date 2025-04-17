@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Exclusive</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">                
         <link rel="stylesheet" href="./css/main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     </head>
     <body>
         <!-- #header-->
@@ -19,37 +20,77 @@
                 svg
             </div>
         </header>
-        <!-- #end header -->
-
-        <!-- #content -->
-        <main>
-            <!-- aside-->
-            <section>
-                aside
+        
+        <main class="flex flex-column">
+            <!-- categories -->
+            <section class="flex flex-column gap-1 py-5 line" aria-labelledby="categories-title">
+                <header class="flex flex-column gap-1" >
+                    <h3 class="subheading flex">Categories</h3>
+                <div class="flex flex-row justify-between items-center">
+                    <h2 class="subtitle" id="categories-title">Browser By Category</h2>
+                    <div class="flex flex-row gap-2 items-center">
+                        <button aria-label="Scroll categories left">
+                            <img src="./icons/arrow-left-svgrepo-com.svg" alt="" class="svg-icon">
+                        </button>
+                        <button aria-label="Scroll categories right">
+                            <img src="./icons/arrow-right-svgrepo-com.svg" alt="" class="svg-icon">
+                        </button>
+                    </div>
+                </div>
+                </header>
+                <nav class=" flex flex-row pt-1">
+                    <ul class="category-list">
+                        <li>
+                            <a href="#" arial-label="Browser phones category">
+                                <img src="./icons/phone1.svg" class ="svg-icon-5" alt="Smartphones and mobile devices">
+                                Phones
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" arial-label="Browser computers category">
+                                <img src="./icons/computer-outline.svg"
+                                class="svg-icon-5" alt="category-computers">
+                                Computers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"arial-label="Browser electronics category">
+                                <img src="./icons/electronics-chip.svg" alt="category-electronics" class="svg-icon-5">
+                                Electronics
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" arial-label="Browser cameras category">
+                                <img src="./icons/camera.svg"  class="svg-icon-5" alt="category-camera">
+                                Camera
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" arial-label="Browser headphones category">
+                                <img src="./icons/headphone.svg"  class="svg-icon-5" alt="category-headphone">
+                                HeadPhones
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" arial-label="Browser gaming category">
+                                <img src="./icons/ai-gaming-spark.svg"  class="svg-icon-5" alt="category-gaming">
+                                Gaming
+                            </a>
+                        </li>                        
+                    </ul>
+                </nav>                                
             </section>
-            <!-- end aside-->
+            <!-- -->
 
-            <!-- today-->
-          
-            <!-- categories-->
-            <section>
-                
-            </section>
-            <!-- end categories-->
-
-            <!-- services -->
-            <section>
-
-            </section>
-            <!-- end services -->
-
+           
+            
         </main>
         <!-- #end content -->
 
-        <!-- #footer -->
+        <!-- #footer 
         <footer>
             footer
         </footer>
-        <!-- #footer -->
+        #footer -->
     </body>
 </html>

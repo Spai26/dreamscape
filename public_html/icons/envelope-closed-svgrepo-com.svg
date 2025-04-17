@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_15_17)">
-<rect width="24" height="24" fill="white"/>
-<path d="M3 17.5V6.5C3 5.94772 3.44772 5.5 4 5.5H12H20C20.5523 5.5 21 5.94772 21 6.5V17.5C21 18.0523 20.5523 18.5 20 18.5H4C3.44772 18.5 3 18.0523 3 17.5Z" stroke="#000000" stroke-linejoin="round"/>
-<path d="M3 6L12 12L21 6" stroke="#000000" stroke-linejoin="round"/>
-</g>
-<defs>
-<clipPath id="clip0_15_17">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" fill="none"><g clip-path="url(#a)"><mask id="b" width="800" height="800" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:luminance"><path fill="#fff" d="M800 0H0v800h800V0Z"/></mask><g mask="url(#b)"><path fill="#fff" d="M800 0H0v800h800V0Z"/><path stroke="#1C1919" stroke-linejoin="round" stroke-width="33.333" d="M100 583.333V216.667c0-18.41 14.924-33.334 33.333-33.334h533.334c18.41 0 33.333 14.924 33.333 33.334v366.666c0 18.41-14.923 33.334-33.333 33.334H133.333c-18.409 0-33.333-14.924-33.333-33.334Z"/><path stroke="#1C1919" stroke-linejoin="round" stroke-width="33.333" d="m100 200 300 200 300-200"/></g></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h800v800H0z"/></clipPath></defs></svg>

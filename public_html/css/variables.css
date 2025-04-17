@@ -12,10 +12,15 @@
     --text-color: #FAFAFA;
     --text-color-1: #7D8184; 
     --text-color-2:#1c1919;    
-    --font-family: 'Inter', sans-serif;
-    --font-size-base: 16px;
+    --font-primary: 'Inter', sans-serif;
+    --font-subheading: "Poppins", sans-serif;
+    --font-size-base: clamp(1rem,1rem+ 0vw, 1rem);
     --heading-title:48px;
-    --heading-subtitle:36px;    
+    --heading-subtitle:clamp(1.5rem, 1.1436rem + 2.3762vw, 3rem);    /* min24px max 36px*/
+    --heading-subtitle-line: 3rem;
+    --border-radius-sm:2px;
+    --border-radius-md:4px;
+    --border-radius-lg:10px;
 }
 
 
@@ -46,6 +51,7 @@ h2,
 h3,
 h4 {
   margin-top: 0;
+  margin-bottom: 0;
   font-weight: 700;
   line-height: 1.1;
 }
@@ -53,4 +59,13 @@ h4 {
 p {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+button{
+  background: none;
+  border:none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
 }
