@@ -48,8 +48,8 @@
 - ⌛️ Creación de pagina de login
 - ⌛️ Creación de footer con sus componentes html
 - ⌛️ Section de los productos de venta rapida
-- ⌛️ Section navegacion de categorias
-- ⌛️ Section de los productos mejor vendidos
+- ✅ Section navegacion de categorias
+- ✅ Section de los productos mejor vendidos
 - ⌛️ section visualizar todos los productos
 - ⌛️ section de los servicios
 - ⌛️ Creacion de pagina de la lista de carrito de compras
