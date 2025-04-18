@@ -40,7 +40,7 @@
 # 👺 To-dos:
 
 - ✅ Maquetación de la pagina
-- ⌛️ Creación de header con sus componentes html    
+- ✅ Creación de header con sus componentes html    
 - ⌛️ Creación de aside con su portada de imagen
 - ⌛️ Creación de pagina de contacto
 - ⌛️ Creación de pagina de about
@@ -50,7 +50,7 @@
 - ✅ Section de los productos de venta rapida
 - ✅ Section navegacion de categorias
 - ✅ Section de los productos mejor vendidos
-- ⌛️ section visualizar todos los productos
+- ✅ section visualizar todos los productos
 - ⌛️ section de los servicios
 - ⌛️ Creacion de pagina de la lista de carrito de compras
 - ⌛️ Creacion de la pagina de pago ( checkout )
