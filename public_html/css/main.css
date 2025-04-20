@@ -488,64 +488,133 @@ body{
     background-color: var(--secondary-green-button);
   }
 
-<<<<<<< HEAD
-  body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
+@import url('normalize.css');
+@import url('variables.css');
+
 footer {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  background-color: var(--text-color-2);
+  color: var(--text-color);
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .footer-section {
-    flex: 1;
-    margin: 10px;
-    padding: 10px 200px 20px;
+  flex: 1;
+  min-width: 200px;
 }
 
 .footer-section h3 {
-    margin-bottom: 10px;
+  font-family: var(--font-subheading);
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section ul li {
+  font-family: var(--font-primary);
+  color: var(--text-color);
 }
 
 .footer-section ul {
-    list-style-type: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .footer-section ul li {
-    margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
-.footer-section p {
-    margin: 5px 0;
+.footer-section ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: var(--font-primary);
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+  color: var(--secondary-hover-green-button);
+}
+
+/* Estilos para la sección subscribe */
+.subscribe form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subscribe input {
+  padding: 10px;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--text-color-3);
+  background-color: var(--secondary-color);
+  color: var(--text-color-2);
+}
+
+.subscribe button {
+  padding: var(--button-secondary);
+  background-color: var(--secondary-red-button);
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: var(--font-subheading);
+  border-radius: var(--border-radius-md);
+  letter-spacing: var(--button-letter-spacing);
+  transition: background-color 0.3s ease;
+}
+
+.subscribe button:hover {
+  background-color: var(--secondary-hover-red-button);
+}
+
+/* Estilos para la sección de descarga de la app */
+/* Estilos para la sección de descarga de la app */
+.app-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Botones apilados verticalmente con menor separación */
+  .download-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1px; /* Reducir la separación entre los botones */
+  }
+  
+  .download-buttons a img {
+    width: 200px;
+  }
+
+/* Estilos para la sección inferior del footer */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: var(--font-size-base);
 }
 
 .social-icons {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .social-icons a img {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
-.footer-bottom {
-    flex-basis: 100%;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.footer-bottom a {
-    color: #fff;
-    text-decoration: none;
-}
-=======
->>>>>>> 3ca4a2f7bd8e5208ad487b6253b61cfbe0ade272

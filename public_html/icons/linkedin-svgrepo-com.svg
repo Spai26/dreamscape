@@ -1,1 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" fill="none"><path fill="#1C1919" d="M216.667 266.667c27.614 0 50-22.386 50-50 0-27.615-22.386-50-50-50-27.615 0-50 22.385-50 50 0 27.614 22.385 50 50 50ZM166.667 333.333C166.667 314.924 181.591 300 200 300h33.333c18.41 0 33.334 14.924 33.334 33.333V600c0 18.41-14.924 33.333-33.334 33.333H200c-18.409 0-33.333-14.923-33.333-33.333V333.333ZM366.667 633.333H400c18.41 0 33.333-14.923 33.333-33.333V450c0-50 100-83.333 100-16.667v166.68c0 18.41 14.924 33.32 33.334 33.32H600c18.41 0 33.333-14.923 33.333-33.333V400c0-66.667-50-100-116.666-100-66.667 0-83.334 50-83.334 50v-16.667C433.333 314.924 418.41 300 400 300h-33.333c-18.41 0-33.334 14.924-33.334 33.333V600c0 18.41 14.924 33.333 33.334 33.333Z"/><path fill="#1C1919" fill-rule="evenodd" d="M666.667 33.333c55.23 0 100 44.772 100 100v533.334c0 55.23-44.77 100-100 100H133.333c-55.228 0-100-44.77-100-100V133.333c0-55.228 44.772-100 100-100h533.334Zm0 66.667c18.41 0 33.333 14.924 33.333 33.333v533.334c0 18.41-14.923 33.333-33.333 33.333H133.333C114.924 700 100 685.077 100 666.667V133.333C100 114.924 114.924 100 133.333 100h533.334Z" clip-rule="evenodd"/></svg>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 48.00 48.00" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff" stroke-width="2.784">
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="SVGRepo_iconCarrier">
+<defs>
+<style>.b{fill:#fafafa;}.c{fill:none;stroke:#fafafa;stroke-linecap:round;stroke-linejoin:round;}</style>
+</defs>
+<circle class="b" cx="15.64" cy="13.46" r=".75"/>
+<line class="c" x1="15.64" x2="15.64" y1="16.93" y2="31.91"/>
+<path class="c" d="m33.11 31.91v-9.61a5.83 5.83 0 0 0-5.82-5.82 5.83 5.83 0 0 0-5.83 5.82v9.61"/>
+<line class="c" x1="21.46" x2="21.46" y1="22.3" y2="16.93"/>
+<path class="c" d="m40.5 5.5h-33a2 2 0 0 0-2 2v33a2 2 0 0 0 2 2h33a2 2 0 0 0 2-2v-33a2 2 0 0 0-2-2z"/>
+</g>
+</svg>
