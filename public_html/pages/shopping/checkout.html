@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Checkout</title>
+        <link rel="stylesheet" href="./checkout.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+        <header class="flex flex-row space-between gap-1   top-navigation items-center">            
+            <div class="top-navigation-wrap">
+                <a class="logo" href="./index.html" aria-label="Exclusibe homepage">
+                    Exclusive
+                </a>
+
+                <nav class="main-nav" aria-label="main menu">
+                    <ul>
+                         <li class="top-level-container">
+                             <a class="top-level-entry" href="../../index.html">Home</a>
+                         </li>                    
+                         <li>
+                             <a class="top-level-entry" href="../contact/about.html">Contact</a>
+                         </li>
+                         <li>
+                            <a class="top-level-entry" href="#">About</a>
+                        </li>
+                         <li>
+                             <a class="top-level-entry" href="#">Sign Up</a>
+                         </li>
+                    </ul>
+                 </nav>
+            </div>
+                        
+            <div class="flex flex-row space-between gap-1">
+                <div class="flex items-center">
+                    <form action="" class="search-container">
+                        <input type="text" name="search" autocomplete="off"
+                        placeholder="What are u looking for?">
+                        <button type="submit" class="search-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21">
+                                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="8.5" cy="8.5" r="5"/>
+                                    <path d="M17.571 17.5L12 12"/>
+                                </g>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                <a href="#" aria-label="favorites">
+                    <img class="svg-icon" src="../../icons/heart-svgrepo-com.svg" alt="">
+                </a>
+                <a href="./pages/shopping/cart.html" aria-label="cart">
+                    <img class="svg-icon" src="../../icons/shopping-cart-svgrepo-com.svg" alt="">
+                </a>
+            </div> 
+        </header>
+
+        <section class="checkout-container">
+            <h2>Billing Details</h2>
+
+            <form id="checkout-form" class="ckeck-form">
+                <label for="fullname">Full Name</label>
+                <input class="text-line" type="text" id="fullname" name="fullname" required>
+
+                <label for="email">Email</label>
+                <input class="text-line" type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number</label>
+                <input class="text-line" type="tel" id="phone" name="phone" required placeholder="+51">
+
+                <label for="address">Shipping Address</label>
+                <textarea class="text-line" id="address" name="address" rows="3" required></textarea>
+
+                <label for="city">Town/City</label>
+                <input class="text-line" type="text" id="city" name="city" required>
+
+                <label for="payment-method">Payment Method</label>
+                <select class="text-line" id="payment-method" name="payment-method" required>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="visa">Visa</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="cash">Cash on Delivery</option>    
+                </select>
+
+                <label for="coupon">Have a Coupon?</label>
+                <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 15px;">
+                    <input class="text-line" type="text" id="coupon" name="coupon" placeholder="Enter your code" class="separate" />
+                    <button type="button" class="btn btn-secundary" onclick="aplicarCupon()">Apply</button>
+                </div>
+                <p id="cupon-msg" style="color: green; font-weight: 500;"></p>
+
+
+
+                <button type="submit" class="btn btn-primary">Place Order</button>
+            </form>
+
+            <a href="./cart.html" class="back-link">← Back to Cart</a>
+        </section>  
+
+        <script>
+            document.getElementById("checkout-form").addEventListener("submit", function (e) {
+                e.preventDefault();
+                alert("Order placed successfully! 🎉");
+                localStorage.removeItem('carrito');
+                window.location.href = "../../index.html";
+            });
+        </script>
+    </body>
+</html>
+
