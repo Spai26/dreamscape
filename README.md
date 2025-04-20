@@ -55,4 +55,5 @@
 - ⌛️ Creacion de pagina de la lista de carrito de compras
 - ⌛️ Creacion de la pagina de pago ( checkout )
 - ⌛️ Creacion de pagina  de configuracion de cuenta 
+- ⌛️ prueba
 

@@ -44,6 +44,9 @@ body{
 .gap-2{
     gap: 2rem;
 }
+.gap-3{
+    gap:3rem;
+}
 
 .pt-1{
     padding-top: 1rem;
@@ -65,6 +68,99 @@ body{
     padding: 5rem 0;
 }
 
+/*------ Header ------*/
+.top-navigation{
+    padding: 1rem;
+}
+
+.logo{
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 24px;
+    letter-spacing: 3px;
+    color: var(--primary-color-black);
+    text-decoration: none;
+}
+/*---- navigation ------*/
+.top-navigation-wrap{
+    display: flex;
+    justify-content: space-between;
+    gap:2rem;
+    align-items: center;
+}
+
+.main-nav{
+    display: block;
+    font-family: var(--font-subheading);
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding-right: 2rem;
+}
+
+.main-nav li{
+    position: relative;
+    padding: 1rem 0;
+}
+
+.top-level-entry{
+    color: var(--primary-color-black);
+    text-decoration: none;
+}
+
+
+.top-level-container{
+    width: 48px;    
+    text-align: center;
+    color: var(--text-color-2);
+}
+/*---------*/
+
+
+/*---- header search -----*/
+
+.search-container{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+}
+
+.search-container input[type="text"]{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: var(--text-color-2);
+    font-family: var(--font-subheading);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: var(--border-radius-md);
+    padding: 10px;
+}
+
+.search-container input:hover{
+    background-color: var(--secondary-hover);
+}
+
+.search-button{
+    position: absolute;
+    background: transparent;
+    width:30px;
+    height:30px;
+    color: var(--text-color-2);
+    right:0;
+    margin-left: 10px;
+}
+
+/*---------*/
 .line {
     width: 100%;
     border-bottom: 1px solid var(--text-color-1);
@@ -392,6 +488,7 @@ body{
     background-color: var(--secondary-green-button);
   }
 
+<<<<<<< HEAD
   body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -450,3 +547,5 @@ footer {
     color: #fff;
     text-decoration: none;
 }
+=======
+>>>>>>> 3ca4a2f7bd8e5208ad487b6253b61cfbe0ade272
