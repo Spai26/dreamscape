@@ -488,8 +488,7 @@ body{
     background-color: var(--secondary-green-button);
   }
 
-<<<<<<< HEAD
-  body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -547,5 +546,4 @@ footer {
     color: #fff;
     text-decoration: none;
 }
-=======
->>>>>>> 3ca4a2f7bd8e5208ad487b6253b61cfbe0ade272
+
