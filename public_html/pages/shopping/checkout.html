@@ -57,6 +57,48 @@
             </div> 
         </header>
 
+       
+        <section class="checkout-container">
+            <h2>Billing Details</h2>
+
+            <form id="checkout-form" class="ckeck-form">
+                <label for="fullname">Full Name</label>
+                <input class="text-line" type="text" id="fullname" name="fullname" required>
+
+                <label for="email">Email</label>
+                <input class="text-line" type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number</label>
+                <input class="text-line" type="tel" id="phone" name="phone" required placeholder="+51">
+
+                <label for="address">Shipping Address</label>
+                <textarea class="text-line" id="address" name="address" rows="3" required></textarea>
+
+                <label for="city">Town/City</label>
+                <input class="text-line" type="text" id="city" name="city" required>
+
+                <label for="payment-method">Payment Method</label>
+                <select class="text-line" id="payment-method" name="payment-method" required>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="visa">Visa</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="cash">Cash on Delivery</option>    
+                </select>
+
+                <label for="coupon">Have a Coupon?</label>
+                <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 15px;">
+                    <input class="text-line" type="text" id="coupon" name="coupon" placeholder="Enter your code" class="separate" />
+                    <button type="button" class="btn btn-secundary" onclick="aplicarCupon()">Apply</button>
+                </div>
+                <p id="cupon-msg" style="color: green; font-weight: 500;"></p>
+
+
+
+                <button type="submit" class="btn btn-primary">Place Order</button>
+            </form>
+
+            <a href="./cart.html" class="back-link">← Back to Cart</a>
+        </section>  
         <footer class="foo-cont pp-5">
             <div class="footer-container">
                 <div class="footer-section subscribe">
@@ -117,48 +159,6 @@
             </div>
         
         </footer>
-        <section class="checkout-container">
-            <h2>Billing Details</h2>
-
-            <form id="checkout-form" class="ckeck-form">
-                <label for="fullname">Full Name</label>
-                <input class="text-line" type="text" id="fullname" name="fullname" required>
-
-                <label for="email">Email</label>
-                <input class="text-line" type="email" id="email" name="email" required>
-
-                <label for="phone">Phone Number</label>
-                <input class="text-line" type="tel" id="phone" name="phone" required placeholder="+51">
-
-                <label for="address">Shipping Address</label>
-                <textarea class="text-line" id="address" name="address" rows="3" required></textarea>
-
-                <label for="city">Town/City</label>
-                <input class="text-line" type="text" id="city" name="city" required>
-
-                <label for="payment-method">Payment Method</label>
-                <select class="text-line" id="payment-method" name="payment-method" required>
-                    <option value="credit-card">Credit Card</option>
-                    <option value="visa">Visa</option>
-                    <option value="paypal">PayPal</option>
-                    <option value="cash">Cash on Delivery</option>    
-                </select>
-
-                <label for="coupon">Have a Coupon?</label>
-                <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 15px;">
-                    <input class="text-line" type="text" id="coupon" name="coupon" placeholder="Enter your code" class="separate" />
-                    <button type="button" class="btn btn-secundary" onclick="aplicarCupon()">Apply</button>
-                </div>
-                <p id="cupon-msg" style="color: green; font-weight: 500;"></p>
-
-
-
-                <button type="submit" class="btn btn-primary">Place Order</button>
-            </form>
-
-            <a href="./cart.html" class="back-link">← Back to Cart</a>
-        </section>  
-
         <script>
             document.getElementById("checkout-form").addEventListener("submit", function (e) {
                 e.preventDefault();
