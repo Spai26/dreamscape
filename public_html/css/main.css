@@ -73,7 +73,7 @@ body{
 
 /*------ Header ------*/
 .top-navigation{
-    padding: 1rem;
+    padding: 0 min(5rem,8%); 
 }
 
 .logo{
@@ -494,30 +494,34 @@ body{
   .add-to-cart:hover {
     background-color: var(--secondary-green-button);
   }
+/*------------------*/
 
-
-.footer-container {
-  background-color: var(--text-color-2);
-  color: var(--text-color);
-  padding: 40px 20px;
+.foo-cont {
+  background-color: #070707;
+  color: var(--text-color);    
 }
 
-.footer-container {
+.footer-container {  
+  color: var(--text-color);    
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
+  padding: 2rem;
+  line-height: 24px;
 }
 
 .footer-section {
   flex: 1;
-  min-width: 200px;
+  min-width: 200px;  
 }
 
 .footer-section h3 {
   font-family: var(--font-subheading);
-  color: var(--text-color);
-  margin-bottom: 15px;
+  color: var(--text-color);  
+  padding-bottom: 1rem;
+  font-weight: 500;
+  
 }
 
 .footer-section p,
@@ -525,6 +529,7 @@ body{
 .footer-section ul li {
   font-family: var(--font-primary);
   color: var(--text-color);
+  padding-bottom: 0.5rem;
 }
 
 .footer-section ul {
@@ -554,29 +559,13 @@ body{
   gap: 10px;
 }
 
-.subscribe input {
+.subscribe input[type="email"] {
   padding: 10px;
-  border-radius: var(--border-radius-md);
-  border: 1px solid var(--text-color-3);
+  border-radius: var(--border-radius-md);  
+  border: none;
   background-color: var(--secondary-color);
   color: var(--text-color-2);
-}
-
-.subscribe button {
-  padding: var(--button-secondary);
-  background-color: var(--secondary-red-button);
-  color: var(--text-color);
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  font-family: var(--font-subheading);
-  border-radius: var(--border-radius-md);
-  letter-spacing: var(--button-letter-spacing);
-  transition: background-color 0.3s ease;
-}
-
-.subscribe button:hover {
-  background-color: var(--secondary-hover-red-button);
+  outline: none;
 }
 
 /* Estilos para la sección de descarga de la app */
