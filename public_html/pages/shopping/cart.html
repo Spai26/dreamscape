@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="./cart.css"/> <!-- Ajusta ruta si es necesario -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+  
+</head>
+<body>
+<!-- #header-->
+<header class="flex flex-row space-between gap-1   top-navigation items-center">            
+  <div class="top-navigation-wrap">
+      <a class="logo" href="../../index.html" aria-label="Exclusibe homepage">
+          Exclusive
+      </a>
+
+      <nav class="main-nav" aria-label="main menu">
+          <ul>
+               <li class="top-level-container">
+                   <a class="top-level-entry" href="../../index.html">Home</a>
+               </li>                    
+               <li>
+                   <a class="top-level-entry" href="../contact/about.html">Contact</a>
+               </li>
+               <li>
+                  <a class="top-level-entry" href="#">About</a>
+              </li>
+               <li>
+                   <a class="top-level-entry" href="#">Sign Up</a>
+               </li>
+          </ul>
+       </nav>
+  </div>
+              
+  <div class="flex flex-row space-between gap-1">
+      <div class="flex items-center">
+          <form action="" class="search-container">
+              <input type="text" name="search" autocomplete="off"
+              placeholder="What are u looking for?">
+              <button type="submit" class="search-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21">
+                      <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                          <circle cx="8.5" cy="8.5" r="5"/>
+                          <path d="M17.571 17.5L12 12"/>
+                      </g>
+                  </svg>
+              </button>
+          </form>
+      </div>
+      <a href="#" aria-label="favorites">
+          <img class="svg-icon" src="../../icons/heart-svgrepo-com.svg" alt="">
+      </a>
+      <a href="./pages/shopping/cart.html" aria-label="cart">
+          <img class="svg-icon" src="../../icons/shopping-cart-svgrepo-com.svg" alt="">
+      </a>
+  </div> 
+</header>
+<!---------->
+  <section class="cart-container pt-5">
+    <h2>Your Shopping Cart</h2>
+    <table id="cart-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>SubTotal</th>
+        </tr>
+      </thead>
+      <tbody id="cart-body">
+        <!-- Productos se insertan aquí -->
+      </tbody>
+    </table>
+
+    <div class="total">
+      Total: $<span id="cart-total">0.00</span>
+    </div>
+
+    <button class="btn btn-secundary "onclick="vaciarCarrito()" class="btn btn-secundary">Empty Cart</button>
+    <button onclick="irACheckout()" class="btn btn-secundary">Proceed to Checkout</button>
+
+    <div id="cart-empty" class="cart-empty" style="display: none;">
+      Your cart is empty. Add some products to continue shopping!
+    </div>
+  </section>
+
+  <script>
+       
+    function cargarCarrito() {
+      const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      const tbody = document.getElementById('cart-body');
+      const totalSpan = document.getElementById('cart-total');
+      const cartEmpty = document.getElementById('cart-empty');
+      tbody.innerHTML = '';
+
+      if (carrito.length === 0) {
+        cartEmpty.style.display = 'block';
+        totalSpan.textContent = '0.00';
+      } else {
+        cartEmpty.style.display = 'none';
+      }
+
+      let total = 0;
+
+      carrito.forEach((item, index) => {
+        const fila = document.createElement('tr');
+        fila.innerHTML = `
+          <td>${item.nombre}</td>
+          <td>$${item.precio.toFixed(2)}</td>
+          <td><img src="${item.imagen}" alt="${item.nombre}" class="cart-product-image" /></td>
+          <td><button onclick="eliminarProducto(${index})">Remove</button></td>
+        `;
+        tbody.appendChild(fila);
+        total += item.precio;
+      });
+
+      totalSpan.textContent = total.toFixed(2);
+    }
+
+    function eliminarProducto(index) {
+      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      carrito.splice(index, 1);
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+      cargarCarrito();
+    }
+
+    function vaciarCarrito() {
+      localStorage.removeItem('carrito');
+      cargarCarrito();
+    }
+
+    function irACheckout() {
+  window.location.href = 'checkout.html';
+
+}
+
+    document.addEventListener('DOMContentLoaded', cargarCarrito);
+  </script>
+
+</body>
+</html>
+
+

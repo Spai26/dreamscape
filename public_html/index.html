@@ -16,7 +16,7 @@
                     Exclusive
                 </a>
 
-                <nav class="main-nav" arial-label="main menu">
+                <nav class="main-nav" aria-label="main menu">
                     <ul>
                          <li class="top-level-container">
                              <a class="top-level-entry" href="./index.html">Home</a>
@@ -52,7 +52,7 @@
                 <a href="#" aria-label="favorites">
                     <img class="svg-icon" src="./icons/heart-svgrepo-com.svg" alt="">
                 </a>
-                <a href="#" aria-label="cart">
+                <a href="./pages/shopping/cart.html" aria-label="cart">
                     <img class="svg-icon" src="./icons/shopping-cart-svgrepo-com.svg" alt="">
                 </a>
             </div> 
@@ -78,38 +78,38 @@
                 <nav class=" flex flex-row pt-1">
                     <ul class="category-list">
                         <li>
-                            <a href="#" arial-label="Browser phones category">
+                            <a href="#" aria-label="Browser phones category">
                                 <img loading="lazy" src="./icons/phone1.svg" class ="svg-icon-5" alt="Smartphones and mobile devices">
                                 Phones
                             </a>
                         </li>
                         <li>
-                            <a href="#" arial-label="Browser computers category">
+                            <a href="#" aria-label="Browser computers category">
                                 <img loading="lazy" src="./icons/computer-outline.svg"
                                 class="svg-icon-5" alt="category-computers">
                                 Computer
                             </a>
                         </li>
                         <li>
-                            <a href="#" arial-label="Browser electronics category">
+                            <a href="#" aria-label="Browser electronics category">
                                 <img loading="lazy" src="./icons/electronics-chip.svg" alt="category-electronics" class="svg-icon-5">
                                 Electronics
                             </a>
                         </li>
                         <li>
-                            <a href="#" arial-label="Browser cameras category">
+                            <a href="#" aria-label="Browser cameras category">
                                 <img src="./icons/camera.svg"  class="svg-icon-5" alt="category-camera">
                                 Camera
                             </a>
                         </li>
                         <li>
-                            <a href="#" arial-label="Browser headphones category">
+                            <a href="#" aria-label="Browser headphones category">
                                 <img src="./icons/headphone.svg"  class="svg-icon-5" alt="category-headphone">
                                 HeadPhones
                             </a>
                         </li>
                         <li>
-                            <a href="#" arial-label="Browser gaming category">
+                            <a href="#" aria-label="Browser gaming category">
                                 <img src="./icons/ai-gaming-spark.svg"  class="svg-icon-5" alt="category-gaming">
                                 Gaming
                             </a>
@@ -488,6 +488,31 @@
             </div>
         
         </footer>
+        <script>
+            function agregarAlCarrito(nombre, precio) {
+                let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
+                carrito.push({nombre, precio});
+
+                localStorage.setItem('carrito', JSON.stringify(carrito));
+
+                alert(`${nombre} fue agregado al carrito.`);
+            }
+
+            // Conectamos todos los botones al agregar al carrito
+            document.addEventListener('DOMContentLoaded', () => {
+                const botones = document.querySelectorAll('.add-to-cart');
+
+                botones.forEach(boton => {
+                    boton.addEventListener('click', () => {
+                        const producto = boton.closest('.product-info').querySelector('h3').textContent;
+                        const precioTexto = boton.closest('.product-info').querySelector('span').textContent;
+                        const precio = parseFloat(precioTexto.replace('$', ''));
+
+                        agregarAlCarrito(producto, precio);
+                    });
+                });
+            });
+        </script>
     </body>
 </html>
