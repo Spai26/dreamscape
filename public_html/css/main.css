@@ -5,8 +5,7 @@ body{
     height: 100vh;
     background-color: var(--background-color);
     font-size: var(--text-size-base);
-    font-family: var(--font-primary);
-    padding: 0 min(5rem,8%);            
+    font-family: var(--font-primary);               
 }
 
 .flex {
@@ -66,6 +65,10 @@ body{
 
 .py-5{
     padding: 5rem 0;
+}
+
+.pp-5{
+    padding: 0 min(5rem,8%); 
 }
 
 /*------ Header ------*/
@@ -492,12 +495,8 @@ body{
     background-color: var(--secondary-green-button);
   }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-footer {
+
+.footer-container {
   background-color: var(--text-color-2);
   color: var(--text-color);
   padding: 40px 20px;
