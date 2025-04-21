@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exclusive - Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">                
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="./login.css">
+        <link rel="icon" type="image/vnd.icon" href="../../images/favicon-32x32.png">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- #header-->
+        <header class="flex flex-row space-between gap-1   top-navigation items-center">            
+            <div class="top-navigation-wrap">
+                <a class="logo" href="../../index.html" aria-label="Exclusibe homepage">
+                    Exclusive
+                </a>
+
+                <nav class="main-nav" arial-label="main menu">
+                    <ul>
+                        <li class="top-level-container">
+                            <a class="top-level-entry" href="../../index.html">Home</a>
+                        </li>                    
+                        <li>
+                            <a class="top-level-entry" href="../../pages/contact/about.html">Contact</a>
+                        </li>
+                        <li>
+                            <a class="top-level-entry" href="../../pages/contact/about.html">About</a>
+                        </li>
+                        <li>
+                            <a class="top-level-entry" href="../../pages/signup/login.html">Sign Up</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="flex flex-row space-between gap-1">
+                <div class="flex items-center">
+                    <form action="" class="search-container">
+                        <input type="text" name="search" autocomplete="off"
+                               placeholder="What are u looking for?">
+                        <button type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 21 21">
+                            <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="8.5" cy="8.5" r="5"/>
+                            <path d="M17.571 17.5L12 12"/>
+                            </g>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                <a href="#" aria-label="favorites">
+                    <img class="svg-icon" src="../../icons/heart-svgrepo-com.svg" alt="">
+                </a>
+                <a href="#" aria-label="cart">
+                    <img class="svg-icon" src="../../icons/shopping-cart-svgrepo-com.svg" alt="">
+                </a>
+            </div> 
+        </header>
+        <section class="login-container">
+            <div class="contenido">
+                <div class="imgcontainer">
+                    <img src="../../images/signup/log_img.jpg" alt="logimg" class="logimg">
+                </div>
+
+                <div class="formulario">
+                    <h2>Login to Exclusive!</h2>
+                    <form action="Procesar registo" method="post">
+
+                        <div class="username">
+                            <label for="nombres">Email or Phone Number</label>
+                            <br>
+                            <input type="text" id="user" name="user" required class="campo-texto"><br><br>
+                        </div>
+                        <div class="contra">
+                            <label for="email">Password</label><br>
+                            <input type="password" id="contra" name="contra" required class="campo-texto"> <br><br>
+
+                        </div>
+                        
+                         <button class="btn btn-secundary" type="submit" >
+                            Log In
+                        </button>
+                        <br>
+                        <br>                        
+                        <div>
+                            <span>
+                                Dont have account? 
+                                <a href="../../pages/signup/register.html">
+                                    Register
+                                </a>
+                            </span>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+    </body>

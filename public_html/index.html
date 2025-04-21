@@ -460,6 +460,31 @@
                 <p>Copyright © 2025 MiEmpresa</p>
             </div>
         </footer>
+        <script>
+            function agregarAlCarrito(nombre, precio) {
+                let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
+                carrito.push({nombre, precio});
+
+                localStorage.setItem('carrito', JSON.stringify(carrito));
+
+                alert(`${nombre} fue agregado al carrito.`);
+            }
+
+            // Conectamos todos los botones al agregar al carrito
+            document.addEventListener('DOMContentLoaded', () => {
+                const botones = document.querySelectorAll('.add-to-cart');
+
+                botones.forEach(boton => {
+                    boton.addEventListener('click', () => {
+                        const producto = boton.closest('.product-info').querySelector('h3').textContent;
+                        const precioTexto = boton.closest('.product-info').querySelector('span').textContent;
+                        const precio = parseFloat(precioTexto.replace('$', ''));
+
+                        agregarAlCarrito(producto, precio);
+                    });
+                });
+            });
+        </script>
     </body>
 </html>
