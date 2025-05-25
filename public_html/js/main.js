@@ -1,19 +1,14 @@
 console.log("hello")
 
-const navbar = document.querySelector(".primary-nav");
-const navToogle = document.querySelector(".movile-toogle-nav");
+const btnOpen = document.querySelector(".toogle-nav-open");
+const btnClose = document.querySelector(".toogle-nav-close");
+const navBar = document.querySelector(".topnav-menu")
 
-navToogle.addEventListener("click", () => {
-    const visibility = navbar.getAttribute("data-visible");
+btnOpen.addEventListener("click", () => {
     
-    if (visibility === "false") {
-        navbar.setAttribute("data-visible", true)               
-        navToogle.setAttribute("data-expanded", true)         
-        navToogle.classList.add("open")
-    }else if (visibility === "true") {
-        navbar.setAttribute("data-visible", false)
-        navToogle.setAttribute("data-expanded", false)        
-        navToogle.classList.remove("open")
-    }
+    navBar.setAttribute("data-visible", "true");    
+})
 
+btnClose.addEventListener("click", () => {
+    navBar.setAttribute("data-visible", "false")
 })
