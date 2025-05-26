@@ -53,18 +53,22 @@ body {
     font-weight: var(--font-weight-regular);
     color: var(--color-text-primary);
     overflow-x: hidden;
-    background-color: #070B12;
+    background-color: var(--bg-primary);
 }
 
 
-/* ========== HEADER ========= */
-.header-main {
-    width: 100%;
-    transition: all 0.3s ease-in-out;
-    background: rgba(255, 255, 255, 0.21);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.7px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+/* ========== header ========= */
+.header-main {    
+    width: 100%;    
+    box-shadow: 0 4px 30px var(--color-text-primary);
+    backdrop-filter: blur(6.7px);    
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.header-main.visible {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .container {
@@ -74,6 +78,7 @@ body {
     margin-inline: auto;
     padding-inline: clamp(1rem, 6vw, 8rem);
 }
+
 
 .fixed-top {
     position: fixed;
@@ -90,22 +95,39 @@ body {
     padding-block: 1rem;
 }
 
+/* for logo parallax*/
+.header-logo{
+    font-size:  clamp(1rem, 0.6364rem + 1.8182vw, 2rem);
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);       
+}
 
-.toogle-nav-open{
-    display: block;
+.header-logo a{
+    text-decoration: none;
+    color: var(--color-text-ternary);
+}
+
+.header-logo a:hover{
+    color: var(--color-text-base);
+}
+
+.toogle-nav-open {
+    display: block; 
 }
 
 .toogle-nav-close {
-    position: relative;    
+    position: relative;
     width: 40px;
-    height: 40px;
-    cursor: pointer;    
+    height: 40px;    
+    cursor: pointer;
     margin-inline-start: auto;
     margin-block-end: 8rem;
+    
 }
+
 .nav-links {
     display: flex;
-    align-items: center;    
+    align-items: center;
     gap: 1rem;
     margin: 0;
     padding: 0;
@@ -113,46 +135,118 @@ body {
 
 .nav-item {
     list-style: none;
+    color: var(--color-text-ternary);
+    overflow: hidden;
 }
 
 .nav-link {
-    color: var(--text-primary);  
-    font-weight: var(--font-weight-bold);      
-}
-/* ========== hero banner ========= */
-.landscape{
-    background: url("../assets/images/anime-9063542.svg") no-repeat center center;
-    background-size: cover;
-    height: 90vh;
-    overflow: hidden;
-    position: relative
+    position: relative;
+    font-family: var(--font-title-primary);
+    color: var(--text-primary);    
+    padding-bottom: 5px;   
+    transition: color 0.3s ease-in-out;
 }
 
-.landscape-layer{
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.landscape-image{
+.nav-link::after{
+    content: '';
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    max-height: 100%;
-	max-width: 300%;
-	min-width: 100%;
-	width: 2500px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color:var(--color-text-base);
+    transform: translateX(-100%);    
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    will-change: transform, background-color;
+}
+
+.nav-link:hover{
+    color: var(--color-text-base);
+}
+
+.nav-link:hover::after{
+    transform: translate(0);
+}
+
+.nav-link.active{
+    color: var(--color-accent);    
+}
+
+.nav-link.active::after{
+    transform: translateX(0);
+    background-color: var(--color-accent);
+}
+
+
+
+/* ========== hero banner ========= */
+.landscape {
+    height: 90vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.landscape-layer {
+    height: 100%;
+    position: absolute;
+    width: 100%;    
+}
+
+.landscape-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*group 2*/
+.layer-back {
+    z-index: 1;
+
+    transform: translateZ(5vw) scale(1.5);
+}
+
+.layer-mid {
+    z-index: 2;
+    transform: translateZ(-5px) scale(1.2);
+}
+
+.layer-front {
+    z-index: 3;
     display: flex;
-	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateZ(0);
+}
+
+.layer-front img {
+    max-height: 70vh;
 }
 
 .landscape__image svg {
-	display: block;
-	height: auto;
-	max-width: 100%;
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.center-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    color: var(--color-text-base);
+    font-size: clamp(1.5rem, 0.5909rem + 4.5455vw, 4rem);
+    text-shadow: 0 4px 20px var(--color-accent);
+    will-change: transform, opacity;    
+}
+
+
+.center-logo,
+.header-logo{
+    font-family: var(--font-header), sans-serif;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 4px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* ========== small movile ========= */
@@ -191,30 +285,47 @@ body {
 
 }
 
-@media (max-width: 1024px) {  
-     .topnav-menu {  
+@media (max-width: 1024px) {
+    .header-main{
+        opacity: 1;
+    }
+
+    .header-logo{
+        order: 0;
+    }
+
+    .topnav-menu {
         position: absolute;
         top: 0;
         right: 0;
         width: 100%;
         display: flex;
-        flex-direction: column;    
-        gap: 1rem;              
+        flex-direction: column;
+        gap: 1rem;
+        padding: 22px;
         padding-inline: clamp(1rem, 6vw, 8rem);
         height: 100vh;
+        background-color: var(--bg-secundary);
         transform: translateX(100%);
         transition: translate 0.5 ease-in-out;
+    }
+
+    .toogle-nav-open{
+        position: absolute;
+        right: 0;
+        padding: 22px;
+        order: 1;
     }
 
     .topnav-menu[data-visible="true"] {
         transform: translateX(0);
     }
-   
+
     .nav-links {
         flex-direction: column;
     }
 
-    .hero-banner{
+    .hero-banner {
         background-position: center;
     }
 
@@ -222,7 +333,10 @@ body {
 
 
 @media (min-width: 1025px) {
-    
+    .container{
+        max-width: 1400px;
+    }
+
     .header-main {
         background-color: transparent;
     }
@@ -231,7 +345,7 @@ body {
     .toogle-nav-close {
         display: none;
     }
-  
+
 }
 
 /*

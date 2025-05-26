@@ -18,10 +18,23 @@
   src: url("../assets/fonts/Karma-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Beatcarb";
+  src: url("../assets/fonts/Beatcarb\ \(Demo_Font\).otf");
+}
+
+
 
 :root {  
+  --bg-primary : #070B12;
+  --bg-secundary : #1a2332;
+  --color-text-base: #ffffff;
   --color-text-primary: #212529;
   --color-text-secundary:#1F3B75; 
+  --color-text-ternary: #a0aec0;
+  --color-accent: #4299e1;
+  --color-accent-2: #ffd93d;
+  --font-header: "Beatcarb";
   --font-text-primary: "Karma";  
   --font-title-primary: "Montserrat";
   --font-title-secundary: "Overpass";

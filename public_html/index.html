@@ -3,28 +3,26 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>FixLecture</title>
+        <title>Dreamscape</title>
         <link rel="stylesheet" href="./css/main.css">
         <script src="./js/main.js" defer></script>
     </head>
     <body>
-        <header class="header-main fixed-top">
+        <header class="header-main fixed-top" id="header-main">
             <div class="container">
                 <div class="head-flex">
-                    <a href="index.html">
-                        <img width="44px" height="44px"
-                            src="./assets/images/logo.png"
-                            alt>
-                    </a>
-                    <nav>
-                        <button class="toogle-nav-open"
-                            aria-controls="topnav-menu" aria-expanded="false">
-                            <img width="40px" height="40px"
-                                src="./assets/icons/align-justify-svgrepo-com.svg"
-                                alt="open menu"
-                                loading="lazy">
-                        </button>
+                    <div class="header-logo" id="header-logo">
+                        <a href="index.html">DREAMSCAPE </a>
+                    </div>
+                    <button class="toogle-nav-open"
+                        aria-controls="topnav-menu" aria-expanded="false">
+                        <img width="40px" height="40px"
+                            src="./assets/icons/align-justify-svgrepo-com.svg"
+                            alt="open menu"
+                            loading="lazy">
+                    </button>
 
+                    <nav>
                         <div class="topnav-menu" id="topnav-menu"
                             data-visible="false">
 
@@ -38,53 +36,51 @@
 
                             <ul id="nav-links" data-visible="false"
                                 class="nav-links">
-                                <li class="nav-item active">
+                                <li class="nav-item">
                                     <a href="index.html"
-                                        class="nav-link">Inicio</a>
+                                        class="nav-link ">Inicio</a>
                                 </li>
-                                <li class="nav-item active">
+                                <li class="nav-item">
                                     <a href="#"
-                                        class="nav-link">Novelas</a>
+                                        class="nav-link ">Novelas</a>
                                 </li>
-                                <li class="nav-item active">
-                                    <a href="#" class="nav-link">Nosotros</a>
+                                <li class="nav-item">
+                                    <a href="#"
+                                        class="nav-link ">Nosotros</a>
                                 </li>
-                                <li class="nav-item active">
-                                    <a href="#" class="nav-link">Comunidad</a>
+                                <li class="nav-item">
+                                    <a href="#"
+                                        class="nav-link active ">Comunidad</a>
                                 </li>
                             </ul>
                         </div>
-
                     </nav>
                 </div>
             </div>
         </header>
-        <section class="landscape">
-            <div class="landscape" role="img"
-                aria-label="This is equivalent to an img alt attribute.">
-                <div class="landscape__layer">
-                    <div class="landscape__image">
-                        <svg viewBox="0 0 4000 1000"
-                            xmlns="http://www.w3.org/2000/svg">...</svg>
-                    </div>
-                </div>
-                <div class="landscape__layer">
-                    <div class="landscape__image">
-                        <svg viewBox="0 0 4000 1000"
-                            xmlns="http://www.w3.org/2000/svg">...</svg>
-                    </div>
-                </div>
-                <div class="landscape__layer">
-                    <div class="landscape__image">
-                        <svg viewBox="0 0 4000 1000"
-                            xmlns="http://www.w3.org/2000/svg">...</svg>
-                    </div>
-                </div>
 
-                ... and so on.
+        <section class="landscape" id="landscape"
+            aria-label="This is equivalent to an img alt attribute.">
+            <div class="landscape-layer layer-back">
+                <div class="landscape-image">
+                    <img src="./assets/landscape/Group 2.svg" alt>
+                </div>
             </div>
-
+            <div class="landscape-layer layer-mid">
+                <div class="landscape-image">
+                    <img src="./assets/landscape/Group 3.svg" alt>
+                </div>
+            </div>
+            <div class="landscape-layer layer-front">
+                <div class="landscape-image">
+                    <img src="./assets/landscape/gril.svg" alt>
+                </div>
+            </div>
+            <div class="center-logo" id="center-logo">
+                DREAMSCAPE
+            </div>
         </section>
+
         <main>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
                 animi excepturi debitis quam aperiam. Reprehenderit, dolore
