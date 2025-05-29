@@ -8,17 +8,21 @@
         <script src="./js/main.js" defer></script>
     </head>
     <body>
-        <header class="header-main fixed-top" id="header-main">
+        <header class="header__main" id="header-main">
             <div class="container">
                 <div class="head-flex">
                     <div class="header-logo" id="header-logo">
-                        <a href="index.html">DREAMSCAPE </a>
+                        <a href="index.html"
+                            aria-label="Inicio - Dreamscape">DREAMSCAPE </a>
                     </div>
-                    <button class="toogle-nav-open"
-                        aria-controls="topnav-menu" aria-expanded="false">
+                    <button
+                        class="toogle-nav-open"
+                        aria-controls="topnav-menu"
+                        aria-expanded="false"
+                        aria-label="Abrir menu de navegación">
                         <img width="40px" height="40px"
                             src="./assets/icons/align-justify-svgrepo-com.svg"
-                            alt="open menu"
+                            alt="Imagen de menu"
                             loading="lazy">
                     </button>
 
@@ -26,12 +30,14 @@
                         <div class="topnav-menu" id="topnav-menu"
                             data-visible="false">
 
-                            <button class="toogle-nav-close"
+                            <button
+                                class="toogle-nav-close"
                                 aria-controls="nav-links"
-                                aria-expanded="true">
+                                aria-expanded="true"
+                                aria-label="Cerrar menú de navegación">
                                 <img width="40px" height="40px"
                                     src="./assets/icons/close-svgrepo-com.svg"
-                                    alt="close menu" loading="lazy">
+                                    alt="Imagen cerrar menu" loading="lazy">
                             </button>
 
                             <ul id="nav-links" data-visible="false"
@@ -42,7 +48,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a href="#"
-                                        class="nav-link ">Novelas</a>
+                                        class="nav-link active">Novelas</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#"
@@ -50,7 +56,11 @@
                                 </li>
                                 <li class="nav-item">
                                     <a href="#"
-                                        class="nav-link active ">Comunidad</a>
+                                        class="nav-link ">Comunidad</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#contact"
+                                        class="nav-link ">Contácto</a>
                                 </li>
                             </ul>
                         </div>
@@ -58,7 +68,7 @@
                 </div>
             </div>
         </header>
-
+        <!--
         <section class="landscape" id="landscape"
             aria-label="This is equivalent to an img alt attribute.">
             <div class="landscape-layer layer-back">
@@ -77,103 +87,133 @@
                 </div>
             </div>
             <div class="center-logo" id="center-logo">
-                DREAMSCAPE
+                <h1>DREAMSCAPE</h1>
+                <p>Libera tu imaginación con historias únicas</p>
+            </div>
+        </section>
+-->
+        <section id="contact" class="section-spacing  landing-h">
+            <div class="container">
+
+                <div class="contact__main">
+                    <!-- Efectos de luz -->
+                    <div class="light-orb"></div>
+                    <div class="light-orb"></div>
+                    <div class="light-orb"></div>
+                    <div class="light-orb"></div>
+
+                    <div class="contact__image">
+                        <img src="./assets/images/hana.webp" alt>
+                    </div>
+
+                    <form action method class="form-container">
+                        <div class="from-header">
+                            <h1 class="form-title">Contáctanos</h1>
+                            <p class="form-subtitle">
+                                Si deseas publicar o
+                                eres tradutor de alguna novela puedes
+                                contactarnos por aquí
+                            </p>
+                        </div>
+
+                        <input type="email"
+                            placeholder="Ingresa tu email"
+                            class="input-item">
+                        <input type="text"
+                            placeholder="Ingresa tu nombre"
+                            class="input-item">
+                        <textarea name="description"
+                            placeholder="Escribe tu mensaje"
+                            class="input-item"></textarea>
+
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
             </div>
         </section>
 
-        <main>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-                animi excepturi debitis quam aperiam. Reprehenderit, dolore
-                laudantium ut tenetur architecto aspernatur nam cumque veniam
-                iste, modi recusandae natus aut dignissimos.
-                Voluptas, modi blanditiis, architecto perspiciatis consequatur
-                aspernatur tenetur veritatis, at aliquam cupiditate eos. Et
-                accusantium, voluptate earum natus amet eveniet enim, molestias
-                ratione sed dicta dolor mollitia magni quasi debitis?
-                Nihil, blanditiis earum, quaerat consequatur numquam, esse
-                repellendus aliquam aspernatur delectus sapiente repellat cum
-                nisi adipisci error modi nemo ab dolore deleniti quam dolores
-                hic nesciunt perferendis sed eligendi! Eveniet.
-                Dolorum quasi vel accusamus, molestiae distinctio inventore eos
-                nam tempore eum omnis at quo quibusdam obcaecati, aspernatur
-                tempora nobis repellendus ratione veniam suscipit! Mollitia,
-                magnam! Quidem, sequi sed! Autem, aliquam?
-                Labore dolorem sapiente ea aspernatur doloremque quis qui illum,
-                maiores veritatis laborum a recusandae, accusantium rem minus
-                suscipit sunt, porro vel debitis quam ipsa mollitia quod quos
-                nam ducimus? Culpa.
-                Ab harum, non laudantium in, temporibus quaerat, explicabo eius
-                nemo consequuntur maiores quibusdam magni vero inventore cum
-                adipisci ullam quae. Illum repellat necessitatibus dolore
-                adipisci autem odit aperiam, a corporis?
-                Hic voluptates consectetur, ut officiis vero quis sit
-                perferendis nesciunt nemo assumenda? Porro velit nisi sint,
-                maxime recusandae voluptates officiis harum sapiente cupiditate,
-                obcaecati laudantium. Ab, assumenda repellendus. Debitis, fugit.
-                Fugit iure cupiditate deleniti ut dignissimos, illum harum
-                beatae perspiciatis ducimus ad consequatur, rerum corporis!
-                Atque dicta esse quia deserunt optio eum aspernatur! Modi
-                reiciendis delectus doloribus velit harum illum.
-                Nostrum possimus quasi, temporibus dolores, eos omnis ea sed
-                molestiae facilis nobis sint, atque assumenda natus quos non
-                odit! Consequuntur perspiciatis quam saepe velit ducimus
-                suscipit iste reprehenderit mollitia recusandae.
-                Eos libero, sit dolore veniam tenetur voluptates ut maiores
-                culpa dolorem similique rerum maxime, numquam nisi dignissimos
-                atque totam reiciendis aliquam nobis temporibus debitis
-                necessitatibus. Dolore odio dicta nam placeat.
-                Sint esse commodi enim nihil, distinctio suscipit nemo mollitia
-                dolorum at unde modi porro blanditiis quod? Beatae praesentium
-                sunt optio. Sit officia quam maxime natus corrupti enim vel
-                doloribus a!
-                Cum nobis at iure, voluptate fugit esse? Unde obcaecati expedita
-                adipisci voluptates exercitationem delectus modi ipsa eos rerum!
-                Expedita nulla qui nostrum ullam voluptatibus unde eveniet illum
-                commodi illo natus.
-                Totam, veniam soluta. Neque praesentium animi quibusdam, id
-                consectetur, corrupti enim ut veritatis illum totam a
-                reiciendis? Dignissimos, laboriosam qui doloremque sunt
-                exercitationem deserunt sequi quibusdam dicta velit, voluptatem
-                adipisci.
-                In ratione ducimus optio ad magnam eius illo tenetur minima
-                nesciunt molestias unde, eaque rem quisquam quod, eos neque.
-                Minus aut aliquid unde quod sed odit iusto mollitia animi
-                quisquam!
-                Ex, commodi fugiat. Maxime rem quas nam nisi numquam dolor
-                laborum amet reprehenderit, temporibus saepe molestiae ratione
-                itaque eos. Expedita numquam ea necessitatibus nulla dolor nobis
-                libero aliquid? Iusto, harum.
-                Ex excepturi eveniet pariatur magnam officia deleniti? Quis, ab.
-                Molestiae quo ipsam nisi. Expedita velit nulla doloribus quae,
-                impedit temporibus voluptatibus, vel aliquam reiciendis mollitia
-                eligendi necessitatibus repellendus quos labore.
-                Vel, quidem ut excepturi voluptas saepe mollitia consequatur.
-                Minima, adipisci! Aliquam quis cupiditate perspiciatis optio,
-                rem labore distinctio corrupti, nam minus dicta earum ipsa enim,
-                atque officiis quisquam debitis cum.
-                Laboriosam tempora molestias dolorum ab excepturi.
-                Exercitationem similique, perspiciatis sunt, dolorum fuga esse
-                quaerat dolores repellat illo libero beatae labore suscipit ad
-                enim nam quos iure ipsum possimus, vero incidunt!
-                Doloribus sint doloremque error illo labore expedita assumenda
-                explicabo quidem aspernatur accusantium totam, deleniti, vel
-                ullam magni delectus! Amet, velit minima. Quidem, nostrum
-                nesciunt eius ducimus rerum voluptatum facere consequuntur!
-                Quod iusto illum temporibus debitis explicabo, illo repellendus
-                qui, laudantium hic deserunt alias omnis aperiam, nihil
-                quibusdam? Inventore harum ad aut, libero reiciendis esse
-                praesentium alias ipsam facere aliquid obcaecati?</p>
-        </main>
+        <footer class="footer">
+            <div class="container flex-complement">
+                <div class="footer__content">
+                    <div class="flex-complement w100 m-500">
+                        <div class="footer__description">
+                            <h3>Suscribete</h3>
+                            <p>Recibe la ultimas novedades</p>
+                        </div>
 
+                        <form method="post" class="footer__form">
+                            <input type="email" id="email" name="email"
+                                required
+                                placeholder="Ingresa tu email"
+                                autocomplete="off"
+                                class="input-item footer-input">
+                            <button type="submit" class="footer-btn">
+                                <svg fill="#fff" height="20px"
+                                    width="20px" version="1.1" id="Capa_1"
+                                    viewBox="0 0 488.4 488.4"
+                                    xml:space="preserve">
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M0,203.25c0,112.1,91.2,203.2,203.2,203.2c51.6,0,98.8-19.4,134.7-51.2l129.5,129.5c2.4,2.4,5.5,3.6,8.7,3.6
+			s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-129.6-129.5c31.8-35.9,51.2-83,51.2-134.7c0-112.1-91.2-203.2-203.2-203.2
+			S0,91.15,0,203.25z M381.9,203.25c0,98.5-80.2,178.7-178.7,178.7s-178.7-80.2-178.7-178.7s80.2-178.7,178.7-178.7
+			S381.9,104.65,381.9,203.25z" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="footer__navlinks">
+                        <h3>Descubre más</h3>
+                        <nav class>
+                            <ul class>
+                                <li class="nav-item">
+                                    <a href>Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href>Novelas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href>Nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href>Comunidad</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href>Contácto</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__socials w100">
+
+                        <a href="#">
+                            <img width="30px" height="30px" src="./assets/icons/instagram-svgrepo-com.svg" alt="instagram" loading="lazy">
+                        </a>
+
+                        <a href="#">
+                            <img width="30px" height="30px"
+                                src="./assets/icons/twitter-svgrepo-com.svg"
+                                alt>
+                        </a>
+                        <a href="#">
+                            <img width="30'px" height="30px"
+                                src="./assets/icons/linkedin-svgrepo-com.svg"
+                                alt>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    <p class="footer__motto">“Donde cada historia encuentra
+                        un lector”</p>
+                    <p> &copy;DreamScape 2025. Todos los
+                        derechos reservados.</p>
+                    
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
-<!--
-background: url("../assets/images/girl-8435339.svg") no-repeat  fixed;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-<script src="./js/main.js" defer></script>
-
-        <section class="front-hero">
-            
-        </section>-->

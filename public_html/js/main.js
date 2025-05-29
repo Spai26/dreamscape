@@ -3,7 +3,7 @@
 const btnOpen = document.querySelector(".toogle-nav-open");
 const btnClose = document.querySelector(".toogle-nav-close");
 const navBar = document.querySelector(".topnav-menu")
-
+/*
 // parallax
 const header = document.getElementById("header-main");
 const header_logo = document.getElementById("header-logo")
@@ -115,7 +115,7 @@ document.addEventListener("mousemove", (event) => {
         showHeader();
     }
 });
-
+*/
 
 btnOpen.addEventListener("click", () => {    
     navBar.setAttribute("data-visible", "true");    
