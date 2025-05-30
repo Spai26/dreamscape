@@ -1,1 +1,48 @@
+# IDEs y editores
+.idea/
+.vscode/
+nbproject/
+*.swp
+*~
+
+# NetBeans
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# IntelliJ
+out/
+*.iml
+*.iws
+*.ipr
+
+# VS Code
+.settings/
+.classpath
+.project
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Dependencias y directorios de construcción
+node_modules/
+vendor/
+target/
+build/
+dist/
+
+# Archivos de logs y datos
+*.log
+*.sql
+*.sqlite
+.env
+.env.local
+.env.*.local
+
+# Archivos temporales
+tmp/
+temp/
 .qodo
