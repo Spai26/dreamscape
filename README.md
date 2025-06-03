@@ -48,6 +48,7 @@ project-root/
 }
 ```
 
+
 # Todos
 - ✅ Eleguir paleta de colores
 - ✅ Definir la lista de navegación
@@ -59,7 +60,7 @@ project-root/
 # 👺Ideas de prototipado:
 
 - ✅ Base de estructura de landing page
-- ⌛️ Crear un animación en el background
+- ⌛️ Crear un animación en el background <-- keyframes -->
 - ⌛️ Agregar parallax al hero section
 - ⌛️ Añadir un modal para movil donde pueda navegar entre paginas dentro del contenido de la novela
 - ⌛️ En el detalle de la novela poder agregar un video de referencia del trailer de la novela animada.
@@ -71,3 +72,6 @@ project-root/
 - ⌛️ Posiblidad de subir audios tipo (podcats)
 - ⌛️ Lectura automatica de la novela 
 - ⌛️ Añadir una seccion de comentarios 
+
+# Creditos de imagen
+https://pixabay.com/es/users/andsproject-26081561/
