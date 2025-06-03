@@ -34,7 +34,7 @@ target/
 build/
 dist/
 
-# Archivos de logs y datos
+# Archivos de logs y dats
 *.log
 *.sql
 *.sqlite

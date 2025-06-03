@@ -12,8 +12,8 @@
             <div class="container">
                 <div class="head-flex">
                     <div class="header-logo" id="header-logo">
-                        <a href="index.html"
-                            aria-label="Inicio - Dreamscape">DREAMSCAPE </a>
+                        <a href="#inicio"
+                            aria-label="Inicio - Dreamscape">DREAMSCAPE</a>
                     </div>
                     <button
                         class="toogle-nav-open"
@@ -43,24 +43,24 @@
                             <ul id="nav-links" data-visible="false"
                                 class="nav-links">
                                 <li class="nav-item">
-                                    <a href="index.html"
-                                        class="nav-link ">Inicio</a>
+                                    <a href="#inicio"
+                                        class="nav-link">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#"
-                                        class="nav-link active">Novelas</a>
+                                    <a href="#novels-section"
+                                        class="nav-link">Novelas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#"
-                                        class="nav-link ">Nosotros</a>
+                                    <a href="#about"
+                                        class="nav-link">Nosotros</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#"
-                                        class="nav-link ">Comunidad</a>
+                                    <a href="#community"
+                                        class="nav-link">Comunidad</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#contact"
-                                        class="nav-link ">Contácto</a>
+                                        class="nav-link">Contácto</a>
                                 </li>
                             </ul>
                         </div>
@@ -69,7 +69,7 @@
             </div>
         </header>
 
-        <section class="parallax" id="parallax">
+        <section class="parallax" id="inicio">
 
             <img class="parallax__top" src="./assets/landscape/top.svg" alt>
 
@@ -86,7 +86,7 @@
                     novelas de autores emergentes y establecidos de todo el
                     mundo</p>
                 <div class="hero-actions">
-                    <a href="#" class="btn btn-primary">Explorar Novelas</a>
+                    <a href="#novels-section" class="btn btn-primary">Explorar Novelas</a>
                     <a href="#" class="btn btn-secondary">Únete como Autor</a>
                 </div>
             </div>
@@ -95,6 +95,130 @@
             <div class="scroll-indicator">
                 <span>Desliza para descubrir</span>
                 <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- Nueva sección de novelas -->
+        <section id="novels-section" class="novels-section section-spacing">
+            <div class="container">
+                <h2 class="section-title">Nuestras Novelas</h2>
+                <div class="novels-grid">
+                    <!-- Novela 1 -->
+                    <article class="novel-card" data-novel="novel-1">
+                        <img src="./assets/images/novel-1.png" alt="Portada de novela" class="novel-image">
+                        <div class="novel-content">
+                            <h3 class="novel-title">El Jardín de las Mariposas</h3>
+                            <p class="novel-description">Una historia conmovedora sobre el amor y la pérdida en un mundo donde la magia y la realidad se entrelazan.</p>
+                            <div class="novel-genres">
+                                <span class="genre-tag">Fantasía</span>
+                                <span class="genre-tag">Romance</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Novela 2 -->
+                    <article class="novel-card" data-novel="novel-2">
+                        <img src="./assets/images/novel-2.png" alt="Portada de novela" class="novel-image">
+                        <div class="novel-content">
+                            <h3 class="novel-title">Ecos del Pasado</h3>
+                            <p class="novel-description">Un thriller psicológico que te mantendrá al borde del asiento mientras descubres secretos enterrados hace décadas.</p>
+                            <div class="novel-genres">
+                                <span class="genre-tag">Suspense</span>
+                                <span class="genre-tag">Misterio</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Novela 3 -->
+                    <article class="novel-card" data-novel="novel-3">
+                        <img src="./assets/images/novel-3.png" alt="Portada de novela" class="novel-image">
+                        <div class="novel-content">
+                            <h3 class="novel-title">Mundos Paralelos</h3>
+                            <p class="novel-description">Una aventura épica a través de dimensiones alternativas donde cada decisión crea un nuevo universo.</p>
+                            <div class="novel-genres">
+                                <span class="genre-tag">Ciencia Ficción</span>
+                                <span class="genre-tag">Aventura</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Novela 4 -->
+                    <article class="novel-card" data-novel="novel-4">
+                        <img src="./assets/images/novel-4.png" alt="Portada de novela" class="novel-image">
+                        <div class="novel-content">
+                            <h3 class="novel-title">Sombras del Crepúsculo</h3>
+                            <p class="novel-description">En una ciudad donde la noche dura seis meses, una detective sobrenatural debe resolver crímenes antes del amanecer.</p>
+                            <div class="novel-genres">
+                                <span class="genre-tag">Fantasía Urbana</span>
+                                <span class="genre-tag">Misterio</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Novela 5 -->
+                    <article class="novel-card" data-novel="novel-5">
+                        <img src="./assets/images/novel-5.png" alt="Portada de novela" class="novel-image">
+                        <div class="novel-content">
+                            <h3 class="novel-title">El Último Manuscrito</h3>
+                            <p class="novel-description">Una bibliotecaria descubre un antiguo manuscrito que contiene secretos que podrían cambiar la historia de la humanidad.</p>
+                            <div class="novel-genres">
+                                <span class="genre-tag">Histórico</span>
+                                <span class="genre-tag">Aventura</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Novela 6 -->
+                    <article class="novel-card" data-novel="novel-6">
+                        <img src="./assets/images/novel-6.png" alt="Portada de novela" class="novel-image">
+                        <div class="novel-content">
+                            <h3 class="novel-title">Código Neural</h3>
+                            <p class="novel-description">En un futuro donde la mente humana puede ser hackeada, una programadora debe proteger sus recuerdos más preciados.</p>
+                            <div class="novel-genres">
+                                <span class="genre-tag">Cyberpunk</span>
+                                <span class="genre-tag">Thriller</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Overlay para detalles de novela -->
+                <div class="novel-detail-overlay" id="novel-detail-overlay">
+                    <div class="novel-detail-content">
+                        <button class="close-detail" aria-label="Cerrar detalle">
+                            <img width="40px" height="40px" src="./assets/icons/close-svgrepo-com.svg" alt="Cerrar">
+                        </button>
+                        <div class="novel-detail-grid">
+                            <div class="novel-detail-image">
+                                <img src="" alt="Portada de novela en detalle" id="detail-image">
+                            </div>
+                            <div class="novel-detail-info">
+                                <h2 id="detail-title"></h2>
+                                <div class="novel-detail-metadata">
+                                    <div class="metadata-item">
+                                        <span class="metadata-label">Autor:</span>
+                                        <span id="detail-author"></span>
+                                    </div>
+                                    <div class="metadata-item">
+                                        <span class="metadata-label">Fecha de publicación:</span>
+                                        <span id="detail-date"></span>
+                                    </div>
+                                    <div class="metadata-item">
+                                        <span class="metadata-label">Géneros:</span>
+                                        <div id="detail-genres" class="novel-genres"></div>
+                                    </div>
+                                </div>
+                                <div class="novel-detail-description">
+                                    <h3>Sinopsis</h3>
+                                    <p id="detail-description"></p>
+                                </div>
+                                <div class="novel-detail-actions">
+                                    <button class="btn btn-primary">Leer ahora</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -173,22 +297,22 @@
                     </div>
                     <div class="footer__navlinks">
                         <h3>Descubre más</h3>
-                        <nav class>
-                            <ul class>
+                        <nav>
+                            <ul>
                                 <li class="nav-item">
-                                    <a href>Inicio</a>
+                                    <a href="#inicio">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href>Novelas</a>
+                                    <a href="#novels-section">Novelas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href>Nosotros</a>
+                                    <a href="#about">Nosotros</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href>Comunidad</a>
+                                    <a href="#community">Comunidad</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href>Contácto</a>
+                                    <a href="#contact">Contácto</a>
                                 </li>
                             </ul>
                         </nav>
