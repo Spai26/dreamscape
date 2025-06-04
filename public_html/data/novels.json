@@ -2,6 +2,7 @@
     "novel-1": {
         "title": "El Jardín de las Mariposas",
         "author": "María González",
+        "slug": "El Jardín de las Mariposas",
         "publishDate": "15 de Marzo, 2024",
         "image": "./assets/images/novel-1.png",
         "genres": ["Fantasía", "Romance"],

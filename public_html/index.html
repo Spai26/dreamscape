@@ -47,12 +47,12 @@
                                         class="nav-link">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#novels-section"
-                                        class="nav-link">Novelas</a>
+                                    <a href="#nosotros"
+                                        class="nav-link">Nosotros</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#about"
-                                        class="nav-link">Nosotros</a>
+                                    <a href="#novels-section"
+                                        class="nav-link">Novelas</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#community"
@@ -69,7 +69,7 @@
             </div>
         </header>
 
-        <section class="parallax" id="inicio">
+        <section class="parallax section-spacing" id="inicio">
 
             <img class="parallax__top" src="./assets/landscape/top.svg" alt>
 
@@ -79,14 +79,14 @@
             <img class="parallax__girl" src="./assets/landscape/gril.svg"
                 alt>
 
-    
             <div class="hero-content container">
                 <h1 class="hero-title">Donde las historias cobran vida</h1>
                 <p class="hero-subtitle">Descubre, lee y comparte las mejores
                     novelas de autores emergentes y establecidos de todo el
                     mundo</p>
                 <div class="hero-actions">
-                    <a href="#novels-section" class="btn btn-primary">Explorar Novelas</a>
+                    <a href="#novels-section" class="btn btn-primary">Explorar
+                        Novelas</a>
                     <a href="#" class="btn btn-secondary">Únete como Autor</a>
                 </div>
             </div>
@@ -97,18 +97,77 @@
                 <div class="scroll-arrow"></div>
             </div>
         </section>
+        <div class="gost-space"></div>
+        <!-- Sección sobre nosotros -->
+        <section id="nosotros" class="landing-h section-spacing">
+            <div class="container">
+                <h1 class="form-title">Acerca de Nosotros</h1>
+                <div class="nosotros__flex">
+                    <div class="nosotros__tarjetas">
+                        <!-- Tarjeta 1 -->
+                        <div class="nosotros__card">
+                            <h3 class="nosotros__subtitulo">Misión</h3>
+                            <p>
+                                Brindar acceso a los autores y traductores una
+                                plataforma accesible y moderna donde puedan
+                                publicar y difundir sus obras a una audiencia
+                                global.
+                            </p>
+                        </div>
+
+                        <!-- Tarjeta 2 -->
+                        <div class="nosotros__card">
+                            <h3 class="nosotros__subtitulo">Visión</h3>
+                            <p>
+                                Convertirnos en una comunidad literaria digital
+                                accesible y envolvente, donde cada historia
+                                tenga un espacio y cada lector una experiencia
+                                envolvente.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Imagen a la derecha -->
+                    <div class="nosotros__imagen-container">
+                        <img
+                            src="assets/images/joven-anime-removebg-preview.png"
+                            alt="Imagen de anime" class="nosotros__imagen">
+                    </div>
+                </div>
+                <!-- Columna izquierda: título y tarjetas -->
+
+            </div>
+
+            <svg class="wave-separetor-b" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1440 320">
+                <path fill="#1a1a2e" fill-opacity="1"
+                    d="M0,64L26.7,90.7C53.3,117,107,171,160,186.7C213.3,203,267,181,320,186.7C373.3,192,427,224,480,234.7C533.3,245,587,235,640,229.3C693.3,224,747,224,800,192C853.3,160,907,96,960,74.7C1013.3,53,1067,75,1120,101.3C1173.3,128,1227,160,1280,160C1333.3,160,1387,128,1413,112L1440,96L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path>
+            </svg>
+
+        </section>
 
         <!-- Nueva sección de novelas -->
         <section id="novels-section" class="novels-section section-spacing">
+            <svg class="wave-separetor-t" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1440 320">
+                <path fill="#1a1a2e" fill-opacity="1"
+                    d="M0,64L26.7,90.7C53.3,117,107,171,160,186.7C213.3,203,267,181,320,186.7C373.3,192,427,224,480,234.7C533.3,245,587,235,640,229.3C693.3,224,747,224,800,192C853.3,160,907,96,960,74.7C1013.3,53,1067,75,1120,101.3C1173.3,128,1227,160,1280,160C1333.3,160,1387,128,1413,112L1440,96L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path>
+            </svg>
             <div class="container">
                 <h2 class="section-title">Nuestras Novelas</h2>
                 <div class="novels-grid">
                     <!-- Novela 1 -->
                     <article class="novel-card" data-novel="novel-1">
-                        <img src="./assets/images/novel-1.png" alt="Portada de novela" class="novel-image">
-                        <div class="novel-content">
-                            <h3 class="novel-title">El Jardín de las Mariposas</h3>
-                            <p class="novel-description">Una historia conmovedora sobre el amor y la pérdida en un mundo donde la magia y la realidad se entrelazan.</p>
+                        <img src="./assets/images/novel-1.png"
+                            alt="Portada de novela" class="novel-image">
+                        <div class="novel-content"
+                            id="el-jardín-de-las-mariposas">
+                            <h3 class="novel-title">El Jardín de las
+                                Mariposas</h3>
+                            <p class="novel-description">Una historia
+                                conmovedora sobre el amor y la pérdida en un
+                                mundo donde la magia y la realidad se
+                                entrelazan.</p>
                             <div class="novel-genres">
                                 <span class="genre-tag">Fantasía</span>
                                 <span class="genre-tag">Romance</span>
@@ -118,10 +177,13 @@
 
                     <!-- Novela 2 -->
                     <article class="novel-card" data-novel="novel-2">
-                        <img src="./assets/images/novel-2.png" alt="Portada de novela" class="novel-image">
+                        <img src="./assets/images/novel-2.png"
+                            alt="Portada de novela" class="novel-image">
                         <div class="novel-content">
                             <h3 class="novel-title">Ecos del Pasado</h3>
-                            <p class="novel-description">Un thriller psicológico que te mantendrá al borde del asiento mientras descubres secretos enterrados hace décadas.</p>
+                            <p class="novel-description">Un thriller psicológico
+                                que te mantendrá al borde del asiento mientras
+                                descubres secretos enterrados hace décadas.</p>
                             <div class="novel-genres">
                                 <span class="genre-tag">Suspense</span>
                                 <span class="genre-tag">Misterio</span>
@@ -131,10 +193,13 @@
 
                     <!-- Novela 3 -->
                     <article class="novel-card" data-novel="novel-3">
-                        <img src="./assets/images/novel-3.png" alt="Portada de novela" class="novel-image">
+                        <img src="./assets/images/novel-3.png"
+                            alt="Portada de novela" class="novel-image">
                         <div class="novel-content">
                             <h3 class="novel-title">Mundos Paralelos</h3>
-                            <p class="novel-description">Una aventura épica a través de dimensiones alternativas donde cada decisión crea un nuevo universo.</p>
+                            <p class="novel-description">Una aventura épica a
+                                través de dimensiones alternativas donde cada
+                                decisión crea un nuevo universo.</p>
                             <div class="novel-genres">
                                 <span class="genre-tag">Ciencia Ficción</span>
                                 <span class="genre-tag">Aventura</span>
@@ -144,10 +209,14 @@
 
                     <!-- Novela 4 -->
                     <article class="novel-card" data-novel="novel-4">
-                        <img src="./assets/images/novel-4.png" alt="Portada de novela" class="novel-image">
+                        <img src="./assets/images/novel-4.png"
+                            alt="Portada de novela" class="novel-image">
                         <div class="novel-content">
                             <h3 class="novel-title">Sombras del Crepúsculo</h3>
-                            <p class="novel-description">En una ciudad donde la noche dura seis meses, una detective sobrenatural debe resolver crímenes antes del amanecer.</p>
+                            <p class="novel-description">En una ciudad donde la
+                                noche dura seis meses, una detective
+                                sobrenatural debe resolver crímenes antes del
+                                amanecer.</p>
                             <div class="novel-genres">
                                 <span class="genre-tag">Fantasía Urbana</span>
                                 <span class="genre-tag">Misterio</span>
@@ -157,10 +226,14 @@
 
                     <!-- Novela 5 -->
                     <article class="novel-card" data-novel="novel-5">
-                        <img src="./assets/images/novel-5.png" alt="Portada de novela" class="novel-image">
+                        <img src="./assets/images/novel-5.png"
+                            alt="Portada de novela" class="novel-image">
                         <div class="novel-content">
                             <h3 class="novel-title">El Último Manuscrito</h3>
-                            <p class="novel-description">Una bibliotecaria descubre un antiguo manuscrito que contiene secretos que podrían cambiar la historia de la humanidad.</p>
+                            <p class="novel-description">Una bibliotecaria
+                                descubre un antiguo manuscrito que contiene
+                                secretos que podrían cambiar la historia de la
+                                humanidad.</p>
                             <div class="novel-genres">
                                 <span class="genre-tag">Histórico</span>
                                 <span class="genre-tag">Aventura</span>
@@ -170,10 +243,14 @@
 
                     <!-- Novela 6 -->
                     <article class="novel-card" data-novel="novel-6">
-                        <img src="./assets/images/novel-6.png" alt="Portada de novela" class="novel-image">
+                        <img src="./assets/images/novel-6.png"
+                            alt="Portada de novela" class="novel-image">
                         <div class="novel-content">
                             <h3 class="novel-title">Código Neural</h3>
-                            <p class="novel-description">En un futuro donde la mente humana puede ser hackeada, una programadora debe proteger sus recuerdos más preciados.</p>
+                            <p class="novel-description">En un futuro donde la
+                                mente humana puede ser hackeada, una
+                                programadora debe proteger sus recuerdos más
+                                preciados.</p>
                             <div class="novel-genres">
                                 <span class="genre-tag">Cyberpunk</span>
                                 <span class="genre-tag">Thriller</span>
@@ -185,27 +262,35 @@
                 <!-- Overlay para detalles de novela -->
                 <div class="novel-detail-overlay" id="novel-detail-overlay">
                     <div class="novel-detail-content">
-                        <button class="close-detail" aria-label="Cerrar detalle">
-                            <img width="40px" height="40px" src="./assets/icons/close-svgrepo-com.svg" alt="Cerrar">
+                        <button class="close-detail"
+                            aria-label="Cerrar detalle">
+                            <img width="40px" height="40px"
+                                src="./assets/icons/close-svgrepo-com.svg"
+                                alt="Cerrar">
                         </button>
                         <div class="novel-detail-grid">
                             <div class="novel-detail-image">
-                                <img src="" alt="Portada de novela en detalle" id="detail-image">
+                                <img src alt="Portada de novela en detalle"
+                                    id="detail-image">
                             </div>
                             <div class="novel-detail-info">
                                 <h2 id="detail-title"></h2>
                                 <div class="novel-detail-metadata">
                                     <div class="metadata-item">
-                                        <span class="metadata-label">Autor:</span>
+                                        <span
+                                            class="metadata-label">Autor:</span>
                                         <span id="detail-author"></span>
                                     </div>
                                     <div class="metadata-item">
-                                        <span class="metadata-label">Fecha de publicación:</span>
+                                        <span class="metadata-label">Fecha de
+                                            publicación:</span>
                                         <span id="detail-date"></span>
                                     </div>
                                     <div class="metadata-item">
-                                        <span class="metadata-label">Géneros:</span>
-                                        <div id="detail-genres" class="novel-genres"></div>
+                                        <span
+                                            class="metadata-label">Géneros:</span>
+                                        <div id="detail-genres"
+                                            class="novel-genres"></div>
                                     </div>
                                 </div>
                                 <div class="novel-detail-description">
@@ -213,7 +298,8 @@
                                     <p id="detail-description"></p>
                                 </div>
                                 <div class="novel-detail-actions">
-                                    <button class="btn btn-primary">Leer ahora</button>
+                                    <button class="btn btn-primary">Leer
+                                        ahora</button>
                                 </div>
                             </div>
                         </div>
@@ -222,16 +308,65 @@
             </div>
         </section>
 
-        <section id="contact" class="section-spacing  landing-h">
+        <div class="gost-space"></div>
+
+        <section id="comunidad" class="landing-h community  section-spacing">
+            <div class="container">
+                <div class="contenedor-coment">
+                    <div>
+                        <h1 class="form-title">Comunidad</h1>
+                        <p>Crea, comparte y comenta. Aquí, cada idea cuenta y
+                            cada
+                            historia puede inspirar a alguien más. </p>
+                    </div>
+                    <div class="comentarios">
+                        <div class="img-user">
+                            <img src="assets/comunidad/astronaut.png"
+                                alt="comentario de comunidad" loading="lazy">
+                        </div>
+                        <h3>Traductor</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore
+                            magna
+                            aliqua.</p>
+                    </div>
+
+                    <div class="comentarios">
+                        <div class="img-user">
+                            <img src="assets/comunidad/astronaut.png"
+                                alt="comentario de comunidad" loading="lazy">
+                        </div>
+                        <h3>Autor</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore
+                            magna
+                            aliqua</p>
+                    </div>
+
+                    <div class="comentarios">
+                        <div class="img-user">
+                            <img src="assets/comunidad/astronaut.png"
+                                alt="comentario de comunidad" loading="lazy">
+                        </div>
+                        <h3>Traductor</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore
+                            magna
+                            aliqua</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="gost-space"></div>
+
+        <section id="contact" class=" landing-h section-spacing">
             <div class="container">
 
                 <div class="contact__main">
-                    <!-- Efectos de luz -->
-                    <div class="light-orb"></div>
-                    <div class="light-orb"></div>
-                    <div class="light-orb"></div>
-                    <div class="light-orb"></div>
-
                     <div class="contact__image">
                         <img src="./assets/images/hana.webp" alt>
                     </div>
@@ -256,13 +391,14 @@
                             placeholder="Escribe tu mensaje"
                             class="input-item"></textarea>
 
-                        <button type="submit" class="btn btn-primary btn btn-flex">Enviar</button>
+                        <button type="submit"
+                            class="btn btn-primary btn btn-flex">Enviar</button>
                     </form>
                 </div>
             </div>
         </section>
 
-        <footer class="footer">
+        <footer class="footer section-spacing">
             <div class="container flex-complement">
                 <div class="footer__content">
                     <div class="flex-complement w100 m-500">
@@ -306,7 +442,7 @@
                                     <a href="#novels-section">Novelas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#about">Nosotros</a>
+                                    <a href="#nosotros">Nosotros</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#community">Comunidad</a>

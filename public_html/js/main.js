@@ -200,7 +200,7 @@ function handleHeaderVisibility() {
 }
 
 // Inicialización
-document.addEventListener('DOMContentLoaded', async () => {
+window.addEventListener('load', async () => {
     await loadNovelsData();
     handleNavigation();
     setupEventListeners();
