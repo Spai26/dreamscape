@@ -1,46 +1,141 @@
-   <!-- Overlay para detalles de novela -->
-                <div class="novel-detail-overlay" id="novel-detail-overlay">
-                    <div class="novel-detail-content">
-                        <button class="close-detail"
-                            aria-label="Cerrar detalle">
-                            <img width="40px" height="40px"
-                                src="./assets/icons/close-svgrepo-com.svg"
-                                alt="Cerrar">
-                        </button>
-                        <div class="novel-detail-grid">
-                            <div class="novel-detail-image">
-                                <img src alt="Portada de novela en detalle"
-                                    id="detail-image">
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>El Jardín de las Mariposas - Detalles</title>
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="../../css/detail.css">
+        <script src="../js/main.js" defer></script>
+    </head>
+    <body>
+        <div class="detail-container">
+            <div class="detail-card">
+                <a href="../../index.html" class="close-button" aria-label="Cerrar">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                
+                <div class="detail-grid">
+                    <div class="detail-image">
+                        <img src="../../assets/images/novel-1.png" alt="El Jardín de las Mariposas">
+                    </div>
+                    
+                    <div class="detail-content">
+                        <h1>El Jardín de las Mariposas</h1>
+                        
+                        <div class="detail-metadata">
+                            <div class="metadata-item">
+                                <span class="metadata-label">Autor:</span>
+                                <span>María González</span>
                             </div>
-                            <div class="novel-detail-info">
-                                <h2 id="detail-title"></h2>
-                                <div class="novel-detail-metadata">
-                                    <div class="metadata-item">
-                                        <span
-                                            class="metadata-label">Autor:</span>
-                                        <span id="detail-author"></span>
-                                    </div>
-                                    <div class="metadata-item">
-                                        <span class="metadata-label">Fecha de
-                                            publicación:</span>
-                                        <span id="detail-date"></span>
-                                    </div>
-                                    <div class="metadata-item">
-                                        <span
-                                            class="metadata-label">Géneros:</span>
-                                        <div id="detail-genres"
-                                            class="novel-genres"></div>
-                                    </div>
-                                </div>
-                                <div class="novel-detail-description">
-                                    <h3>Sinopsis</h3>
-                                    <p id="detail-description"></p>
-                                </div>
-                                <div class="novel-detail-actions">
-                                    <button class="btn btn-primary">Leer
-                                        ahora</button>
+                            <div class="metadata-item">
+                                <span class="metadata-label">Fecha de publicación:</span>
+                                <span>15 de Marzo, 2024</span>
+                            </div>
+                            <div class="metadata-item">
+                                <span class="metadata-label">Géneros:</span>
+                                <div class="genre-tags">
+                                    <span class="genre-tag">Fantasía</span>
+                                    <span class="genre-tag">Romance</span>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="detail-synopsis">
+                            <h2>Sinopsis</h2>
+                            <p>En un mundo donde la magia se desvanece lentamente, Isabella descubre un jardín secreto donde las mariposas brillan con luz propia. Estas criaturas mágicas guardan los últimos vestigios de una antigua magia que podría salvar su mundo, pero también atraen a aquellos que buscan controlar su poder. A medida que Isabella profundiza en los misterios del jardín, se encuentra con un enigmático guardián que protege estos secretos desde hace siglos. Juntos deberán enfrentar una antigua profecía que podría significar la salvación o la destrucción de todo lo que conocen. Una historia que entrelaza el amor, la pérdida y el poder de la esperanza en un mundo al borde del cambio.</p>
+                        </div>   
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container flex-complement">
+                <div class="footer__content">
+                    <div class="flex-complement w100 m-500">
+                        <div class="footer__description">
+                            <h3>Suscribete</h3>
+                            <p>Recibe la ultimas novedades</p>
+                        </div>
+
+                        <form method="post" class="footer__form">
+                            <input type="email" id="email" name="email"
+                                required
+                                placeholder="Ingresa tu email"
+                                autocomplete="off"
+                                class="input-item footer-input">
+                            <button type="submit" class="footer-btn">
+                                <svg fill="#fff" height="20px"
+                                    width="20px" version="1.1" id="Capa_1"
+                                    viewBox="0 0 488.4 488.4"
+                                    xml:space="preserve">
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M0,203.25c0,112.1,91.2,203.2,203.2,203.2c51.6,0,98.8-19.4,134.7-51.2l129.5,129.5c2.4,2.4,5.5,3.6,8.7,3.6
+			s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-129.6-129.5c31.8-35.9,51.2-83,51.2-134.7c0-112.1-91.2-203.2-203.2-203.2
+			S0,91.15,0,203.25z M381.9,203.25c0,98.5-80.2,178.7-178.7,178.7s-178.7-80.2-178.7-178.7s80.2-178.7,178.7-178.7
+			S381.9,104.65,381.9,203.25z" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="footer__navlinks">
+                        <h3>Descubre más</h3>
+                        <nav>
+                            <ul>
+                                <li class="nav-item">
+                                    <a href="#inicio">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#novels-section">Novelas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#nosotros">Nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#community">Comunidad</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#contact">Contácto</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__socials w100">
+
+                        <a href="#">
+                            <img width="30px" height="30px"
+                                src="../../assets/icons/instagram-svgrepo-com.svg"
+                                alt="instagram" loading="lazy">
+                        </a>
+
+                        <a href="#">
+                            <img width="30px" height="30px"
+                                src="../../assets/icons/twitter-svgrepo-com.svg"
+                                alt>
+                        </a>
+                        <a href="#">
+                            <img width="30'px" height="30px"
+                                src="../../assets/icons/linkedin-svgrepo-com.svg"
+                                alt>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    <p class="footer__motto">"Donde cada historia encuentra
+                        un lector"</p>
+                    <p> &copy;DreamScape 2025. Todos los
+                        derechos reservados.</p>
+
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
