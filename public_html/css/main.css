@@ -112,10 +112,7 @@ body::before {
     right: 0;
     left: 0;
     z-index: 1000;
-    display: none;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
     transition: transform 0.3s ease-in-out;
     transform: translateY(-100%);
 }
@@ -153,7 +150,7 @@ body::before {
 }
 
 .toogle-nav-close {
-    position: relative;
+    position: absolute;
     width: 40px;
     height: 40px;
     cursor: pointer;
@@ -1030,10 +1027,6 @@ body::before {
         display: none;
     }
 
-    .topnav-menu {
-        display: block !important;
-    }
-
     /* ==== contact ==== */
     .contact__image img {
         width: 89%;
@@ -1051,16 +1044,25 @@ body::before {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--text-primary);
+     background: linear-gradient(135deg, var(--color7), var(--color6), var(--color5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .novels-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax( 300px, 1fr));
+    grid-template-rows: auto;
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+}
+
+.novels-grid a{
+    text-decoration: none;
+    color: var(--color-text-base);
 }
 
 .novel-card {
@@ -1086,13 +1088,11 @@ body::before {
 }
 
 .novel-title {
-    font-size: 1.5rem;
     margin-bottom: 1rem;
     color: var(--text-primary);
 }
 
 .novel-description {
-    color: var(--text-secondary);
     margin-bottom: 1rem;
     line-height: 1.6;
 }
@@ -1108,11 +1108,10 @@ body::before {
     color: white;
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: var(--xs-font-size)
 }
 
 
-/* Estilos para el overlay de detalles de novela */
 .novel-detail-overlay {
     position: fixed;
     top: 0;
@@ -1271,40 +1270,5 @@ body::before {
 
     .novel-detail-info h2 {
         font-size: 1.5rem;
-    }
-}
-
-/* Comportamiento de scroll suave global */
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 100px;
-    /* Ajuste para el header fijo */
-}
-
-
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-
-    .section-spacing {
-        transition: none;
-    }
-
-    .footer__navlinks a {
-        transition: none;
-    }
-}
-
-/* Ajuste responsivo para pantallas más pequeñas */
-@media (max-width: 1024px) {
-    .novels-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 640px) {
-    .novels-grid {
-        grid-template-columns: 1fr;
     }
 }
