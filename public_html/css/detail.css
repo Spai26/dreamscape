@@ -50,7 +50,6 @@
     width: 100%;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .detail-image img {
