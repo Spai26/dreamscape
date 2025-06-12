@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dreamscape</title>
+        <link rel="stylesheet" href="./css/refactor.css">
+       
+    </head>
+    <body>
+        <header class="header__main" id="header-main">
+            <div class="container">
+                <div class="head-flex">
+                    <div class="header-logo" id="header-logo">
+                        <a href="#inicio"
+                            aria-label="Inicio - Dreamscape">DREAMSCAPE</a>
+                    </div>
+                    <button
+                        class="btn toogle-nav-open"
+                        aria-controls="topnav-menu"
+                        aria-expanded="false"
+                        aria-label="Abrir menu de navegación">
+                        <img width="40px" height="40px"
+                            src="./assets/icons/align-justify-svgrepo-com.svg"
+                            alt="Imagen de menu"
+                            loading="lazy">
+                    </button>
+
+                    <nav>
+                        <div class="topnav-menu" id="topnav-menu"
+                            data-visible="false">
+
+                            <button
+                                class="toogle-nav-close"
+                                aria-controls="nav-links"
+                                aria-expanded="true"
+                                aria-label="Cerrar menú de navegación">
+                                <img width="40px" height="40px"
+                                    src="./assets/icons/close-svgrepo-com.svg"
+                                    alt="Imagen cerrar menu" loading="lazy">
+                            </button>
+
+                            <ul id="nav-links" data-visible="false"
+                                class="nav-links">
+                                <li class="nav-item">
+                                    <a href="#inicio"
+                                        class="nav-link">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#nosotros"
+                                        class="nav-link">Nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#novels-section"
+                                        class="nav-link">Novelas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#community"
+                                        class="nav-link">Comunidad</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#contact"
+                                        class="nav-link">Contácto</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+   <script src="./js/main.js" defer></script>
+    </body>
+</html>
