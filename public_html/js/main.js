@@ -2,37 +2,6 @@
 
 import { novels } from "./novels-data.js";
 
-
-console.log(novels)
-const header = document.getElementById("header-main");
-const parallaxSection = document.getElementById("inicio")
-
-
-const btnOpen = document.querySelector(".toogle-nav-open");
-const btnClose = document.querySelector(".toogle-nav-close");
-const navBar = document.querySelector(".topnav-menu")
-
-document.addEventListener("DOMContentLoaded", () => {
-    loadNovelsCard();
-    
-    window.addEventListener("scroll", () => {
-        const parallaxHeight = parallaxSection.offsetHeight;
-
-        const scrolling = window.pageXOffset || document.documentElement.scrollTop;
-
-        (scrolling > parallaxHeight * 0.9) ? header.classList.add("visible") : header.classList.remove("visible")
-
-    })
-
-    btnOpen.addEventListener("click", () => {
-        navBar.setAttribute("data-visible", "true");
-    })
-
-    btnClose.addEventListener("click", () => {
-        navBar.setAttribute("data-visible", "false")
-    });
-})
-
 const loadNovelsCard = () => {
     const containerNovel = document.querySelector(".novels-grid");
 
@@ -41,7 +10,7 @@ const loadNovelsCard = () => {
         return;
     }
 
-    containerNovel.innerHTML = ""; 
+    containerNovel.innerHTML = "";
 
     novels.forEach((novel) => {
         const link = document.createElement('a');
@@ -51,38 +20,111 @@ const loadNovelsCard = () => {
         const title = document.createElement('h3');
         const parrafo = document.createElement('p');
         const divGenres = document.createElement('div');
-        
+
         link.href = `./pages/detail/detail.html`
         link.className = "novel-link"
-        
+
         card.className = "novel-cad"
         card.setAttribute("data-novel", novel.id)
-        
+
         tagImg.src = novel.image;
         tagImg.alt = novel.slug || novel.title || "portada de novela";
         tagImg.className = "novel-image";
 
         divContent.className = "novel-title";
         divContent.textContent = novel.title;
-        
+
         parrafo.className = "novel-description";
         parrafo.textContent = novel.short_description;
 
         divContent.className = "novel-genres"
-        novel.genres.forEach((genre)=> {
+        novel.genres.forEach((genre) => {
             const spanGenre = document.createElement('span');
             spanGenre.className = "genre-tag";
             spanGenre.textContent = genre;
             divGenres.appendChild(spanGenre)
         })
-    
+
         divContent.append(title, parrafo, divGenres);
-    
+
         card.append(tagImg, divContent)
-    
+
         link.append(card);
         containerNovel.append(link);
     });
 };
 
-console.log(loadNovelsCard())
+
+
+
+const navLinks = document.querySelectorAll(".nav-link");
+function updateActiveLink(activeID) {
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${activeID}`) {
+            link.classList.add("active");
+        }
+    })
+}
+
+function setupActiveLink() {
+    const sections = document.querySelectorAll("section[id]");
+
+    const observerOptions = {
+        root: null,
+        rootMargin: "-20% 0px -80% 0px",
+        threshold: 0
+    }
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const targetID = entry.target.id;
+                updateActiveLink(targetID)
+            }
+        })
+    }, observerOptions);
+
+    sections.forEach(section => {
+        sectionObserver.observe(section);
+    });
+}
+
+const toogleOpen = document.querySelector(".toogle-nav-open");
+const toogleClose = document.querySelector(".toogle-nav-close");
+const navMenu = document.querySelector(".topnav-menu");
+
+function setupMobileMenu() {    
+    const openMenu =()=> {
+        navMenu.setAttribute("data-visible", "true");
+    }
+     const closeMenu =()=> {
+        navMenu.setAttribute("data-visible", "false")
+    }
+    
+    toogleOpen?.addEventListener("click", openMenu)
+    toogleClose?.addEventListener("click", closeMenu);
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            if (window.innerHeight <= 768) {
+                closeMenu();
+            }
+        })
+    })
+    
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && navMenu.getAttribute('data-visible') === "true") { 
+            closeMenu();
+        }
+     })
+}
+
+const initFunctions = () => {
+    setupActiveLink();
+    setupMobileMenu();
+}
+
+
+document.addEventListener("DOMContentLoaded", initFunctions)
+
