@@ -53,10 +53,7 @@ const loadNovelsCard = () => {
         containerNovel.append(link);
     });
 };
-
-
-
-
+const header = document.getElementById("header-main")
 const navLinks = document.querySelectorAll(".nav-link");
 function updateActiveLink(activeID) {
     navLinks.forEach(link => {
@@ -112,7 +109,7 @@ function setupMobileMenu() {
             }
         })
     })
-    
+
     document.addEventListener("keydown", (event) => {
         if (event.key === "Escape" && navMenu.getAttribute('data-visible') === "true") { 
             closeMenu();

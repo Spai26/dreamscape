@@ -93,6 +93,19 @@ body::before {
     z-index: 0;
 }
 
+/* === simulate landing sections======= */
+.h-100 {
+    min-height: 100vh;
+    position: relative;
+    z-index: 5;
+}
+
+.pt-8{
+    padding-top: 8vh;
+}
+.pb-8{
+    padding-bottom: 8vh;
+}
 /*=====cotainer base=====*/
 .container {
     width: 100%;
@@ -114,6 +127,14 @@ body::before {
     display: flex;
     align-items: center;
     transition: transform .3s ease, background-color .3s ease, backdrop-filter .3s ease;
+    background-color: var(--color1);
+}
+.header__main.hidden {
+    transform: translateY(-100%);
+}
+
+.header__main.visible{
+    transform: translateY(0);
 }
 
 .header__main.glass{
@@ -218,8 +239,8 @@ body::before {
     min-height: 100vh;
     display: grid;
     overflow-x: hidden;
-    overflow-y: hidden;
-    place-items: center;
+    place-items: center;  
+    isolation: isolate;  
 }
 
 .parallax__top {
@@ -234,8 +255,7 @@ body::before {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    z-index: -10;
-    opacity: 1;
+    z-index: 1;
     width: clamp(540px, 45vw, 1200px);
     transition: top 0.4s ease-in-out, opacity 1.2s ease-in-out;
 }
@@ -431,19 +451,12 @@ body::before {
     }
 }
 
-/* === simulate landing sections======= */
-.landing-h {
-    height: 100vh;
-}
 
-.gost-space {
-    padding: 3.5rem;
-}
+
 
 /*==========Comunidad=========*/
 .community {
-    width: 100%;
-    margin: 0 auto;
+    width: 100%;    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -504,10 +517,7 @@ body::before {
 
 
 /*==========contacto===========*/
-#contacto {
-    padding-block: clamp(2rem, 8vw, 6rem);
-    margin-bottom: clamp(1rem, 4vw, 3rem);
-}
+
 
 .contact__main {
     width: 100%;
@@ -598,13 +608,13 @@ body::before {
 }
 
 /* ================= */
-.flex-complement {
+.flex-c {
     display: flex;
     flex-direction: column;
     gap: clamp(0.09rem, 2vw, 1rem);
 }
 
-.w100 {
+.w-100 {
     width: 100%;
 }
 
@@ -714,30 +724,6 @@ body::before {
 }
 
 /*======= nosotros ==========*/
-#nosotros {
-    position: relative;
-    padding: 1rem;
-}
-
-.wave-separetor-b {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -10;
-    width: 100%;
-}
-
-.wave-separetor-t {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -10;
-    width: 100%;
-    transform: scale(1, -1);
-    margin-top: -1px;
-}
-
 .nosotros__flex {
     display: flex;
     flex-wrap: wrap;
@@ -925,7 +911,6 @@ body::before {
 }
 
 @media (max-width:750px) {
-
     .contact__main {
         flex-direction: column;
         align-items: center;
@@ -1007,6 +992,10 @@ body::before {
     .nosotros__card {
         padding: 1rem;
     }
+
+     .form-title{
+        padding-bottom: 2rem
+    }
 }
 
 @media (min-width: 1025px) {
@@ -1023,17 +1012,10 @@ body::before {
 }
 
 /* Estilos para la sección de novelas */
-.novels-section {
-    background-color: var(--bg-secondary);
-    position: relative;
-    
-}
-
-
 .section-title {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     background: linear-gradient(135deg, var(--color7), var(--color6), var(--color5));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1071,6 +1053,7 @@ body::before {
     width: 100%;
     height: 250px;
     object-fit: cover;
+    object-position: top;
 }
 
 .novel-content {
