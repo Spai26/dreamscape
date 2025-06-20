@@ -1,6 +1,12 @@
 'use strict'
 
 import { novels } from "./novels-data.js";
+const navLinks = document.querySelectorAll(".nav-link");
+const toogleOpen = document.querySelector(".toogle-nav-open");
+const toogleClose = document.querySelector(".toogle-nav-close");
+const navMenu = document.querySelector(".topnav-menu");
+
+// const header = document.getElementById("header-main");
 
 const loadNovelsCard = () => {
     const containerNovel = document.querySelector(".novels-grid");
@@ -53,8 +59,9 @@ const loadNovelsCard = () => {
         containerNovel.append(link);
     });
 };
-const header = document.getElementById("header-main")
-const navLinks = document.querySelectorAll(".nav-link");
+
+
+
 function updateActiveLink(activeID) {
     navLinks.forEach(link => {
         link.classList.remove("active");
@@ -86,10 +93,6 @@ function setupActiveLink() {
         sectionObserver.observe(section);
     });
 }
-
-const toogleOpen = document.querySelector(".toogle-nav-open");
-const toogleClose = document.querySelector(".toogle-nav-close");
-const navMenu = document.querySelector(".topnav-menu");
 
 function setupMobileMenu() {    
     const openMenu =()=> {
