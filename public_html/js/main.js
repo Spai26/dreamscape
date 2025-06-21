@@ -72,18 +72,28 @@ function toogleClearBtn() {
 
 
 function setupSearchNav() {
-
-    searchInput.addEventListener('input', toogleClearBtn);
+    searchInput.addEventListener('input', (e) => {
+        console.log(e.target.value)
+        toogleClearBtn()
+    });
     searchInput.addEventListener('keyup', toogleClearBtn);
-
 
     clearbtn.addEventListener('click', () => {
         searchInput.value = '';
         searchInput.focus();
         toogleClearBtn();
+
+        searchInput.dispatchEvent(new Event('input',{bubbles: true}))
     });
 
     toogleClearBtn();
+
+    searchInput.addEventListener('keydown', (e) => {
+        if (e.key === "Backspace" || e.key === "Delete"){
+            setTimeout(toogleClearBtn, 10);
+        }
+            
+    })
 }
 
 function updateActiveLink(activeID) {
