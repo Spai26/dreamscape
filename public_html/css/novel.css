@@ -1,3 +1,9 @@
 .novel-content{
     margin-top: 10vh;
 }
+
+.nav-filters{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}

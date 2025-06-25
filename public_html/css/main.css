@@ -729,6 +729,10 @@ body::before {
     .parallax__girl {
         top: 55%;
     }
+
+    .novels-section{
+        padding-top: 8rem;
+    }
 }
 
 /* ========== movile ========= */
@@ -773,7 +777,7 @@ body::before {
 
     .parallax__girl {
         top: 30%;
-    }
+    }   
 }
 
 /* ========== destok 2xl ========= */
@@ -792,6 +796,10 @@ body::before {
 }
 
 @media (max-width:750px) {
+
+     .novels-section{
+        padding-top: 8rem;
+    }
     .contact__main {
         flex-direction: column;
         align-items: center;
