@@ -1,14 +1,18 @@
-'use strict'
-
 import { novels } from "./novels-data.js";
+
 const navLinks = document.querySelectorAll(".nav-link");
 const toogleOpen = document.querySelector(".toogle-nav-open");
 const toogleClose = document.querySelector(".toogle-nav-close");
-const navMenu = document.querySelector(".topnav-menu");
+const navMenu = document.getElementById("topnav-menu");
 const searchInput = document.getElementById("search-input");
+const searchFrom = document.getElementById("search-form");
 const clearbtn = document.getElementById("btnclear");
 
-// const header = document.getElementById("header-main");
+let currentFilter = "all";
+let currentSearchItem = "";
+let filterNovels = [...novels]
+let genres = [];
+
 
 const loadNovelsCard = () => {
     const containerNovel = document.querySelector(".novels-grid");
@@ -62,7 +66,14 @@ const loadNovelsCard = () => {
     });
 };
 
-function toogleClearBtn() {
+
+const loadFilterGenre = () =>{
+    return novels.forEach(novel => novel.genres.forEach(genre => genres.push(genre)));
+}
+
+function handlerToSearch() {
+    const search = searchInput.value.trim();
+
     if (searchInput.value.trim().length > 0) {
         clearbtn.classList.add("show");
     } else {
@@ -70,27 +81,28 @@ function toogleClearBtn() {
     }
 }
 
-
-function setupSearchNav() {
+function setupSearchNav() {   
     searchInput.addEventListener('input', (e) => {
-        console.log(e.target.value)
-        toogleClearBtn()
+        handlerToSearch()
     });
-    searchInput.addEventListener('keyup', toogleClearBtn);
+
+    searchInput.addEventListener('keyup', handlerToSearch);
 
     clearbtn.addEventListener('click', () => {
         searchInput.value = '';
         searchInput.focus();
-        toogleClearBtn();
+        handlerToSearch();
 
         searchInput.dispatchEvent(new Event('input',{bubbles: true}))
     });
 
-    toogleClearBtn();
+    handlerToSearch();
 
     searchInput.addEventListener('keydown', (e) => {
-        if (e.key === "Backspace" || e.key === "Delete"){
-            setTimeout(toogleClearBtn, 10);
+        if (e.key === "Backspace" || e.key === "Delete") {
+            console.log("enter")
+            
+            setTimeout(handlerToSearch, 10);
         }
             
     })
@@ -158,6 +170,7 @@ const initFunctions = () => {
     setupActiveLink();
     setupMobileMenu();
     setupSearchNav();
+    loadNovelsCard();
 }
 
 

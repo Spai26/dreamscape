@@ -24,6 +24,9 @@
   --color7: #ff6b9d;
   --color8: #ff4757;  
   --color9: #a0aec0;
+  --pink: #F5477C;
+  --cyan: #1AB5FF;
+  --indigo: #3F51E0;
   --color-text-base: #ffffff;
   --color-button-acent: linear-gradient(135deg, var(--color8), var(--color6));
   --font-title-primary: "Montserrat";  

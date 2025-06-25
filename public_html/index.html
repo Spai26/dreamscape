@@ -5,93 +5,96 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dreamscape</title>
         <link rel="stylesheet" href="./css/main.css">
-
     </head>
     <body>
-        <header class="header__main" id="header-main">
+        <header class="header" id="header-main">
             <div class="container">
-                <div class="head-flex">
-                    <div id="header-logo">
-                        <a href="#inicio" class="header-logo"
-                            aria-label="Inicio - Dreamscape">
-                            <div class="logo">
-                                <div class="shape shape-pink"></div>
-                                <div class="shape shape-cyan"></div>
-                                <div class="bar"></div>
-                            </div>
-                            DREAMSCAPE
-                        </a>
+                <div class="main-wrapper">
+                    <div class="header-left">
+                        <button class="toogle-nav-open"
+                            aria-controls="topnav-menu"
+                            aria-expanded="false"
+                            aria-label="menu">
+                            <span class="comet-icon">
+                                <svg viewBox="0 0 1024 1024" width="400px"
+                                    height="400px" fill="currentColor"
+                                    aria-hidden="false" focusable="false">
+                                    <path
+                                        d="M906.666667 789.333333a32 32 0 0 1 0 64H117.333333a32 32 0 0 1 0-64h789.333334z m0-309.333333a32 32 0 0 1 0 64H117.333333a32 32 0 0 1 0-64h789.333334z m0-309.333333a32 32 0 0 1 0 64H117.333333a32 32 0 0 1 0-64h789.333334z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="header-logo">
+                            <a href="#inicio" class="logo"
+                                aria-label="Inicio - Dreamscape">
+                                <div class="logo-icon">
+                                    <div class="shape shape-pink"></div>
+                                    <div class="shape shape-cyan"></div>
+                                    <div class="bar"></div>
+                                </div>
+                                <span>DREAMSCAPE</span>
+                            </a>
+                        </div>
                     </div>
-                    <search class="header-search" id="header-search">
-                        <form action="./novels.html" method="get"
-                            class="search-form" role="search">
-                            <input type="text"
-                                placeholder="Buscar novelas por titulo, autor o género."
-                                name="search"
-                                autocomplete="off"
-                                class="input-search"
-                                id="search-input">
-                            <div class="search-buttons">
-                                <!-- button clear -->
-                                <button type="button" class="search-clear"
-                                    aria-label="limpiar busqueda" id="btnclear">
-                                    <svg width="40px" height="40px"
-                                        viewBox="0 0 24 24" fill="currentColor"
-                                        stroke="none">
-                                        <path
-                                            d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z"
-                                            fill="#fff" />
-                                    </svg>
-                                </button>
-                                <!-- button search form -->
-                                <button class="search-open"
-                                    aria-label="iniciar busqueda">
-                                    <svg fill="currentColor" stroke="none"
-                                        height="40px"
-                                        width="40px" version="1.1" id="Capa_1"
-                                        viewBox="0 0 488.4 488.4"
-                                        xml:space="preserve">
-                                        <g>
+                    <div class="header-center">
+                        <search class="search-container">
+                            <form action="./p/novels/index.html" class="search-form" id="searchForm" role="search">
+                                <input type="text"
+                                    placeholder="Buscar novelas por titulo, @autor o #género."
+                                    name="search"
+                                    autocomplete="off"
+                                    class="input-base input-search"
+                                    id="search-input"
+                                    aria-label="Buscar novelas">
+                                <div class="search-buttons">
+                                    <!-- button clear -->
+                                    <button type="button"
+                                        class="search-reset"
+                                        aria-label="limpiar busqueda"
+                                        id="btnclear">
+                                        <svg width="40px" height="40px"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            stroke="none">
+                                            <path
+                                                d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z"
+                                                fill="#fff" />
+                                        </svg>
+                                    </button>
+                                    <!-- button search form -->
+                                    <button class="search-btn"
+                                        aria-label="Buscar">
+                                        <svg fill="currentColor"
+                                            stroke="none"
+                                            height="40px"
+                                            width="40px" version="1.1"
+                                            id="Capa_1"
+                                            viewBox="0 0 488.4 488.4"
+                                            xml:space="preserve">
                                             <g>
-                                                <path
-                                                    d="M0,203.25c0,112.1,91.2,203.2,203.2,203.2c51.6,0,98.8-19.4,134.7-51.2l129.5,129.5c2.4,2.4,5.5,3.6,8.7,3.6
+                                                <g>
+                                                    <path
+                                                        d="M0,203.25c0,112.1,91.2,203.2,203.2,203.2c51.6,0,98.8-19.4,134.7-51.2l129.5,129.5c2.4,2.4,5.5,3.6,8.7,3.6
 			s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-129.6-129.5c31.8-35.9,51.2-83,51.2-134.7c0-112.1-91.2-203.2-203.2-203.2
 			S0,91.15,0,203.25z M381.9,203.25c0,98.5-80.2,178.7-178.7,178.7s-178.7-80.2-178.7-178.7s80.2-178.7,178.7-178.7
 			S381.9,104.65,381.9,203.25z" />
+                                                </g>
                                             </g>
-                                        </g>
-                                    </svg>
-                                </button>
-                                
-                            </div>
-                        </form>
-                    </search>
-
-                    <!-- button navbar -->
-                    <button
-                        class="toogle-nav-open"
-                        aria-controls="topnav-menu"
-                        aria-expanded="false"
-                        aria-label="Abrir menu de navegación">
-                        <svg width="40px" height="40px"
-                            viewBox="0 0 800 800"
-                            fill="none">
-                            <path stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="66.667"
-                                d="M666.667 600H133.333h533.334ZM666.667 466.667H133.333h533.334ZM666.667 333.333H133.333h533.334ZM666.667 200H133.333h533.334Z" />
-                        </svg>
-                    </button>
-                    <nav>
-                        <div class="topnav-menu" id="topnav-menu"
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </search>
+                    </div>
+                    <div class="header-rigth">
+                        <nav class="topnav-menu" id="topnav-menu"
                             data-visible="false">
                             <button
                                 class="toogle-nav-close"
                                 aria-controls="nav-links"
                                 aria-expanded="true"
                                 aria-label="Cerrar menú de navegación">
-
                                 <svg width="40px" height="40px"
                                     viewBox="0 0 24 24" fill="currentColor">
                                     <path
@@ -99,9 +102,7 @@
                                         fill="#fff" />
                                 </svg>
                             </button>
-
-                            <ul id="nav-links" data-visible="false"
-                                class="nav-links">
+                            <ul id="nav-links" class="nav-links">
                                 <li class="nav-item">
                                     <a href="#inicio"
                                         class="nav-link">Inicio</a>
@@ -123,8 +124,17 @@
                                         class="nav-link">Contácto</a>
                                 </li>
                             </ul>
-                        </div>
-                    </nav>
+                        </nav>
+                        <span class="comet-icon">
+                            <svg viewBox="0 0 1024 1024" width="400px"
+                                height="400px" fill="currentColor"
+                                aria-hidden="false" focusable="false">
+                                <path
+                                    d="M506.666667 74.666667c130.773333 0 236.8 106.282667 236.8 237.333333a237.226667 237.226667 0 0 1-99.114667 193.109333c39.893333 12.352 76.586667 30.357333 108.010667 53.546667 100.010667 73.706667 152.789333 169.450667 156.416 284.928 0.96 30.464-25.109333 49.386667-75.605334 64.725333l-11.2 3.242667c-3.84 1.066667-7.829333 2.133333-11.946666 3.157333l-12.672 3.072-13.397334 2.986667-14.122666 2.986667c-74.965333 15.317333-168.533333 24.597333-256.789334 24.533333-88.490667-0.106667-181.802667-9.536-256.768-24.96l-14.336-3.050667a970.666667 970.666667 0 0 1-6.890666-1.536l-13.226667-3.114666C153.386667 898.901333 117.333333 879.36 117.333333 844.586667c0-154.709333 106.624-285.866667 255.658667-336.682667a237.205333 237.205333 0 0 1-103.125333-195.904c0-131.050667 106.026667-237.333333 236.8-237.333333z m3.712 474.666666c-177.621333 0-321.408 126.122667-328.746667 282.666667l-0.085333 2.026667 2.581333 1.365333a117.333333 117.333333 0 0 0 5.418667 2.517333l3.114666 1.322667c17.706667 7.296 44.245333 14.762667 76.522667 21.397333 70.72 14.570667 159.722667 23.552 243.904 23.637334 83.989333 0.064 173.248-8.768 243.925333-23.210667 32.426667-6.613333 59.029333-14.08 76.672-21.397333 3.242667-1.344 6.058667-2.645333 8.448-3.84l2.133334-1.130667-0.405334-5.76c-7.018667-85.034667-47.232-155.541333-122.112-213.226667l-7.36-5.546666c-52.906667-38.997333-126.08-60.821333-204.010666-60.821334zM506.666667 138.666667c-95.402667 0-172.8 77.589333-172.8 173.333333 0 95.744 77.397333 173.333333 172.8 173.333333 95.402667 0 172.8-77.589333 172.8-173.333333 0-95.744-77.397333-173.333333-172.8-173.333333z">
+                                </path>
+                            </svg>
+                        </span>
+                    </div>
                 </div>
             </div>
         </header>
@@ -196,7 +206,7 @@
             </div>
         </section>
 
-        <section id="novels-section" class="h-100 pt-8 novels-section">
+        <section id="novels-section" class="h-100 novels-section">
             <div class="container">
                 <h1 class="section-title">Nuestras Novelas</h1>
                 <div class="novels-grid">
@@ -378,6 +388,6 @@
             </div>
         </footer>
 
-        <script type="module" src="./js/main.js" defer></script>
+        <script type="module" src="./js/main.js"></script>
     </body>
 </html>

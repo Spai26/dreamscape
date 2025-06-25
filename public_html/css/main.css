@@ -1,6 +1,7 @@
 @import url("./variables.css");
-@import url("./logo.css");
 @import url("./header.css");
+@import url("./novel.css");
+
 
 *,
 *::before,
@@ -108,13 +109,16 @@ body::before {
 .pb-8{
     padding-bottom: 8vh;
 }
+.ml-4{
+    margin-left: 4px;
+}
 /*=====cotainer base=====*/
 .container {
     width: 100%;
     max-width: 1440px;
     min-width: 240px;
     margin-inline: auto;
-    padding-inline: clamp(0.5rem, 6vw, 8rem);
+    padding-inline: clamp(0.5rem, 2vw, 5rem);
 }
 
 /*======== parallax==============*/
@@ -707,10 +711,7 @@ body::before {
     body {
         font-size: var(--xs-font-size);
     }
-
-    .input-search::placeholder{
-        opacity: 0.2;
-    }    
+  
     .form-subtitle {
         margin-bottom: 1rem;
     }
@@ -728,10 +729,6 @@ body::before {
     .parallax__girl {
         top: 55%;
     }
-
-    .input-search {
-    width: 100%
-}
 }
 
 /* ========== movile ========= */
