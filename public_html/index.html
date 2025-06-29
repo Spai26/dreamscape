@@ -106,11 +106,11 @@
                             </button>
                             <ul id="nav-links" class="nav-links">
                                 <li class="nav-item">
-                                    <a href="#inicio"
+                                    <a href="#home"
                                         class="nav-link">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#nosotros"
+                                    <a href="#about"
                                         class="nav-link">Nosotros</a>
                                 </li>
                                 <li class="nav-item">
@@ -141,191 +141,201 @@
             </div>
         </header>
 
-        <section class="parallax pt-8" id="inicio">
+        <main>
+            <section class="parallax pt-8" id="home">
 
-            <img class="parallax__top" src="./assets/landscape/top.svg" alt>
+                <img class="parallax__top" src="./assets/landscape/top.svg" alt>
 
-            <img class="parallax__center" src="./assets/landscape/left.svg"
-                alt>
+                <img class="parallax__center" src="./assets/landscape/left.svg"
+                    alt>
 
-            <img class="parallax__girl" src="./assets/landscape/gril.svg"
-                alt>
+                <img class="parallax__girl" src="./assets/landscape/gril.svg"
+                    alt>
 
-            <div class="hero-content container">
-                <h1 class="hero-title">Donde las historias cobran vida</h1>
-                <p class="hero-subtitle">Descubre, lee y comparte las mejores
-                    novelas de autores emergentes y establecidos de todo el
-                    mundo</p>
-                <div class="hero-actions">
-                    <a href="#novels-section" class="btn btn-primary">Explorar
-                        Novelas</a>
-                    <a href="#" class="btn btn-secondary">Únete como Autor</a>
+                <div class="hero-content container">
+                    <h1 class="hero-title">Donde las historias cobran vida</h1>
+                    <p class="hero-subtitle">Descubre, lee y comparte las
+                        mejores
+                        novelas de autores emergentes y establecidos de todo el
+                        mundo</p>
+                    <div class="hero-actions">
+                        <a href="#novels" class="btn btn-primary">Explorar
+                            Novelas</a>
+                        <a href="#" class="btn btn-secondary">Únete como
+                            Autor</a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Indicador de scroll -->
-            <div class="scroll-indicator">
-                <span>Desliza para descubrir</span>
-                <div class="scroll-arrow"></div>
-            </div>
-        </section>
+                <!-- Indicador de scroll -->
+                <div class="scroll-indicator">
+                    <span>Desliza para descubrir</span>
+                    <div class="scroll-arrow"></div>
+                </div>
+            </section>
 
-        <section id="nosotros" class="h-100 pt-8">
-            <div class="container">
-                <h1 class="form-title">Acerca de Nosotros</h1>
-                <div class="nosotros__flex">
-                    <div class="nosotros__tarjetas">
-                        <!-- Tarjeta 1 -->
-                        <div class="nosotros__card">
-                            <h3 class="nosotros__subtitulo">Misión</h3>
-                            <p>
-                                Brindar acceso a los autores y traductores una
-                                plataforma accesible y moderna donde puedan
-                                publicar y difundir sus obras a una audiencia
-                                global.
+            <section id="about" class="h-100 pt-8">
+                <div class="container">
+                    <h1 class="form-title">Acerca de Nosotros</h1>
+                    <div class="nosotros__flex">
+                        <div class="nosotros__tarjetas">
+                            <!-- Tarjeta 1 -->
+                            <div class="nosotros__card">
+                                <h3 class="nosotros__subtitulo">Misión</h3>
+                                <p>
+                                    Brindar acceso a los autores y traductores
+                                    una
+                                    plataforma accesible y moderna donde puedan
+                                    publicar y difundir sus obras a una
+                                    audiencia
+                                    global.
+                                </p>
+                            </div>
+
+                            <!-- Tarjeta 2 -->
+                            <div class="nosotros__card">
+                                <h3 class="nosotros__subtitulo">Visión</h3>
+                                <p>
+                                    Convertirnos en una comunidad literaria
+                                    digital
+                                    accesible y envolvente, donde cada historia
+                                    tenga un espacio y cada lector una
+                                    experiencia
+                                    envolvente.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Imagen a la derecha -->
+                        <div class="nosotros__imagen-container">
+                            <img
+                                src="assets/images/joven-anime-removebg-preview.png"
+                                alt="Imagen de anime" class="nosotros__imagen">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="novels" class="h-100 novels-section">
+                <div class="container">
+                    <h1 class="title-primary novel-title">Nuestras Novelas</h1>
+                    <div class="novels-grid">
+                        <!-- Las tarjetas de novelas se generarán dinámicamente aquí -->
+                    </div>
+
+                    <div class="banner-novel">
+                        <div class="banner-novel__content">
+                            <p class="banner-text">
+                                ¿Te quedaste con ganas de más
+                                historias?
                             </p>
-                        </div>
-
-                        <!-- Tarjeta 2 -->
-                        <div class="nosotros__card">
-                            <h3 class="nosotros__subtitulo">Visión</h3>
-                            <p>
-                                Convertirnos en una comunidad literaria digital
-                                accesible y envolvente, donde cada historia
-                                tenga un espacio y cada lector una experiencia
-                                envolvente.
+                            <p class="banner-stat">
+                                Explora más de <strong>120 novelas</strong> en
+                                nuestro catálogo
                             </p>
+                            <a href="./p/novels/index.html"
+                                class="btn-primary btn-baner">Ver más...</a>
                         </div>
                     </div>
-
-                    <!-- Imagen a la derecha -->
-                    <div class="nosotros__imagen-container">
-                        <img
-                            src="assets/images/joven-anime-removebg-preview.png"
-                            alt="Imagen de anime" class="nosotros__imagen">
-                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="novels" class="h-100 novels-section">
-            <div class="container">
-                <h1 class="title-primary novel-title">Nuestras Novelas</h1>
-                <div class="novels-grid">
-                    <!-- Las tarjetas de novelas se generarán dinámicamente aquí -->
-                </div>
-
-                <div class="banner-novel">
-                    <div class="banner-novel__content">
-                        <p class="banner-text">
-                            ¿Te quedaste con ganas de más
-                            historias?
-                        </p>
-                        <p class="banner-stat">
-                            Explora más de <strong>120 novelas</strong> en nuestro catálogo
-                        </p>
-                        <a href="./p/novels/index.html"
-                            class="btn-primary btn-baner">Ver más...</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="community" class="h-100 pt-8 pb-8 community">
-            <div class="container">
-                <div class="contenedor-coment">
-                    <div>
-                        <h1 class="form-title">Comunidad</h1>
-                        <p>Crea, comparte y comenta. Aquí, cada idea cuenta
-                            y
-                            cada
-                            historia puede inspirar a alguien más. </p>
-                    </div>
-                    <div class="comentarios">
-                        <div class="img-user">
-                            <img src="assets/comunidad/astronaut.png"
-                                alt="comentario de comunidad"
-                                loading="lazy">
+            <section id="community" class="h-100 pt-8 pb-8 community">
+                <div class="container">
+                    <div class="contenedor-coment">
+                        <div>
+                            <h1 class="form-title">Comunidad</h1>
+                            <p>Crea, comparte y comenta. Aquí, cada idea cuenta
+                                y
+                                cada
+                                historia puede inspirar a alguien más. </p>
                         </div>
-                        <h3>Traductor</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur
-                            adipiscing
-                            elit,
-                            sed do eiusmod tempor incididunt ut labore et
-                            dolore
-                            magna
-                            aliqua.</p>
-                    </div>
-
-                    <div class="comentarios">
-                        <div class="img-user">
-                            <img src="assets/comunidad/astronaut.png"
-                                alt="comentario de comunidad"
-                                loading="lazy">
-                        </div>
-                        <h3>Autor</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur
-                            adipiscing
-                            elit,
-                            sed do eiusmod tempor incididunt ut labore et
-                            dolore
-                            magna
-                            aliqua</p>
-                    </div>
-
-                    <div class="comentarios">
-                        <div class="img-user">
-                            <img src="assets/comunidad/astronaut.png"
-                                alt="comentario de comunidad"
-                                loading="lazy">
-                        </div>
-                        <h3>Traductor</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur
-                            adipiscing
-                            elit,
-                            sed do eiusmod tempor incididunt ut labore et
-                            dolore
-                            magna
-                            aliqua</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="h-100 pt-8">
-            <div class="container">
-
-                <div class="contact__main">
-                    <div class="contact__image">
-                        <img src="./assets/images/hana.webp" alt>
-                    </div>
-
-                    <form action method class="form-container">
-                        <div class="from-header">
-                            <h1 class="form-title">Contáctanos</h1>
-                            <p class="form-subtitle">
-                                Si deseas publicar o
-                                eres tradutor de alguna novela puedes
-                                contactarnos por aquí
-                            </p>
+                        <div class="comentarios">
+                            <div class="img-user">
+                                <img src="assets/comunidad/astronaut.png"
+                                    alt="comentario de comunidad"
+                                    loading="lazy">
+                            </div>
+                            <h3>Traductor</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                                adipiscing
+                                elit,
+                                sed do eiusmod tempor incididunt ut labore et
+                                dolore
+                                magna
+                                aliqua.</p>
                         </div>
 
-                        <input type="email"
-                            placeholder="Ingresa tu email"
-                            class="input-item">
-                        <input type="text"
-                            placeholder="Ingresa tu nombre"
-                            class="input-item">
-                        <textarea name="description"
-                            placeholder="Escribe tu mensaje"
-                            class="input-item"></textarea>
+                        <div class="comentarios">
+                            <div class="img-user">
+                                <img src="assets/comunidad/astronaut.png"
+                                    alt="comentario de comunidad"
+                                    loading="lazy">
+                            </div>
+                            <h3>Autor</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                                adipiscing
+                                elit,
+                                sed do eiusmod tempor incididunt ut labore et
+                                dolore
+                                magna
+                                aliqua</p>
+                        </div>
 
-                        <button type="submit"
-                            class="btn btn-primary btn btn-flex">Enviar</button>
-                    </form>
+                        <div class="comentarios">
+                            <div class="img-user">
+                                <img src="assets/comunidad/astronaut.png"
+                                    alt="comentario de comunidad"
+                                    loading="lazy">
+                            </div>
+                            <h3>Traductor</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                                adipiscing
+                                elit,
+                                sed do eiusmod tempor incididunt ut labore et
+                                dolore
+                                magna
+                                aliqua</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <section id="contact" class="h-100 pt-8">
+                <div class="container">
+
+                    <div class="contact__main">
+                        <div class="contact__image">
+                            <img src="./assets/images/hana.webp" alt>
+                        </div>
+
+                        <form action method class="form-container">
+                            <div class="from-header">
+                                <h1 class="form-title">Contáctanos</h1>
+                                <p class="form-subtitle">
+                                    Si deseas publicar o
+                                    eres tradutor de alguna novela puedes
+                                    contactarnos por aquí
+                                </p>
+                            </div>
+
+                            <input type="email"
+                                placeholder="Ingresa tu email"
+                                class="input-item">
+                            <input type="text"
+                                placeholder="Ingresa tu nombre"
+                                class="input-item">
+                            <textarea name="description"
+                                placeholder="Escribe tu mensaje"
+                                class="input-item"></textarea>
+
+                            <button type="submit"
+                                class="btn btn-primary btn btn-flex">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </main>
 
         <footer class="footer">
             <div class="container flex-c">
@@ -363,18 +373,18 @@
                     <div class="footer__navlinks">
                         <div class="footer__socials w-100">
 
-                            <a href="#">
+                            <a>
                                 <img width="30px" height="30px"
                                     src="./assets/icons/instagram-svgrepo-com.svg"
                                     alt="instagram" loading="lazy">
                             </a>
 
-                            <a href="#">
+                            <a>
                                 <img width="30px" height="30px"
                                     src="./assets/icons/twitter-svgrepo-com.svg"
                                     alt>
                             </a>
-                            <a href="#">
+                            <a>
                                 <img width="30'px" height="30px"
                                     src="./assets/icons/linkedin-svgrepo-com.svg"
                                     alt>
@@ -385,13 +395,13 @@
                         <nav>
                             <ul>
                                 <li class="nav-item">
-                                    <a href="#inicio">Inicio</a>
+                                    <a href="#home">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#novels-section">Novelas</a>
+                                    <a href="#novels">Novelas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#nosotros">Nosotros</a>
+                                    <a href="#about">Nosotros</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#community">Comunidad</a>

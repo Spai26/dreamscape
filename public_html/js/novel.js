@@ -1,25 +1,11 @@
 import { novels } from "./novels-data.js";
 
-const novelsGrid = document.querySelector('.novels-grid');
-
-export const loadAllNovels = () => {
-    if (!novelsGrid) {
-        alert("no se encontro el contenedor novels-grid");
-        return;
-    }
-
-    novelsGrid.innerHTML = "";
-
-    novels.forEach((novel) => {
-        const card = createCard(novel);
-        novelsGrid.appendChild(card);
-    })
-}
 
 
 export const loadMinNovels = () => {
+    const novelsGrid = document.querySelector('.novels-grid');
     if (!novelsGrid) {
-        alert("no se encontro el contenedor novels-grid");
+        console.log("no se encontro el contenedor novels-grid");
         return;
     }
 
@@ -31,7 +17,7 @@ export const loadMinNovels = () => {
     })
 }
 
-function createCard(novel) {
+export function createCard(novel) {
     const article = document.createElement("article");
     article.className = "novel-card";
     article.setAttribute("data-novel", novel.id);
@@ -47,8 +33,10 @@ function createCard(novel) {
     const link_read = createLink("Leer Ahora", linkNovel(novel.slug), "read-button btn-primary");
 
     const img_novel = document.createElement("img");
+    const base = pathNovel();
+    
     img_novel.className = "novel-image";
-    img_novel.src = novel.image;
+    img_novel.src =`${base}${novel.image}`;
     img_novel.alt = novel.slug || novel.title || "portada de novela";
     img_novel.loading = "lazy";
 
@@ -81,9 +69,7 @@ function createCard(novel) {
     const rating = createDiv("rating-stars")
     const valueRating = createSpan(novel.rating);
 
-    for (let i = 0; i < Math.floor(novel.rating); i++) {
-        rating.appendChild(svgStart());
-    }
+    loadRating(rating, novel.rating)
 
     info_link.appendChild(h4)
     info.appendChild(info_link);
@@ -106,18 +92,30 @@ function createCard(novel) {
     return article
 }
 
-function linkNovel(slug) {
+export function pathNovel() {
+    const subPage = window.location.pathname.includes("/p/novels");
+    const imagebase = subPage ? "../../assets/novels/" : "./assets/novels/"
+    return imagebase;
+}
+
+export function loadRating(element, rating) {
+    for (let i = 0; i < Math.floor(rating); i++) {
+        element.appendChild(svgStart());
+    }
+}
+
+export function linkNovel(slug) {
     return `./p/novels/detail.html?slug=${slug}`
 }
 
-function createSpan(text, classname) {
+export function createSpan(text, classname) {
     const span = document.createElement("span");
     span.textContent = text;
     span.className = classname || "none";
     return span;
 }
 
-function createLink(text, href, classname) {
+export function createLink(text, href, classname) {
     const link = document.createElement("a");
     link.textContent = text;
     link.href = href;
@@ -126,13 +124,13 @@ function createLink(text, href, classname) {
     return link;
 }
 
-function createDiv(className) {
+export function createDiv(className) {
     const div = document.createElement("div");
     div.className = className;
     return div;
 }
 
-function svgStart() {
+export function svgStart() {
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttribute("class", "star");
     svg.setAttribute("viewBox", "0 0 24 24");
@@ -148,7 +146,7 @@ function svgStart() {
     return svg
 }
 
-function svgHeart() {
+export function svgHeart() {
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttribute("class", "icon heart-icon");
     svg.setAttribute("width", "24");
@@ -164,7 +162,7 @@ function svgHeart() {
     return svg;
 }
 
-function svgView() {
+export function svgView() {
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttribute("class", "icon view-icon");
     svg.setAttribute("width", "24");

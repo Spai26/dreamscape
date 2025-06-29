@@ -361,9 +361,9 @@
     }
 
     .topnav-menu[data-visible="true"]~.toogle-nav-open {
-    visibility: hidden;
-    pointer-events: none;
-}
+        visibility: hidden;
+        pointer-events: none;
+    }
 }
 
 @media (max-width: 480px) {

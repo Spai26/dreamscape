@@ -1,4 +1,4 @@
-import { loadMinNovels, loadAllNovels } from "./novel.js";
+import { loadMinNovels } from "./novel.js";
 import { novels } from "./novels-data.js";
 
 const navLinks = document.querySelectorAll(".nav-link");
@@ -9,8 +9,6 @@ const searchInput = document.getElementById("search-input");
 const searchFrom = document.getElementById("search-form");
 const clearbtn = document.getElementById("btnclear");
 
-let genres = [];
-
 const openMenu = () => {
     navMenu.setAttribute("data-visible", "true");
 }
@@ -18,14 +16,14 @@ const closeMenu = () => {
     navMenu.setAttribute("data-visible", "false")
 }
 
-const loadFilterGenre = () => {
-    return novels.forEach((novel) => novel.genres.forEach((genre) => {
-        if (!genres.includes(genre)) {
-            genres.push(genre)
-        }
-    }));
+export function getUrlParams() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("slug");
 }
 
+export function goBack() {
+    return window.history.back();
+}
 
 function setupSearchNav() {
     toogleOpen.addEventListener("click", openMenu)
@@ -34,7 +32,6 @@ function setupSearchNav() {
     searchInput.addEventListener('input', (e) => {
         handlerToSearch()
     });
-
     searchInput.addEventListener('keyup', handlerToSearch);
 
     clearbtn.addEventListener('click', () => {
@@ -45,17 +42,12 @@ function setupSearchNav() {
         searchInput.dispatchEvent(new Event('input', { bubbles: true }))
     });
 
-    handlerToSearch();
-
     searchInput.addEventListener('keydown', (e) => {
         if (e.key === "Backspace" || e.key === "Delete") {
-            console.log("enter")
-
             setTimeout(handlerToSearch, 10);
         }
     })
 }
-
 
 function handlerToSearch() {
     const search = searchInput.value.trim();
@@ -66,8 +58,6 @@ function handlerToSearch() {
         clearbtn.classList.remove("show")
     }
 }
-
-
 
 function setupActiveLink() {
     const sections = document.querySelectorAll("section[id]");
@@ -95,7 +85,7 @@ function setupActiveLink() {
 function setupMobileMenu() {
     navLinks.forEach(link => {
         link.addEventListener("click", () => {
-            if (window.innerHeight <= 768) {
+            if (window.innerHeight <= 1025) {
                 closeMenu();
             }
         })
@@ -116,6 +106,7 @@ const initFunctions = () => {
     setupMobileMenu();
     setupSearchNav();
     loadMinNovels();
+    getUrlParams();
 }
 
 

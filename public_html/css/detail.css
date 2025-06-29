@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    background-color: red;
+    margin-top: 10vh;
 }
 
 .detail-card {
@@ -32,6 +32,10 @@
     justify-content: center;
     color: var(--color9);
     transition: all 0.3s ease;
+}
+
+.close-button svg{
+    fill: white;
 }
 
 .close-button:hover {
