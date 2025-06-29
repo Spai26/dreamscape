@@ -1,3 +1,4 @@
+import { loadMinNovels, loadAllNovels } from "./novel.js";
 import { novels } from "./novels-data.js";
 
 const navLinks = document.querySelectorAll(".nav-link");
@@ -8,80 +9,28 @@ const searchInput = document.getElementById("search-input");
 const searchFrom = document.getElementById("search-form");
 const clearbtn = document.getElementById("btnclear");
 
-let currentFilter = "all";
-let currentSearchItem = "";
-let filterNovels = [...novels]
 let genres = [];
 
-
-const loadNovelsCard = () => {
-    const containerNovel = document.querySelector(".novels-grid");
-
-    if (!containerNovel) {
-        console.log("no se encontro el contenedor novels-grid");
-        return;
-    }
-
-    containerNovel.innerHTML = "";
-
-    novels.forEach((novel) => {
-        const link = document.createElement('a');
-        const card = document.createElement('article')
-        const tagImg = document.createElement('img');
-        const divContent = document.createElement('div');
-        const title = document.createElement('h3');
-        const parrafo = document.createElement('p');
-        const divGenres = document.createElement('div');
-
-        link.href = `./pages/detail/detail.html`
-        link.className = "novel-link"
-
-        card.className = "novel-cad"
-        card.setAttribute("data-novel", novel.id)
-
-        tagImg.src = novel.image;
-        tagImg.alt = novel.slug || novel.title || "portada de novela";
-        tagImg.className = "novel-image";
-
-        divContent.className = "novel-title";
-        divContent.textContent = novel.title;
-
-        parrafo.className = "novel-description";
-        parrafo.textContent = novel.short_description;
-
-        divContent.className = "novel-genres"
-        novel.genres.forEach((genre) => {
-            const spanGenre = document.createElement('span');
-            spanGenre.className = "genre-tag";
-            spanGenre.textContent = genre;
-            divGenres.appendChild(spanGenre)
-        })
-
-        divContent.append(title, parrafo, divGenres);
-
-        card.append(tagImg, divContent)
-
-        link.append(card);
-        containerNovel.append(link);
-    });
-};
-
-
-const loadFilterGenre = () =>{
-    return novels.forEach(novel => novel.genres.forEach(genre => genres.push(genre)));
+const openMenu = () => {
+    navMenu.setAttribute("data-visible", "true");
+}
+const closeMenu = () => {
+    navMenu.setAttribute("data-visible", "false")
 }
 
-function handlerToSearch() {
-    const search = searchInput.value.trim();
-
-    if (searchInput.value.trim().length > 0) {
-        clearbtn.classList.add("show");
-    } else {
-        clearbtn.classList.remove("show")
-    }
+const loadFilterGenre = () => {
+    return novels.forEach((novel) => novel.genres.forEach((genre) => {
+        if (!genres.includes(genre)) {
+            genres.push(genre)
+        }
+    }));
 }
 
-function setupSearchNav() {   
+
+function setupSearchNav() {
+    toogleOpen.addEventListener("click", openMenu)
+    toogleClose.addEventListener("click", closeMenu);
+
     searchInput.addEventListener('input', (e) => {
         handlerToSearch()
     });
@@ -93,7 +42,7 @@ function setupSearchNav() {
         searchInput.focus();
         handlerToSearch();
 
-        searchInput.dispatchEvent(new Event('input',{bubbles: true}))
+        searchInput.dispatchEvent(new Event('input', { bubbles: true }))
     });
 
     handlerToSearch();
@@ -101,21 +50,24 @@ function setupSearchNav() {
     searchInput.addEventListener('keydown', (e) => {
         if (e.key === "Backspace" || e.key === "Delete") {
             console.log("enter")
-            
+
             setTimeout(handlerToSearch, 10);
         }
-            
     })
 }
 
-function updateActiveLink(activeID) {
-    navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === `#${activeID}`) {
-            link.classList.add("active");
-        }
-    })
+
+function handlerToSearch() {
+    const search = searchInput.value.trim();
+
+    if (searchInput.value.trim().length > 0) {
+        clearbtn.classList.add("show");
+    } else {
+        clearbtn.classList.remove("show")
+    }
 }
+
+
 
 function setupActiveLink() {
     const sections = document.querySelectorAll("section[id]");
@@ -141,16 +93,6 @@ function setupActiveLink() {
 }
 
 function setupMobileMenu() {
-    const openMenu = () => {
-        navMenu.setAttribute("data-visible", "true");
-    }
-    const closeMenu = () => {
-        navMenu.setAttribute("data-visible", "false")
-    }
-
-    toogleOpen?.addEventListener("click", openMenu)
-    toogleClose?.addEventListener("click", closeMenu);
-
     navLinks.forEach(link => {
         link.addEventListener("click", () => {
             if (window.innerHeight <= 768) {
@@ -158,10 +100,13 @@ function setupMobileMenu() {
             }
         })
     })
+}
 
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && navMenu.getAttribute('data-visible') === "true") {
-            closeMenu();
+function updateActiveLink(activeID) {
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${activeID}`) {
+            link.classList.add("active");
         }
     })
 }
@@ -170,9 +115,14 @@ const initFunctions = () => {
     setupActiveLink();
     setupMobileMenu();
     setupSearchNav();
-    loadNovelsCard();
+    loadMinNovels();
 }
 
 
 document.addEventListener("DOMContentLoaded", initFunctions)
 
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && navMenu.getAttribute('data-visible') === "true") {
+        closeMenu();
+    }
+})

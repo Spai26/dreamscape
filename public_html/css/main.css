@@ -42,10 +42,8 @@ a:visited {
     border: none;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3,
+h4, h5, h6 {
     font-family: var(--font-title-primary), sans-serif;
     font-weight: 800;
     line-height: 1.2;
@@ -72,7 +70,7 @@ button {
 }
 
 body {
-    font-family: var(--font-text-secondary), sans-serif;
+    font-family: var(--font-text-secundary);
     width: 100%;
     min-height: 100vh;
     font-size: var(--xl-font-size);
@@ -103,15 +101,32 @@ body::before {
     z-index: 5;
 }
 
-.pt-8{
+.pt-8 {
     padding-top: 8vh;
 }
-.pb-8{
+
+.pb-8 {
     padding-bottom: 8vh;
 }
-.ml-4{
+
+.ml-4 {
     margin-left: 4px;
 }
+
+.title-primary {
+    background: linear-gradient(135deg, var(--color7), var(--color6), var(--color5));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title-secondary {
+    background: linear-gradient(135deg, var(--cyan));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 /*=====cotainer base=====*/
 .container {
     width: 100%;
@@ -127,8 +142,8 @@ body::before {
     min-height: 100vh;
     display: grid;
     overflow-x: hidden;
-    place-items: center;  
-    isolation: isolate;  
+    place-items: center;
+    isolation: isolate;
 }
 
 .parallax__top {
@@ -341,7 +356,7 @@ body::before {
 
 /*==========Comunidad=========*/
 .community {
-    width: 100%;    
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -711,7 +726,7 @@ body::before {
     body {
         font-size: var(--xs-font-size);
     }
-  
+
     .form-subtitle {
         margin-bottom: 1rem;
     }
@@ -730,7 +745,7 @@ body::before {
         top: 55%;
     }
 
-    .novels-section{
+    .novels-section {
         padding-top: 8rem;
     }
 }
@@ -777,7 +792,7 @@ body::before {
 
     .parallax__girl {
         top: 30%;
-    }   
+    }
 }
 
 /* ========== destok 2xl ========= */
@@ -797,9 +812,10 @@ body::before {
 
 @media (max-width:750px) {
 
-     .novels-section{
+    .novels-section {
         padding-top: 8rem;
     }
+
     .contact__main {
         flex-direction: column;
         align-items: center;
@@ -854,86 +870,13 @@ body::before {
         padding: 1rem;
     }
 
-     .form-title{
+    .form-title {
         padding-bottom: 2rem
     }
 }
 
 @media (min-width: 1025px) {
-     .contact__image img {
+    .contact__image img {
         width: 89%;
     }
-}
-
-/* Estilos para la sección de novelas */
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2.5rem;
-    background: linear-gradient(135deg, var(--color7), var(--color6), var(--color5));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.novels-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: auto;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-.novels-grid a {
-    text-decoration: none;
-    color: var(--color-text-base);
-}
-
-.novel-card {
-    background: var(--bg-primary);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.novel-card:hover {
-    transform: translateY(-5px);
-}
-
-.novel-image {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    object-position: top;
-}
-
-.novel-content {
-    padding: 1.5rem;
-}
-
-.novel-title {
-    margin-bottom: 1rem;
-    color: var(--text-primary);
-}
-
-.novel-description {
-    margin-bottom: 1rem;
-    line-height: 1.6;
-}
-
-.novel-genres {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-}
-
-.genre-tag {
-    background: var(--accent-color);
-    color: white;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: var(--xs-font-size)
 }

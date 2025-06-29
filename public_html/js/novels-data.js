@@ -7,8 +7,11 @@ export const novels =[
         publishDate: "15 de Marzo, 2024",
         image: "./assets/novels/novel1.png",
         genres: ["Fantasía", "Romance"],
+        rating: 4.5,
+        reviews: 120,
         description: "En un mundo donde la magia se desvanece lentamente, Isabella descubre un jardín secreto donde las mariposas brillan con luz propia. Estas criaturas mágicas guardan los últimos vestigios de una antigua magia que podría salvar su mundo, pero también atraen a aquellos que buscan controlar su poder.\n\nA medida que Isabella profundiza en los misterios del jardín, se encuentra con un enigmático guardián que protege estos secretos desde hace siglos. Juntos deberán enfrentar una antigua profecía que podría significar la salvación o la destrucción de todo lo que conocen.\n\nUna historia que entrelaza el amor, la pérdida y el poder de la esperanza en un mundo al borde del cambio.",
-        short_description : "Una historia mundo donde la magia y la realidad se entrelazan."
+        short_description: "Una historia mundo donde la magia y la realidad se entrelazan.",
+        lang: "es",
     },
     {
         id: 2,
@@ -17,9 +20,12 @@ export const novels =[
         author: "Carlos Ruiz",
         publishDate: "3 de Abril, 2024",
         image: "./assets/novels/novel2.png",
-        genres: ["Suspense", "Misterio"],
+        genres: ["Suspense", "Misterio"],    
+        rating: 2.4,
+        reviews: 120,
         description: "Cuando la detective Laura Martínez encuentra un antiguo diario en una casa abandonada, no imagina que este descubrimiento la llevará a investigar un misterioso caso de hace 30 años. Las páginas del diario revelan una serie de acontecimientos inexplicables que parecen estar conectados con una serie de desapariciones actuales.\n\nMientras más profundiza en la investigación, más cuenta se da de que el pasado y el presente están unidos por una red de secretos que alguien quiere mantener ocultos a toda costa. La verdad podría estar más cerca de lo que piensa, pero descubrirla podría costarle todo.\n\nUn thriller psicológico que te mantendrá en vilo hasta la última página, donde nada es lo que parece y todos guardan secretos.",
-        short_description : "Un thriller psicológico que te mantendrá al borde del asiento mientras descubres secretos enterrados hace décadas."
+        short_description : "Un thriller psicológico que te mantendrá al borde del asiento mientras descubres secretos enterrados hace décadas.",
+        lang: "es",
     },
     {
         id: 1,
@@ -29,8 +35,11 @@ export const novels =[
         publishDate: "28 de Febrero, 2024",
         image: "./assets/novels/novel3.png",
         genres: ["Ciencia Ficción", "Aventura"],
+        rating: 4.1,
+        reviews: 120,
         description: "En un futuro donde los viajes entre dimensiones son posibles, la Dra. Elena Vega descubre una perturbadora verdad: cada decisión que tomamos crea una nueva realidad, y algunas de estas realidades están comenzando a colapsar.\n\nComo parte de un equipo de elite de \"Viajeros Dimensionales\", Elena debe navegar entre diferentes versiones de la Tierra para encontrar la fuente de estas anomalías. Sin embargo, cada salto dimensional la acerca más a una versión de sí misma que podría ser la clave para salvar el multiverso... o destruirlo.\n\nUna aventura épica que explora las consecuencias de nuestras decisiones y el precio de jugar con el tejido mismo de la realidad.",
-        short_description : "Una aventura épica a través de dimensiones alternativas donde cada decisión crea un nuevo universo."
+        short_description : "Una aventura épica a través de dimensiones alternativas donde cada decisión crea un nuevo universo.",
+        lang: "es",
     },
     {
         id: 3,
@@ -40,8 +49,11 @@ export const novels =[
         publishDate: "10 de Mayo, 2024",
         image: "./assets/novels/novel4.png",
         genres: ["Fantasía Urbana", "Misterio"],
+        rating: 2.3,
+        reviews: 120,
         description: "En la ciudad de Nocturnia, donde el sol se pone durante seis meses seguidos, la detective Luna Blackwood tiene un don único: puede ver los ecos de los crímenes pasados. Cuando una serie de misteriosas desapariciones comienza a sacudir la ciudad, Luna debe usar sus habilidades para resolver el caso antes de que llegue el amanecer.\n\nPero en una ciudad donde las sombras cobran vida y los secretos se esconden en la oscuridad perpetua, Luna descubre que hay fuerzas antiguas trabajando entre bastidores. Con la ayuda de un misterioso hechicero y contra el reloj, deberá desentrañar una conspiración que amenaza no solo a Nocturnia, sino al delicado equilibrio entre el día y la noche.\n\nUna historia que mezcla el noir clásico con elementos sobrenaturales, donde la línea entre la realidad y lo sobrenatural se desvanece con cada página.",
-        short_description : "En una ciudad donde la noche dura seis meses, una detective sobrenatural debe resolver crímenes antes del amanecer."
+        short_description : "En una ciudad donde la noche dura seis meses, una detective sobrenatural debe resolver crímenes antes del amanecer.",
+        lang: "es",
     },
     {
         id: 4,
@@ -51,8 +63,11 @@ export const novels =[
         publishDate: "22 de Junio, 2024",
         image: "./assets/novels/novel5.png",
         genres: ["Histórico", "Aventura"],
+        rating: 1.5,
+        reviews: 120,
         description: "La Dra. Sara Ramírez, una brillante bibliotecaria especializada en textos antiguos, encuentra un manuscrito misterioso oculto en las profundidades de la Biblioteca Nacional. El documento, escrito en una lengua nunca antes vista, parece contener información sobre una civilización perdida que podría reescribir la historia de la humanidad.\n\nPerseguida por una antigua sociedad secreta y ayudada por un enigmático profesor de lingüística, Sara emprende un viaje que la llevará desde las catedrales medievales de Europa hasta las ruinas perdidas en el corazón de Sudamérica. Cada página del manuscrito revela pistas sobre un poder ancestral que podría cambiar el mundo... o destruirlo.\n\nUna aventura que entrelaza historia, arqueología y misterio, donde cada descubrimiento plantea más preguntas que respuestas.",
-        short_description : "Una bibliotecaria descubre un antiguo manuscrito que contiene secretos que podrían cambiar la historia de la humanidad."
+        short_description : "Una bibliotecaria descubre un antiguo manuscrito que contiene secretos que podrían cambiar la historia de la humanidad.",
+        lang: "es",
     },
     {
         id: 5,
@@ -62,8 +77,11 @@ export const novels =[
         publishDate: "8 de Julio, 2024",
         image: "./assets/novels/novel6.png",
         genres: ["Cyberpunk", "Thriller"],
+        rating: 4.5,
+        reviews: 120,
         description: "En el año 2089, la tecnología permite almacenar, modificar y comerciar con recuerdos humanos. Maya Zhang, una brillante programadora de neuroimplantes, descubre que alguien está robando y modificando sus memorias más preciadas. Lo que comienza como una invasión personal se convierte en una conspiración que involucra a las mayores corporaciones de tecnología neural del mundo.\n\nEn una carrera contra el tiempo, Maya debe navegar por un laberinto de realidad aumentada, memorias sintéticas y consciencias digitalizadas para descubrir quién está detrás del robo de sus recuerdos. Pero en un mundo donde la mente humana es solo otro sistema que hackear, ¿en quién puede confiar cuando ni siquiera puede confiar en sus propios recuerdos?\n\nUn thriller cyberpunk que explora los límites entre la memoria, la identidad y la tecnología, y el precio que estamos dispuestos a pagar por preservar quienes somos.",
-        short_description : "En un futuro donde la mente humana puede ser hackeada, una programadora debe proteger sus recuerdos más preciados."
+        short_description : "En un futuro donde la mente humana puede ser hackeada, una programadora debe proteger sus recuerdos más preciados.",
+        lang: "es",
     },
     {
         id: 6,
@@ -73,8 +91,11 @@ export const novels =[
         publishDate: "8 de Julio, 2024",
         image: "./assets/novels/novel6.png",
         genres: ["Cyberpunk", "Thriller"],
+        rating: 2.9,
+        reviews: 120,
         description: "En el año 2089, la tecnología permite almacenar, modificar y comerciar con recuerdos humanos. Maya Zhang, una brillante programadora de neuroimplantes, descubre que alguien está robando y modificando sus memorias más preciadas. Lo que comienza como una invasión personal se convierte en una conspiración que involucra a las mayores corporaciones de tecnología neural del mundo.\n\nEn una carrera contra el tiempo, Maya debe navegar por un laberinto de realidad aumentada, memorias sintéticas y consciencias digitalizadas para descubrir quién está detrás del robo de sus recuerdos. Pero en un mundo donde la mente humana es solo otro sistema que hackear, ¿en quién puede confiar cuando ni siquiera puede confiar en sus propios recuerdos?\n\nUn thriller cyberpunk que explora los límites entre la memoria, la identidad y la tecnología, y el precio que estamos dispuestos a pagar por preservar quienes somos.",
-        short_description : "En un futuro donde la mente humana puede ser hackeada, una programadora debe proteger sus recuerdos más preciados."
+        short_description : "En un futuro donde la mente humana puede ser hackeada, una programadora debe proteger sus recuerdos más preciados.",
+        lang: "es",
     },
     {
         id: 7,
@@ -84,8 +105,11 @@ export const novels =[
         publishDate: "8 de Julio, 2024",
         image: "./assets/novels/novel6.png",
         genres: ["Cyberpunk", "Thriller"],
+        rating: 3.6,
+        reviews: 120,
         description: "En el año 2089, la tecnología permite almacenar, modificar y comerciar con recuerdos humanos. Maya Zhang, una brillante programadora de neuroimplantes, descubre que alguien está robando y modificando sus memorias más preciadas. Lo que comienza como una invasión personal se convierte en una conspiración que involucra a las mayores corporaciones de tecnología neural del mundo.\n\nEn una carrera contra el tiempo, Maya debe navegar por un laberinto de realidad aumentada, memorias sintéticas y consciencias digitalizadas para descubrir quién está detrás del robo de sus recuerdos. Pero en un mundo donde la mente humana es solo otro sistema que hackear, ¿en quién puede confiar cuando ni siquiera puede confiar en sus propios recuerdos?\n\nUn thriller cyberpunk que explora los límites entre la memoria, la identidad y la tecnología, y el precio que estamos dispuestos a pagar por preservar quienes somos.",
-        short_description : "En un futuro donde la mente humana puede ser hackeada, una programadora debe proteger sus recuerdos más preciados."
+        short_description : "En un futuro donde la mente humana puede ser hackeada, una programadora debe proteger sus recuerdos más preciados.",
+        lang: "es",
     },
     {
         id: 8,
@@ -95,8 +119,11 @@ export const novels =[
         publishDate: "8 de Julio, 2024",
         image: "./assets/novels/novel6.png",
         genres: ["Cyberpunk", "Thriller"],
+        rating: 1.5,
+        reviews: 120,
         description: "En el año 2089, la tecnología permite almacenar, modificar y comerciar con recuerdos humanos. Maya Zhang, una brillante programadora de neuroimplantes, descubre que alguien está robando y modificando sus memorias más preciadas. Lo que comienza como una invasión personal se convierte en una conspiración que involucra a las mayores corporaciones de tecnología neural del mundo.\n\nEn una carrera contra el tiempo, Maya debe navegar por un laberinto de realidad aumentada, memorias sintéticas y consciencias digitalizadas para descubrir quién está detrás del robo de sus recuerdos. Pero en un mundo donde la mente humana es solo otro sistema que hackear, ¿en quién puede confiar cuando ni siquiera puede confiar en sus propios recuerdos?\n\nUn thriller cyberpunk que explora los límites entre la memoria, la identidad y la tecnología, y el precio que estamos dispuestos a pagar por preservar quienes somos.",
-        short_description : "En un futuro donde la mente humana puede ser hackeada, una programadora debe proteger sus recuerdos más preciados."
+        short_description : "En un futuro donde la mente humana puede ser hackeada, una programadora debe proteger sus recuerdos más preciados.",
+        lang: "es",
     },{
         id: 9,
         title: "Código Neural",
@@ -105,8 +132,11 @@ export const novels =[
         publishDate: "8 de Julio, 2024",
         image: "./assets/novels/novel6.png",
         genres: ["Cyberpunk", "Thriller"],
+         rating: 2.6,
+        reviews: 120,
         description: "En el año 2089, la tecnología permite almacenar, modificar y comerciar con recuerdos humanos. Maya Zhang, una brillante programadora de neuroimplantes, descubre que alguien está robando y modificando sus memorias más preciadas. Lo que comienza como una invasión personal se convierte en una conspiración que involucra a las mayores corporaciones de tecnología neural del mundo.\n\nEn una carrera contra el tiempo, Maya debe navegar por un laberinto de realidad aumentada, memorias sintéticas y consciencias digitalizadas para descubrir quién está detrás del robo de sus recuerdos. Pero en un mundo donde la mente humana es solo otro sistema que hackear, ¿en quién puede confiar cuando ni siquiera puede confiar en sus propios recuerdos?\n\nUn thriller cyberpunk que explora los límites entre la memoria, la identidad y la tecnología, y el precio que estamos dispuestos a pagar por preservar quienes somos.",
-        short_description : "En un futuro donde la mente humana puede ser hackeada, una programadora debe proteger sus recuerdos más preciados."
+        short_description : "En un futuro donde la mente humana puede ser hackeada, una programadora debe proteger sus recuerdos más preciados.",
+        lang: "es",
     },
     {
         id: 10,
@@ -116,7 +146,10 @@ export const novels =[
         publishDate: "8 de Julio, 2024",
         image: "./assets/novels/novel6.png",
         genres: ["Cyberpunk", "Thriller"],
+        rating: 3.8,
+        reviews: 120,
         description: "En el año 2089, la tecnología permite almacenar, modificar y comerciar con recuerdos humanos. Maya Zhang, una brillante programadora de neuroimplantes, descubre que alguien está robando y modificando sus memorias más preciadas. Lo que comienza como una invasión personal se convierte en una conspiración que involucra a las mayores corporaciones de tecnología neural del mundo.\n\nEn una carrera contra el tiempo, Maya debe navegar por un laberinto de realidad aumentada, memorias sintéticas y consciencias digitalizadas para descubrir quién está detrás del robo de sus recuerdos. Pero en un mundo donde la mente humana es solo otro sistema que hackear, ¿en quién puede confiar cuando ni siquiera puede confiar en sus propios recuerdos?\n\nUn thriller cyberpunk que explora los límites entre la memoria, la identidad y la tecnología, y el precio que estamos dispuestos a pagar por preservar quienes somos.",
-        short_description : "En un futuro donde la mente humana puede ser hackeada, una programadora debe proteger sus recuerdos más preciados."
+        short_description : "En un futuro donde la mente humana puede ser hackeada, una programadora debe proteger sus recuerdos más preciados.",
+        lang: "es",
     }
 ]
