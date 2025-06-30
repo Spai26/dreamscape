@@ -27,7 +27,8 @@
   --pink: #F5477C;
   --cyan: #1AB5FF;
   --indigo: #3F51E0;
-  --black :#191A1C;
+  --black :#191A1CF2;
+  --black-acent: #2e2e2e;
   --color-text-base: #ffffff;
   --color-button-acent: linear-gradient(135deg, var(--color8), var(--color6));
   --font-title-primary: "Montserrat";  
@@ -41,11 +42,11 @@
   --h1-clamp: clamp(2rem, 2vw, 3rem);
   --font-weight-regular: 400;
   --font-weight-bold: 700;
-  --xs-border: 2px  
-  --sm-border: 4px  
-  --lg-border: 6px;
-  --xl-border: 8px;
-  --2xl-border: 10px;
+  --xs-border: 4px;
+  --sm-border: 6px; 
+  --lg-border: 8px;
+  --xl-border: 10px;
+  --2xl-border: 12px;
   --bg-grad-primary:linear-gradient(135deg, var(--color1) 0%, var(--color2) 25%, var(--color3) 50%, var(--color4) 75%, var(--color5) 100%);
   --input-bg: rgba(255, 255, 255, 0.12);
   --input-border: rgba(255, 107, 157, 0.5);

@@ -157,8 +157,4 @@
     .detail-actions {
         flex-direction: column;
     }
-
-    .btn {
-        width: 100%;
-    }
 } 

@@ -1,5 +1,4 @@
 import { loadMinNovels } from "./novel.js";
-import { novels } from "./novels-data.js";
 
 const navLinks = document.querySelectorAll(".nav-link");
 const toogleOpen = document.querySelector(".toogle-nav-open");
@@ -7,13 +6,19 @@ const toogleClose = document.querySelector(".toogle-nav-close");
 const navMenu = document.getElementById("topnav-menu");
 const searchInput = document.getElementById("search-input");
 const searchFrom = document.getElementById("search-form");
-const clearbtn = document.getElementById("btnclear");
+const btncloseSearchFrom = document.getElementById("btnclear");
 
-const openMenu = () => {
-    navMenu.setAttribute("data-visible", "true");
+const btnOpenModalAuthor = document.getElementById("AuthorRegister")
+const btnCloseModalAuthor = document.querySelector(".toogle-close");
+const modal_author = document.querySelector(".modal-author");
+const form_register_author = document.getElementById("author-register");
+
+const openLabel = (label) => {
+    label.setAttribute("data-visible", "true")
 }
-const closeMenu = () => {
-    navMenu.setAttribute("data-visible", "false")
+
+const closeLabel = (label) => {
+    label.setAttribute("data-visible", "false")
 }
 
 export function getUrlParams() {
@@ -25,16 +30,20 @@ export function goBack() {
     return window.history.back();
 }
 
-function setupSearchNav() {
-    toogleOpen.addEventListener("click", openMenu)
-    toogleClose.addEventListener("click", closeMenu);
+function setupEventListeners() {
+    toogleOpen.addEventListener("click", () => {
+        openLabel(navMenu)
+    })
+    toogleClose.addEventListener("click", () => {
+        closeLabel(navMenu)
+    });
 
     searchInput.addEventListener('input', (e) => {
         handlerToSearch()
     });
     searchInput.addEventListener('keyup', handlerToSearch);
 
-    clearbtn.addEventListener('click', () => {
+    btncloseSearchFrom.addEventListener('click', () => {
         searchInput.value = '';
         searchInput.focus();
         handlerToSearch();
@@ -47,6 +56,13 @@ function setupSearchNav() {
             setTimeout(handlerToSearch, 10);
         }
     })
+    
+    if (!getUrlParams()) {
+        btnOpenModalAuthor.addEventListener("click", () => openLabel(modal_author) );
+        
+        btnCloseModalAuthor.addEventListener("click", () => closeLabel(modal_author));
+    }
+
 }
 
 function handlerToSearch() {
@@ -86,7 +102,7 @@ function setupMobileMenu() {
     navLinks.forEach(link => {
         link.addEventListener("click", () => {
             if (window.innerHeight <= 1025) {
-                closeMenu();
+                closeLabel(navMenu);
             }
         })
     })
@@ -104,16 +120,21 @@ function updateActiveLink(activeID) {
 const initFunctions = () => {
     setupActiveLink();
     setupMobileMenu();
-    setupSearchNav();
+    setupEventListeners();
     loadMinNovels();
     getUrlParams();
 }
-
 
 document.addEventListener("DOMContentLoaded", initFunctions)
 
 document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && navMenu.getAttribute('data-visible') === "true") {
-        closeMenu();
+        closeLabel(navMenu);
+    }
+});
+
+document.addEventListener("click", (event) => {
+    if (event.target === modal_author && modal_author.getAttribute('data-visible') === "true") {
+        closeLabel(modal_author);
     }
 })

@@ -2,7 +2,9 @@
 @import url("./header.css");
 @import url("./novel.css");
 @import url("./detail.css");
-
+@import url("./form.css");
+@import url("./buttons.css");
+@import url("./modal.css");
 
 *,
 *::before,
@@ -67,6 +69,16 @@ button {
     padding: 0;
     margin: 0;
     cursor: pointer;
+    outline: none;
+}
+
+input,
+textarea{
+    outline: none;
+}
+
+input:focus,
+textarea:focus{
     outline: none;
 }
 
@@ -209,68 +221,6 @@ body::before {
     flex-wrap: wrap;
 }
 
-.btn {
-    color: var(--color-text-base);
-    height: 40px;
-    padding: 1rem 2rem;
-    border-radius: var(--2xl-border);
-    font-weight: 600;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-}
-
-.btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    transition: left 0.5s;
-}
-
-.btn:hover::before {
-    left: 100%;
-}
-
-.btn-flex {
-    display: flex;
-    justify-content: center;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, var(--color7), var(--color6));
-}
-
-.btn-primary::before {
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-}
-
-.btn-primary:hover {
-    background: linear-gradient(135deg, var(--color8), var(--color6));
-    box-shadow: 0 12px 35px rgba(255, 107, 157, 0.4);
-}
-
-.btn-secondary {
-    background: var(--input-bg);
-    color: var(--color-text-base);
-    border: var(--xs-border) solid var(--input-border);
-    backdrop-filter: blur(20px);
-
-}
-
-.btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: var(--color7);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.2);
-}
 
 
 /* ======== Animaciones ======== */
@@ -437,72 +387,6 @@ body::before {
     max-width: 100%;
     width: 100%;
     height: auto;
-}
-
-/*====== formulario ==========*/
-.form-container {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgb(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    width: 100%;
-    flex: 0 0 50%;
-    display: flex;
-    flex-direction: column;
-    gap: clamp(0.75rem, 2vw, 1.5rem);
-    padding: clamp(1.5rem, 4vw, 3rem);
-    border-radius: var(--2xl-border);
-    box-sizing: border-box;
-    height: fit-content;
-}
-
-.form-header {
-    margin-bottom: clamp(1rem, 3vw, 2rem);
-}
-
-.form-title {
-    background: linear-gradient(135deg, var(--color7), var(--color6), var(--color5));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.form-subtitle {
-    opacity: 0.8;
-    color: var(--color-text-base);
-}
-
-.form-container textarea {
-    min-height: clamp(80px, 20vw, 120px);
-    resize: vertical;
-    font-family: inherit;
-    line-height: 1.5;
-    padding: 0.5rem;
-}
-
-.input-item {
-    padding: 0 1rem;
-    min-height: clamp(40px, 10vw, 48px);
-}
-
-.input-item {
-    width: 100%;
-    color: var(--color-text-base);
-    border-radius: var(--2xl-border);
-    background: var(--n-input-bg);
-    backdrop-filter: blur(10px);
-    outline: none;
-    border: 1px solid var(--n-input-border);
-}
-
-.input-item::placeholder {
-    color: var(--color9);
-    opacity: 0.8;
-}
-
-.input-item:focus {
-    background: var(--input-bg);
-    border-color: var(--input-border);
-    box-shadow: 0 8px 25px var(--box-shadow);
 }
 
 /* ================= */
@@ -749,6 +633,11 @@ body::before {
     .novels-section {
         padding-top: 8rem;
     }
+
+    .form,
+    .form-input{
+        border-radius: var(--xs-border);
+    }
 }
 
 /* ========== movile ========= */
@@ -763,6 +652,11 @@ body::before {
 
     .parallax__girl {
         top: 50%;
+    }
+
+    .form,
+    .form-input{
+        border-radius: var(--sm-border);
     }
 }
 
@@ -779,6 +673,11 @@ body::before {
     .parallax__girl {
         top: 40%;
     }
+
+    .form,
+    .form-input{
+        border-radius: var(--lg-border);
+    }
 }
 
 /* ========== destok ========= */
@@ -794,6 +693,11 @@ body::before {
     .parallax__girl {
         top: 30%;
     }
+
+    .form,
+    .form-input{
+        border-radius: var(--xl-border);
+    }
 }
 
 /* ========== destok 2xl ========= */
@@ -808,6 +712,11 @@ body::before {
 
     .parallax__girl {
         top: 20%;
+    }
+
+    .form,
+    .form-input{
+        border-radius: var(--2xl-border);
     }
 }
 
@@ -862,22 +771,5 @@ body::before {
 
     .nosotros__card p {
         font-size: 1rem;
-    }
-
-}
-
-@media (max-width: 1024px) {
-    .nosotros__card {
-        padding: 1rem;
-    }
-
-    .form-title {
-        padding-bottom: 2rem
-    }
-}
-
-@media (min-width: 1025px) {
-    .contact__image img {
-        width: 89%;
     }
 }

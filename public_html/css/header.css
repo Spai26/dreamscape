@@ -181,14 +181,14 @@
     visibility: visible;
 }
 
-.comet-icon {
+.icon {
     display: inline-block;
     line-height: 0;
     text-align: center;
     text-transform: none;
 }
 
-.comet-icon svg {
+.icon svg {
     fill: var(--color-text-base);
     width: 25px;
     height: 25px;

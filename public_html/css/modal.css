@@ -1,0 +1,50 @@
+
+.modal-author{
+    width: 100%;
+    height: 100vh; 
+    left: 0;
+    right: 0;  
+    background: linear-gradient(to top, var(--black), var(--black-acent));
+    position: fixed;    
+    z-index: 1001;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    transition: all .3 ease;
+}
+
+.modal-author[data-visible="true"]{
+    display: flex;
+}
+
+.modal-content{
+    margin: auto;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+}
+
+.modal-content > h3{
+    margin-top: 1.5rem;
+}
+.toogle-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.toogle-close:hover{
+    transform: rotate(90deg);
+}
+
+.white {
+    color: var(--color-text-base);
+}
+
+.white:hover{
+    color: rgba(255, 255, 255, 0.2)
+}

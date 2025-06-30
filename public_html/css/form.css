@@ -1,0 +1,121 @@
+
+/*====== formulario ==========*/
+.form {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgb(255, 255, 255, 0.1);
+    width: 100%;
+    height: fit-content;
+    padding: 1rem;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;    
+    gap: clamp(0.5rem, 2vw, 0.75rem);
+}
+
+.group-button{
+    display: flex;
+    justify-content: center;
+}
+
+.form-label{
+    font-weight: 500;
+    font-size: clamp(0.9rem, 2vw, 1rem)
+}
+
+.form-button{
+    width: 50%;
+    margin-top: clamp(0.5rem, 2vw, 1rem);
+}
+
+.form-input{
+    padding: 0 1rem;
+    min-height: clamp(30px, 10vw, 40px);
+    width: 100%;
+    color: var(--color-text-base);
+    background: var(--n-input-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--n-input-border);
+}
+
+.form-input:focus {
+    background: var(--input-bg);
+    border-color: var(--input-border);
+    box-shadow: 0 4px 15px var(--box-shadow);
+}
+
+.form-input::placeholder{
+    color: var(--color9);
+    opacity: 0.8;
+}
+
+.form-textarea{
+    min-height: clamp(80px, 20vw, 120px);
+    resize: vertical;
+    font-family: var(--font-text-secundary);
+    line-height: 1.5;
+    padding: 0.5rem 1rem;
+}
+
+.form-input-error {
+    border-color: var(--color8) !important;
+    box-shadow: 0 0 0 3px var(--box-shadow) !important;
+}
+
+.form-error-message {
+    color: var(--pink);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+
+.form-container {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgb(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.75rem, 2vw, 1.5rem);
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border-radius: var(--2xl-border);
+    box-sizing: border-box;
+    height: fit-content;
+}
+
+.form-title {
+    background: linear-gradient(135deg, var(--color7), var(--color6), var(--color5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.form-subtitle {
+    opacity: 0.8;
+    color: var(--color-text-base);
+}
+
+.form-container textarea {
+    min-height: clamp(80px, 20vw, 120px);
+}
+
+
+@media (max-width:750px){
+    .form-title{
+        padding-bottom: 1.5rem;
+    }
+
+    .form-label{
+        font-size: 1rem;
+    }
+}
+
+@media (min-width:751px){
+    .form-title{
+        padding-bottom: 2rem;
+    }
+
+}
