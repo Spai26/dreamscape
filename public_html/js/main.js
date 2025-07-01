@@ -22,7 +22,7 @@ const formAuthorData = {
     country: document.getElementById("authorCountry"),
     lang: document.getElementById("authorLanguages")
 };
-console.log(formAuthorData.bio.value);
+
 
 const openLabel = (target) => {
     target.setAttribute("data-visible", "true")
