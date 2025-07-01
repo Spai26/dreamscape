@@ -3,7 +3,7 @@ import { novels } from "./novels-data.js";
 
 
 let genres = [];
-
+let authors = [];
 const loadFilterGenre = () => {
     return novels.forEach((novel) => novel.genres.forEach((genre) => {
         if (!genres.includes(genre)) {

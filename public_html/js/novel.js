@@ -1,7 +1,4 @@
-import { getUrlParams } from "./main.js";
 import { novels } from "./novels-data.js";
-
-
 
 export const loadMinNovels = () => {
     const novelsGrid = document.querySelector('.novels-grid');

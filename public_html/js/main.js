@@ -1,5 +1,5 @@
 import { loadMinNovels } from "./novel.js";
-import { validation } from "./validator.js";
+import { getFieldsID, validation } from "./validator.js";
 
 const navLinks = document.querySelectorAll(".nav-link");
 const toogleOpen = document.querySelector(".toogle-nav-open");
@@ -13,6 +13,16 @@ const btnOpenModalAuthor = document.getElementById("AuthorRegister")
 const btnCloseModalAuthor = document.querySelector(".toogle-close");
 const modal_author = document.querySelector(".modal-author");
 const form_register_author = document.getElementById("author-register");
+
+
+const formAuthorData = {
+    name: document.getElementById("authorName"),
+    bio: document.getElementById("authorBio"),
+    img: document.getElementById("authorImage"),
+    country: document.getElementById("authorCountry"),
+    lang: document.getElementById("authorLanguages")
+};
+console.log(formAuthorData.bio.value);
 
 const openLabel = (target) => {
     target.setAttribute("data-visible", "true")
@@ -37,7 +47,6 @@ function setupEventListeners() {
     })
 
     toogleClose.addEventListener("click", () => {
-
         closeLabel(navMenu)
     });
 
@@ -61,34 +70,76 @@ function setupEventListeners() {
 
     if (!getUrlParams()) {
         btnOpenModalAuthor.addEventListener("click", (e) => {
-            openLabel(modal_author) 
-            
+            openLabel(modal_author)
+
         });
 
-        btnCloseModalAuthor.addEventListener("click", () => closeLabel(modal_author));
+        btnCloseModalAuthor.addEventListener("click", () => {
+            closeLabel(modal_author);
+        });
 
+        Object.entries(formAuthorData).forEach(([key, input]) => {
+            const values = fromValues(formAuthorData);
+            input.addEventListener("input", () => {
+                validateErrors(key, values);
+            })
+
+            input.addEventListener("blur", () => {
+                validateErrors(key, values);
+            })
+        });
 
         form_register_author.addEventListener("submit", (e) => {
             e.preventDefault();
+            const values = fromValues(formAuthorData);
+            const errors = validation(values);
 
-            const fields = form_register_author.querySelectorAll("input", "textarea")
-            
-            fields.forEach((field) => {
-                const errors = validation(field.name)
-                console.log(field.name)
+            Object.keys(values).forEach((key) => {
+                if (errors[key]) {
+                    showErrors(key, errors[key]);
+                } else {
+                    hideError(key)
+                }
             })
+
+            if (Object.keys(errors).length === 0) {
+                console.log("enviar");
+            }
         })
     }
 
 }
 
+
 function handlerToSearch() {
     const search = searchInput.value.trim();
-    
+
     if (searchInput.value.trim().length > 0) {
         btncloseSearchFrom.classList.add("show");
     } else {
         btncloseSearchFrom.classList.remove("show")
+    }
+}
+
+
+function fromValues(data) {
+    const values = {
+        name: data.name.value,
+        bio: data.bio.value,
+        img: data.img.value,
+        country: data.country.value,
+        lang: data.lang.value
+    }
+
+    return values;
+}
+
+function validateErrors(key, values) {
+    const errors = validation(values);
+    if (errors[key]) {
+        showErrors(key, errors[key]);
+    } else {
+        hideError(key)
     }
 }
 
@@ -146,7 +197,7 @@ function showErrors(fieldname, message) {
         errorElement.style.display = "block";
         errorElement.style.marginTop = "5px";
 
-        const field = document.getElementById(getFields(fieldname));
+        const field = document.getElementById(getFieldsID(fieldname));
         field.parentNode.appendChild(errorElement);
     }
 
@@ -162,13 +213,11 @@ function hideError(fieldname) {
     }
 }
 
-
 const initFunctions = () => {
     setupActiveLink();
     setupMobileMenu();
     setupEventListeners();
     loadMinNovels();
-    getUrlParams();
 }
 
 document.addEventListener("DOMContentLoaded", initFunctions)
