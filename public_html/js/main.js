@@ -1,4 +1,5 @@
 import { loadMinNovels } from "./novel.js";
+import { validation } from "./validator.js";
 
 const navLinks = document.querySelectorAll(".nav-link");
 const toogleOpen = document.querySelector(".toogle-nav-open");
@@ -13,12 +14,12 @@ const btnCloseModalAuthor = document.querySelector(".toogle-close");
 const modal_author = document.querySelector(".modal-author");
 const form_register_author = document.getElementById("author-register");
 
-const openLabel = (label) => {
-    label.setAttribute("data-visible", "true")
+const openLabel = (target) => {
+    target.setAttribute("data-visible", "true")
 }
 
-const closeLabel = (label) => {
-    label.setAttribute("data-visible", "false")
+const closeLabel = (target) => {
+    target.setAttribute("data-visible", "false")
 }
 
 export function getUrlParams() {
@@ -32,23 +33,24 @@ export function goBack() {
 
 function setupEventListeners() {
     toogleOpen.addEventListener("click", () => {
-        openLabel(navMenu)
+        openLabel(navMenu);
     })
+
     toogleClose.addEventListener("click", () => {
+
         closeLabel(navMenu)
     });
 
     searchInput.addEventListener('input', (e) => {
         handlerToSearch()
     });
+
     searchInput.addEventListener('keyup', handlerToSearch);
 
     btncloseSearchFrom.addEventListener('click', () => {
         searchInput.value = '';
         searchInput.focus();
         handlerToSearch();
-
-        searchInput.dispatchEvent(new Event('input', { bubbles: true }))
     });
 
     searchInput.addEventListener('keydown', (e) => {
@@ -56,22 +58,37 @@ function setupEventListeners() {
             setTimeout(handlerToSearch, 10);
         }
     })
-    
+
     if (!getUrlParams()) {
-        btnOpenModalAuthor.addEventListener("click", () => openLabel(modal_author) );
-        
+        btnOpenModalAuthor.addEventListener("click", (e) => {
+            openLabel(modal_author) 
+            
+        });
+
         btnCloseModalAuthor.addEventListener("click", () => closeLabel(modal_author));
+
+
+        form_register_author.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const fields = form_register_author.querySelectorAll("input", "textarea")
+            
+            fields.forEach((field) => {
+                const errors = validation(field.name)
+                console.log(field.name)
+            })
+        })
     }
 
 }
 
 function handlerToSearch() {
     const search = searchInput.value.trim();
-
+    
     if (searchInput.value.trim().length > 0) {
-        clearbtn.classList.add("show");
+        btncloseSearchFrom.classList.add("show");
     } else {
-        clearbtn.classList.remove("show")
+        btncloseSearchFrom.classList.remove("show")
     }
 }
 
@@ -116,6 +133,35 @@ function updateActiveLink(activeID) {
         }
     })
 }
+
+
+function showErrors(fieldname, message) {
+    let errorElement = document.getElementById(`error-${fieldname}`);
+
+    if (!errorElement) {
+        errorElement = document.createElement("span");
+        errorElement.id = `error-${fieldname}`
+        errorElement.style.color = "red";
+        errorElement.style.fontSize = "12px";
+        errorElement.style.display = "block";
+        errorElement.style.marginTop = "5px";
+
+        const field = document.getElementById(getFields(fieldname));
+        field.parentNode.appendChild(errorElement);
+    }
+
+    errorElement.textContent = message;
+    errorElement.style.display = "block";
+}
+
+
+function hideError(fieldname) {
+    const errorElement = document.getElementById(`error-${fieldname}`);
+    if (errorElement) {
+        errorElement.style.display = "none";
+    }
+}
+
 
 const initFunctions = () => {
     setupActiveLink();

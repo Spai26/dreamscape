@@ -1,3 +1,4 @@
+import { getUrlParams } from "./main.js";
 import { novels } from "./novels-data.js";
 
 
@@ -26,17 +27,21 @@ export function createCard(novel) {
     const div_item = createDiv("novel-item");
     const div_container_img = createDiv("novel-image-container");
     const info = createDiv("novel-info");
+
     const image_link = createLink("", linkNovel(novel.slug), "novel-link");
+
     const div_genres_container = createDiv("novel-genres");
     const div_description = createDiv("novel-description")
+
     const info_link = createLink("", linkNovel(novel.slug), "novel-link");
+
     const link_read = createLink("Leer Ahora", linkNovel(novel.slug), "read-button btn-primary");
 
     const img_novel = document.createElement("img");
     const base = pathNovel();
-    
+
     img_novel.className = "novel-image";
-    img_novel.src =`${base}${novel.image}`;
+    img_novel.src = `${base}${novel.image}`;
     img_novel.alt = novel.slug || novel.title || "portada de novela";
     img_novel.loading = "lazy";
 
@@ -105,7 +110,11 @@ export function loadRating(element, rating) {
 }
 
 export function linkNovel(slug) {
-    return `./p/novels/detail.html?slug=${slug}`
+    const path = window.location.pathname.includes("/p/novels");
+
+    const linkPath = path ? `./detail.html?slug=${slug}` : `./p/novels/detail.html?slug=${slug}`;
+
+    return linkPath
 }
 
 export function createSpan(text, classname) {
