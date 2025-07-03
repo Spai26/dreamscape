@@ -315,11 +315,11 @@ body::before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 40px 20px;
 }
 
 .community h1 {
     text-align: center;
-
 }
 
 .community p {
@@ -331,6 +331,9 @@ body::before {
     justify-content: center;
     gap: 3.75rem;
     flex-wrap: wrap;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
 
 }
 
@@ -368,7 +371,58 @@ body::before {
     object-fit: cover;
 }
 
+/*-------------Preguntas------------*/
+.tabla-preguntas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+ 
 
+
+.tabla-preguntas td {
+    padding-bottom: 15px;
+}
+
+.tabla-preguntas label{
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--color10);
+}
+
+.preguntas {
+    display: block;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.preguntas:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.respuesta {
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0 0 12px 12px;
+    color: white;
+    padding: 0 20px;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.tabla-preguntas  input[type="checkbox"] {
+    display: none;
+}
+
+.tabla-preguntas input[type="checkbox"]:checked ~ .respuesta {
+    max-height: 200px;
+    padding: 15px 20px;
+}
 /*==========contacto===========*/
 .contact__main {
     width: 100%;
