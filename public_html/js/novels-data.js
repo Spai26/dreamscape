@@ -108,7 +108,7 @@ export const novels =[
         rating: 4.3,
         reviews: 189,
         description: "En una ciudad donde los recuerdos son impuestos por el Estado, un neurohacker decide recuperar la verdad de su infancia perdida. Cada sinapsis desbloqueada lo acerca a un pasado que podría cambiar el destino de millones.",
-        short_description: "¿Qué ocurre cuando tus memorias no son realmente tuyas?",
+        short_description: "¿Qué ocurre cuando tus memorias no son realmente tuyas? It is a long established fact that a reader will be distracted by the readable content of a page.",
         lang: "es",
   },
   {
