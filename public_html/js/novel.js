@@ -1,5 +1,6 @@
 import { novels } from "./novels-data.js";
-
+export const authors = [];
+// section banner index.html
 export const loadMinNovels = () => {
     const novelsGrid = document.querySelector('.novels-grid');
     if (!novelsGrid) {

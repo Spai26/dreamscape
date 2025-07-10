@@ -1,4 +1,4 @@
-import { loadMinNovels } from "./novel.js";
+import { authors, loadMinNovels } from "./novel.js";
 import { getFieldsID, validation } from "./validator.js";
 
 const navLinks = document.querySelectorAll(".nav-link");
@@ -14,13 +14,12 @@ const btnCloseModalAuthor = document.querySelector(".toogle-close");
 const modal_author = document.querySelector(".modal-author");
 const form_register_author = document.getElementById("author-register");
 
-
-const formAuthorData = {
+const formSubmission = {
     name: document.getElementById("authorName"),
-    bio: document.getElementById("authorBio"),
-    img: document.getElementById("authorImage"),
+    biografy: document.getElementById("authorBio"),
+    image: document.getElementById("authorImage"),
     country: document.getElementById("authorCountry"),
-    lang: document.getElementById("authorLanguages")
+    language: document.getElementById("authorLanguages")
 };
 
 
@@ -68,33 +67,37 @@ function setupEventListeners() {
         }
     })
 
+    // valido solo para index.html
     if (!getUrlParams()) {
-        btnOpenModalAuthor.addEventListener("click", (e) => {
-            openLabel(modal_author)
-
+        btnOpenModalAuthor.addEventListener("click", () => {
+            openLabel(modal_author);
         });
 
         btnCloseModalAuthor.addEventListener("click", () => {
             closeLabel(modal_author);
         });
 
-        Object.entries(formAuthorData).forEach(([key, input]) => {
-            const values = fromValues(formAuthorData);
+        let values = {};
+        Object.entries(formSubmission).forEach(([key, input]) => {
             input.addEventListener("input", () => {
+                values[key] = input.value.trim();
                 validateErrors(key, values);
             })
 
             input.addEventListener("blur", () => {
+                values[key] = input.value.trim()
                 validateErrors(key, values);
             })
-        });
+        })
 
         form_register_author.addEventListener("submit", (e) => {
             e.preventDefault();
-            const values = fromValues(formAuthorData);
+
             const errors = validation(values);
 
-            Object.keys(values).forEach((key) => {
+            Object.keys(formSubmission).forEach(([key]) => {
+                console.log(values[key])
+
                 if (errors[key]) {
                     showErrors(key, errors[key]);
                 } else {
@@ -103,17 +106,36 @@ function setupEventListeners() {
             })
 
             if (Object.keys(errors).length === 0) {
-                console.log("enviar");
+
+                // opional en una function reutilizable
+                Toastify({
+                    text: "Registro realizado!",
+                    duration: 2000,
+                    destination: "https://github.com/apvarun/toastify-js",
+                    newWindow: true,
+                    close: true,
+                    gravity: "rigth",
+                    position: "center", 
+                    stopOnFocus: true, 
+                    style: {
+                        fontFamily: "var(--font-text-secundary)",
+                        borderRadius: "var(--2xl-border)",
+                        background: "linear-gradient(135deg, var(--color8), var(--color6))",
+                    },
+                    onClick: function () { } 
+                }).showToast();
+
+                form_register_author.reset();
+                closeLabel(modal_author);
             }
         })
     }
 
 }
 
-
 function handlerToSearch() {
     const search = searchInput.value.trim();
-
+    console.log(search)
     if (searchInput.value.trim().length > 0) {
         btncloseSearchFrom.classList.add("show");
     } else {
@@ -121,21 +143,8 @@ function handlerToSearch() {
     }
 }
 
-
-function fromValues(data) {
-    const values = {
-        name: data.name.value,
-        bio: data.bio.value,
-        img: data.img.value,
-        country: data.country.value,
-        lang: data.lang.value
-    }
-
-    return values;
-}
-
 function validateErrors(key, values) {
-    const errors = validation(values);
+    const errors = validation(values, key);
     if (errors[key]) {
         showErrors(key, errors[key]);
     } else {
@@ -190,27 +199,34 @@ function showErrors(fieldname, message) {
     let errorElement = document.getElementById(`error-${fieldname}`);
 
     if (!errorElement) {
-        errorElement = document.createElement("span");
-        errorElement.id = `error-${fieldname}`
-        errorElement.style.color = "red";
-        errorElement.style.fontSize = "12px";
-        errorElement.style.display = "block";
-        errorElement.style.marginTop = "5px";
-
+        errorElement = createSpanError(fieldname)
         const field = document.getElementById(getFieldsID(fieldname));
         field.parentNode.appendChild(errorElement);
     }
 
     errorElement.textContent = message;
-    errorElement.style.display = "block";
+    errorElement.style.display = 'block';
 }
-
 
 function hideError(fieldname) {
     const errorElement = document.getElementById(`error-${fieldname}`);
+
     if (errorElement) {
         errorElement.style.display = "none";
     }
+}
+
+function createSpanError(fieldname) {
+    const errorElement = document.createElement("span");
+    errorElement.id = `error-${fieldname}`
+    errorElement.style.color = "var(--color8)";
+    errorElement.style.fontFamily = "var(--font-text-secundary)";
+    errorElement.style.letterSpacing = "2px";
+    errorElement.style.fontSize = "12px";
+    errorElement.style.display = "block";
+    errorElement.style.marginTop = "5px";
+
+    return errorElement;
 }
 
 const initFunctions = () => {
@@ -228,8 +244,9 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
+/*
 document.addEventListener("click", (event) => {
     if (event.target === modal_author && modal_author.getAttribute('data-visible') === "true") {
         closeLabel(modal_author);
     }
-})
+})*/

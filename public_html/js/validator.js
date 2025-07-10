@@ -1,45 +1,58 @@
 export function getFieldsID(fieldname) {
     const fields = {
         name: "authorName",
-        img: "authorImage",
-        bio: "authorBio",
+        image: "authorImage",
+        biografy: "authorBio",
         country: "authorCountry",
-        lang: "auhorLang"
+        language: "authorLanguages"
     }
 
     return fields[fieldname];
 }
 
-export function validation(field, singleField = null) {
+export function validation(values, singleField = null) {
+    const defaultMessage = "Este campo es requerido";
     let errors = [];
-    const regexName = /^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ'´\-.\s]{2,20}$/;
-    const regexImg = /\.(jpe?g|png|gif|bmp|webp)$/i;
-    const regexDesc = /^.{0,300}$/;
+    const regexName = /^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ'´\-.\s]{5,20}$/;
+    const regexImage = /^https?:\/\/.*\.(jpg|jpeg|png|webp|gif|bmp)$/i;
+    const regexDescription = /^.{10,300}$/s;
 
-    if (!singleField || field === "name") {
-        if (!field.name.trim()) {
-            errors.name = "ingresa al menos un nombre";
-        } else if (!regexName.test(field.name.trim())) {
-            errors.name = "El nombre debe tener al menos 2 a 20 caracteres";
+    if (!singleField || singleField === "name") {
+        if (!values.name) {             
+            errors.name = defaultMessage;
+        } else if (!regexName.test(values.name)) {
+            errors.name = "El nombre debe tener al menos 5 a 20 caracteres";
         }
     }
 
 
-    if (!singleField || field === "img") {
-        if (!field.img.trim()) {
-            errors.image = "ingresa una url para tu imagen";
-        } else if (!regexImg.test(field.img.trim())) {
+    if (!singleField || singleField === "image") {
+        if (!values.image) {
+            errors.image = defaultMessage;
+        } else if (!regexImage.test(values.image)) {
             errors.image = "Ingresa una url valida de imagen (jpg, png, gif, webp";
         }
     }
 
-    if (!singleField || field === "bio") {
-        if (!field.bio.trim()) {
-            errors.desc = "Es requerido";
-        } else if (!regexDesc.test(field.bio.trim())) {
-            errors.desc = "La biografia debe tener entre 10 y 300 caracteres";
+    if (!singleField || singleField === "biografy") {
+        if (!values.biografy) {
+            errors.biografy = defaultMessage;
+        } else if (!regexDescription.test(values.biografy)) {
+            errors.biografy = "La biografia debe tener entre 10 y 300 caracteres";
         }
     }
 
+    if (!singleField || singleField === "country") {
+        if (!values.country) {
+            errors.country = defaultMessage;
+        } 
+    }
+    
+    if (!singleField || singleField === "language") {
+        if (!values.language) {
+            errors.language = defaultMessage;
+        } 
+    }
+    console.log(errors)
     return errors;
 }
