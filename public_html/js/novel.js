@@ -183,5 +183,3 @@ export function svgView() {
     svg.appendChild(path)
     return svg
 }
-
-

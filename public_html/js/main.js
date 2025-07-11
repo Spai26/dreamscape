@@ -1,34 +1,16 @@
-import { authors, loadMinNovels } from "./novel.js";
+import { initDetailPage } from "./detail.js";
+import { loadAllNovels } from "./filter.js";
+import { loadMinNovels } from "./novel.js";
 import { getFieldsID, validation } from "./validator.js";
 
 const navLinks = document.querySelectorAll(".nav-link");
-const toogleOpen = document.querySelector(".toogle-nav-open");
-const toogleClose = document.querySelector(".toogle-nav-close");
-const navMenu = document.getElementById("topnav-menu");
-const searchInput = document.getElementById("search-input");
-const searchFrom = document.getElementById("search-form");
-const btncloseSearchFrom = document.getElementById("btnclear");
-
-const btnOpenModalAuthor = document.getElementById("AuthorRegister")
-const btnCloseModalAuthor = document.querySelector(".toogle-close");
-const modal_author = document.querySelector(".modal-author");
-const form_register_author = document.getElementById("author-register");
-
-const formSubmission = {
-    name: document.getElementById("authorName"),
-    biografy: document.getElementById("authorBio"),
-    image: document.getElementById("authorImage"),
-    country: document.getElementById("authorCountry"),
-    language: document.getElementById("authorLanguages")
-};
-
 
 const openLabel = (target) => {
-    target.setAttribute("data-visible", "true")
+    target.setAttribute("data-visible", "true");
 }
 
 const closeLabel = (target) => {
-    target.setAttribute("data-visible", "false")
+    target.setAttribute("data-visible", "false");
 }
 
 export function getUrlParams() {
@@ -40,18 +22,34 @@ export function goBack() {
     return window.history.back();
 }
 
-function setupEventListeners() {
+function setupEventHeader() {
+    // elements for header global    
+    const toogleOpen = document.querySelector(".toogle-nav-open");
+    const toogleClose = document.querySelector(".toogle-nav-close");
+    const navMenu = document.getElementById("topnav-menu");
+
     toogleOpen.addEventListener("click", () => {
         openLabel(navMenu);
     })
 
     toogleClose.addEventListener("click", () => {
-        closeLabel(navMenu)
+        closeLabel(navMenu);
     });
 
-    searchInput.addEventListener('input', (e) => {
-        handlerToSearch()
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && navMenu.getAttribute('data-visible') === "true") {
+            closeLabel(navMenu);
+        }
     });
+}
+
+function setupEventSearch() {
+    // elements for header search
+    const searchInput = document.getElementById("search-input");
+    const searchFrom = document.getElementById("search-form");
+    const btncloseSearchFrom = document.getElementById("btnclear");
+
+    searchInput.addEventListener('input', handlerToSearch);
 
     searchInput.addEventListener('keyup', handlerToSearch);
 
@@ -67,6 +65,36 @@ function setupEventListeners() {
         }
     })
 
+    function handlerToSearch() {
+        const search = searchInput.value.trim();
+        console.log(search)
+        if (search.length > 0) {
+
+            const params = new URLSearchParams(window.location.search);
+            console.log(params)
+            btncloseSearchFrom.classList.add("show");
+        } else {
+            btncloseSearchFrom.classList.remove("show")
+        }
+    }
+
+}
+
+function setupModalForm() {
+    // elements for modal
+    const btnOpenModalAuthor = document.getElementById("AuthorRegister")
+    const btnCloseModalAuthor = document.querySelector(".toogle-close");
+    const modal_author = document.querySelector(".modal-author");
+    const form_register_author = document.getElementById("author-register");
+
+    const formSubmission = {
+        name: document.getElementById("authorName"),
+        biografy: document.getElementById("authorBio"),
+        image: document.getElementById("authorImage"),
+        country: document.getElementById("authorCountry"),
+        language: document.getElementById("authorLanguages")
+    };
+
     // valido solo para index.html
     if (!getUrlParams()) {
         btnOpenModalAuthor.addEventListener("click", () => {
@@ -74,10 +102,13 @@ function setupEventListeners() {
         });
 
         btnCloseModalAuthor.addEventListener("click", () => {
+            form_register_author.reset();
+            Object.keys(formSubmission).forEach((key) => hideError(key));
             closeLabel(modal_author);
         });
 
         let values = {};
+
         Object.entries(formSubmission).forEach(([key, input]) => {
             input.addEventListener("input", () => {
                 values[key] = input.value.trim();
@@ -85,7 +116,7 @@ function setupEventListeners() {
             })
 
             input.addEventListener("blur", () => {
-                values[key] = input.value.trim()
+                values[key] = input.value.trim();
                 validateErrors(key, values);
             })
         })
@@ -96,17 +127,14 @@ function setupEventListeners() {
             const errors = validation(values);
 
             Object.keys(formSubmission).forEach(([key]) => {
-                console.log(values[key])
-
                 if (errors[key]) {
                     showErrors(key, errors[key]);
                 } else {
-                    hideError(key)
+                    hideError(key);
                 }
             })
 
             if (Object.keys(errors).length === 0) {
-
                 // opional en una function reutilizable
                 Toastify({
                     text: "Registro realizado!",
@@ -115,14 +143,14 @@ function setupEventListeners() {
                     newWindow: true,
                     close: true,
                     gravity: "rigth",
-                    position: "center", 
-                    stopOnFocus: true, 
+                    position: "center",
+                    stopOnFocus: true,
                     style: {
                         fontFamily: "var(--font-text-secundary)",
                         borderRadius: "var(--2xl-border)",
                         background: "linear-gradient(135deg, var(--color8), var(--color6))",
                     },
-                    onClick: function () { } 
+                    onClick: function () { }
                 }).showToast();
 
                 form_register_author.reset();
@@ -131,16 +159,12 @@ function setupEventListeners() {
         })
     }
 
-}
-
-function handlerToSearch() {
-    const search = searchInput.value.trim();
-    console.log(search)
-    if (searchInput.value.trim().length > 0) {
-        btncloseSearchFrom.classList.add("show");
-    } else {
-        btncloseSearchFrom.classList.remove("show")
-    }
+    /*
+    document.addEventListener("click", (event) => {
+        if (event.target === modal_author && modal_author.getAttribute('data-visible') === "true") {
+            closeLabel(modal_author);
+        }
+    })*/
 }
 
 function validateErrors(key, values) {
@@ -194,7 +218,6 @@ function updateActiveLink(activeID) {
     })
 }
 
-
 function showErrors(fieldname, message) {
     let errorElement = document.getElementById(`error-${fieldname}`);
 
@@ -230,23 +253,29 @@ function createSpanError(fieldname) {
 }
 
 const initFunctions = () => {
+    const body = document.body;
+
+    setupEventHeader();
     setupActiveLink();
     setupMobileMenu();
-    setupEventListeners();
-    loadMinNovels();
+    setupEventSearch();
+
+    if (body.classList.contains("page-home")) {
+        console.log("home");
+        setupModalForm();
+        loadMinNovels();
+    }
+
+    if (body.classList.contains("page-novel-list")) {
+        console.log("list");
+        loadAllNovels();
+    }
+
+    if (body.classList.contains("page-novel-detail")) {
+        console.log("detail");
+        initDetailPage();
+    }
+
 }
 
-document.addEventListener("DOMContentLoaded", initFunctions)
-
-document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && navMenu.getAttribute('data-visible') === "true") {
-        closeLabel(navMenu);
-    }
-});
-
-/*
-document.addEventListener("click", (event) => {
-    if (event.target === modal_author && modal_author.getAttribute('data-visible') === "true") {
-        closeLabel(modal_author);
-    }
-})*/
+document.addEventListener("DOMContentLoaded", initFunctions);

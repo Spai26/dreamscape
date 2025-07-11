@@ -4,7 +4,7 @@ import { novels } from "./novels-data.js";
 
 let genres = [];
 let authors = [];
-const loadFilterGenre = () => {
+export const loadFilterGenre = () => {
     return novels.forEach((novel) => novel.genres.forEach((genre) => {
         if (!genres.includes(genre)) {
             genres.push(genre)
@@ -12,7 +12,7 @@ const loadFilterGenre = () => {
     }));
 }
 
-const loadAllNovels = () => {
+export const loadAllNovels = () => {
     const novelsGrid = document.querySelector('.novels-grid');
     if (!novelsGrid) {
         console.log("no se encontro el contenedor novels-grid");
@@ -26,11 +26,3 @@ const loadAllNovels = () => {
         novelsGrid.appendChild(card);
     })
 }
-
-
-function init() {
-    loadAllNovels();
-}
-
-
-document.addEventListener("DOMContentLoaded",init)
