@@ -4,6 +4,16 @@ import { novels } from "./novels-data.js";
 
 let genres = [];
 let authors = [];
+export function fetchResult(query) {
+    console.log("fect",query)
+    
+}
+export function handlerToSearch(input) {
+    const params = new URLSearchParams(window.location.search);
+    console.log("params", params.get("search"));
+    console.log(input)
+}
+
 export const loadFilterGenre = () => {
     return novels.forEach((novel) => novel.genres.forEach((genre) => {
         if (!genres.includes(genre)) {

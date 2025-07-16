@@ -1,5 +1,5 @@
 import { initDetailPage } from "./detail.js";
-import { loadAllNovels } from "./filter.js";
+import { fetchResult, handlerToSearch, loadAllNovels } from "./filter.js";
 import { loadMinNovels } from "./novel.js";
 import { getFieldsID, validation } from "./validator.js";
 
@@ -49,14 +49,19 @@ function setupEventSearch() {
     const searchFrom = document.getElementById("search-form");
     const btncloseSearchFrom = document.getElementById("btnclear");
 
-    searchInput.addEventListener('input', handlerToSearch);
-
-    searchInput.addEventListener('keyup', handlerToSearch);
+    searchInput.addEventListener('input', () => {        
+        if (searchInput.value.length > 0) {
+            handlerToSearch(searchInput.value)
+            btncloseSearchFrom.classList.add("show");
+        } else {
+            btncloseSearchFrom.classList.remove("show")
+        }    
+    });
 
     btncloseSearchFrom.addEventListener('click', () => {
         searchInput.value = '';
         searchInput.focus();
-        handlerToSearch();
+        btncloseSearchFrom.classList.remove("show")
     });
 
     searchInput.addEventListener('keydown', (e) => {
@@ -64,20 +69,6 @@ function setupEventSearch() {
             setTimeout(handlerToSearch, 10);
         }
     })
-
-    function handlerToSearch() {
-        const search = searchInput.value.trim();
-        console.log(search)
-        if (search.length > 0) {
-
-            const params = new URLSearchParams(window.location.search);
-            console.log(params)
-            btncloseSearchFrom.classList.add("show");
-        } else {
-            btncloseSearchFrom.classList.remove("show")
-        }
-    }
-
 }
 
 function setupModalForm() {
