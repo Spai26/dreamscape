@@ -1,6 +1,7 @@
 export function getFieldsID(fieldname) {
     const fields = {
         name: "authorName",
+        email: "authorEmail",
         image: "authorImage",
         biografy: "authorBio",
         country: "authorCountry",
@@ -11,9 +12,11 @@ export function getFieldsID(fieldname) {
 }
 
 export function validation(values, singleField = null) {
+    console.log(values)
     const defaultMessage = "Este campo es requerido";
     let errors = [];
     const regexName = /^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ'´\-.\s]{5,20}$/;
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const regexImage = /^https?:\/\/.*\.(jpg|jpeg|png|webp|gif|bmp)$/i;
     const regexDescription = /^.{10,300}$/s;
 
@@ -22,6 +25,14 @@ export function validation(values, singleField = null) {
             errors.name = defaultMessage;
         } else if (!regexName.test(values.name)) {
             errors.name = "El nombre debe tener al menos 5 a 20 caracteres";
+        }
+    }
+    
+    if (!singleField || singleField === "email") {
+        if (!values.email) {             
+            errors.email = defaultMessage;
+        } else if (!regexEmail.test(values.email)) {
+            errors.email = "Ingresa un email valido";
         }
     }
 
@@ -33,12 +44,14 @@ export function validation(values, singleField = null) {
             errors.image = "Ingresa una url valida de imagen (jpg, png, gif, webp";
         }
     }
-
+    const biovalue = values.bio || values.biografy
     if (!singleField || singleField === "biografy") {
-        if (!values.biografy) {
+        if (!biovalue) {
+            errors.bio = defaultMessage;
             errors.biografy = defaultMessage;
-        } else if (!regexDescription.test(values.biografy)) {
-            errors.biografy = "La biografia debe tener entre 10 y 300 caracteres";
+        } else if (!regexDescription.test(biovalue)) {
+            errors.bio = "La biografia debe tener entre 10 y 300 caracteres";
+            errors.biografy = errors.bio
         }
     }
 

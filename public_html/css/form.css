@@ -29,7 +29,7 @@
     margin-top: clamp(0.5rem, 2vw, 1rem);
 }
 
-.form-input{
+.form-input, .form-select{
     padding: 0 1rem;
     min-height: clamp(30px, 10vw, 40px);
     width: 100%;
@@ -39,7 +39,14 @@
     border: 1px solid var(--n-input-border);
 }
 
-.form-input:focus {
+.form-select option{
+    background: black !important;
+    color: var(--color-text-base);
+    padding: 10px;
+}
+
+.form-input:focus, .form-select:focus {
+    outline: none;
     background: var(--input-bg);
     border-color: var(--input-border);
     box-shadow: 0 4px 15px var(--box-shadow);

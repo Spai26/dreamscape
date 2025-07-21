@@ -4,9 +4,11 @@ import { novels } from "./novels-data.js";
 
 let genres = [];
 let authors = [];
+
+
 export function fetchResult(query) {
-    console.log("fect",query)
-    
+    console.log("fect", query)
+
 }
 export function handlerToSearch(input) {
     const params = new URLSearchParams(window.location.search);

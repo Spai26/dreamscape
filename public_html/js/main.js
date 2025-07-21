@@ -1,6 +1,7 @@
 import { initDetailPage } from "./detail.js";
 import { fetchResult, handlerToSearch, loadAllNovels } from "./filter.js";
-import { loadMinNovels } from "./novel.js";
+import { loadCountriesOption, loadlanguageOption } from "./helpers.js";
+import { authors, loadMinNovels } from "./novel.js";
 import { getFieldsID, validation } from "./validator.js";
 
 const navLinks = document.querySelectorAll(".nav-link");
@@ -49,13 +50,13 @@ function setupEventSearch() {
     const searchFrom = document.getElementById("search-form");
     const btncloseSearchFrom = document.getElementById("btnclear");
 
-    searchInput.addEventListener('input', () => {        
+    searchInput.addEventListener('input', () => {
         if (searchInput.value.length > 0) {
             handlerToSearch(searchInput.value)
             btncloseSearchFrom.classList.add("show");
         } else {
             btncloseSearchFrom.classList.remove("show")
-        }    
+        }
     });
 
     btncloseSearchFrom.addEventListener('click', () => {
@@ -80,6 +81,7 @@ function setupModalForm() {
 
     const formSubmission = {
         name: document.getElementById("authorName"),
+        email: document.getElementById("authorEmail"),
         biografy: document.getElementById("authorBio"),
         image: document.getElementById("authorImage"),
         country: document.getElementById("authorCountry"),
@@ -101,6 +103,7 @@ function setupModalForm() {
         let values = {};
 
         Object.entries(formSubmission).forEach(([key, input]) => {
+            console.log(input)
             input.addEventListener("input", () => {
                 values[key] = input.value.trim();
                 validateErrors(key, values);
@@ -115,9 +118,18 @@ function setupModalForm() {
         form_register_author.addEventListener("submit", (e) => {
             e.preventDefault();
 
-            const errors = validation(values);
+            const formValues = {
+                name: form_register_author.authorName.value.trim(),
+                email: form_register_author.authorEmail.value.trim(),
+                image: form_register_author.authorImage.value.trim(),
+                bio: form_register_author.authorBio.value,
+                language: form_register_author.authorLanguages.value,
+                country: form_register_author.authorCountry.value
+            }
+            
+            const errors = validation(formValues);
 
-            Object.keys(formSubmission).forEach(([key]) => {
+            Object.keys(formValues).forEach((key) => { 
                 if (errors[key]) {
                     showErrors(key, errors[key]);
                 } else {
@@ -126,24 +138,19 @@ function setupModalForm() {
             })
 
             if (Object.keys(errors).length === 0) {
-                // opional en una function reutilizable
-                Toastify({
-                    text: "Registro realizado!",
-                    duration: 2000,
-                    destination: "https://github.com/apvarun/toastify-js",
-                    newWindow: true,
-                    close: true,
-                    gravity: "rigth",
-                    position: "center",
-                    stopOnFocus: true,
-                    style: {
-                        fontFamily: "var(--font-text-secundary)",
-                        borderRadius: "var(--2xl-border)",
-                        background: "linear-gradient(135deg, var(--color8), var(--color6))",
-                    },
-                    onClick: function () { }
-                }).showToast();
+                const newAuthor = {
+                    id: Date.now().toString(),
+                    name: formValues.name,
+                    email: formValues.email,
+                    language: formValues.language,
+                    bio: formValues.bio,
+                }
 
+                authors.push(newAuthor);
+                
+                localStorage.setItem('authors', JSON.stringify(authors));
+                console.log(authors)
+                notification("Registro realizado!")
                 form_register_author.reset();
                 closeLabel(modal_author);
             }
@@ -156,6 +163,26 @@ function setupModalForm() {
             closeLabel(modal_author);
         }
     })*/
+}
+
+
+function notification(text) {
+    Toastify({
+        text: text,
+        duration: 2000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "rigth",
+        position: "rigth",
+        stopOnFocus: true,
+        style: {
+            fontFamily: "var(--font-text-secundary)",
+            borderRadius: "var(--2xl-border)",
+            background: "linear-gradient(135deg, var(--color8), var(--color6))",
+        },
+        onClick: function () { }
+    }).showToast();
 }
 
 function validateErrors(key, values) {
@@ -245,7 +272,8 @@ function createSpanError(fieldname) {
 
 const initFunctions = () => {
     const body = document.body;
-
+    loadCountriesOption();
+    loadlanguageOption();
     setupEventHeader();
     setupActiveLink();
     setupMobileMenu();
