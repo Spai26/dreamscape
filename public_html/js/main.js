@@ -142,14 +142,16 @@ function setupModalForm() {
                     id: Date.now().toString(),
                     name: formValues.name,
                     email: formValues.email,
+                    image: formValues.image,
                     language: formValues.language,
                     bio: formValues.bio,
+                    country: formValues.country
                 }
 
-                authors.push(newAuthor);
-                
+                authors.push(newAuthor);                
                 localStorage.setItem('authors', JSON.stringify(authors));
-                console.log(authors)
+
+                
                 notification("Registro realizado!")
                 form_register_author.reset();
                 closeLabel(modal_author);
@@ -262,18 +264,15 @@ function createSpanError(fieldname) {
     errorElement.id = `error-${fieldname}`
     errorElement.style.color = "var(--color8)";
     errorElement.style.fontFamily = "var(--font-text-secundary)";
-    errorElement.style.letterSpacing = "2px";
-    errorElement.style.fontSize = "12px";
+    errorElement.style.letterSpacing = "1.5px";
+    errorElement.style.fontSize = "11px";
     errorElement.style.display = "block";
-    errorElement.style.marginTop = "5px";
 
     return errorElement;
 }
 
 const initFunctions = () => {
-    const body = document.body;
-    loadCountriesOption();
-    loadlanguageOption();
+    const body = document.body;    
     setupEventHeader();
     setupActiveLink();
     setupMobileMenu();
@@ -281,6 +280,8 @@ const initFunctions = () => {
 
     if (body.classList.contains("page-home")) {
         console.log("home");
+        loadCountriesOption();
+        loadlanguageOption();
         setupModalForm();
         loadMinNovels();
     }

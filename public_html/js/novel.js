@@ -10,7 +10,7 @@ export const loadMinNovels = () => {
 
     novelsGrid.innerHTML = "";
 
-    novels.slice(0, 6).forEach((novel) => {
+    novels.slice(0, 4).forEach((novel) => {
         const card = createCard(novel);
         novelsGrid.appendChild(card);
     })
