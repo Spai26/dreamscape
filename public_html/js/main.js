@@ -103,7 +103,6 @@ function setupModalForm() {
         let values = {};
 
         Object.entries(formSubmission).forEach(([key, input]) => {
-            console.log(input)
             input.addEventListener("input", () => {
                 values[key] = input.value.trim();
                 validateErrors(key, values);
@@ -220,6 +219,7 @@ function setupActiveLink() {
 }
 
 function setupMobileMenu() {
+    const navMenu = document.getElementById("topnav-menu");
     navLinks.forEach(link => {
         link.addEventListener("click", () => {
             if (window.innerHeight <= 1025) {

@@ -25,6 +25,9 @@ export function initDetailPage() {
 
     if (novel) {
         createDetailNovel(novel);
+
+        const title = document.getElementsByName("title");
+        console.log(title)
     }
     
 }
