@@ -7,6 +7,8 @@
         <title>Dreamscape</title>
         <link rel="stylesheet" type="text/css"
             href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="./css/main.css">
     </head>
 
@@ -138,7 +140,6 @@
                 </div>
             </div>
         </header>
-
         <main class="group-relative">
             <section class="parallax pt-8" id="home">
 
@@ -201,7 +202,8 @@
                                 autocomplete="off">
                         </div>
                         <div class="form-group">
-                            <label class="form-label" for="authorEmail">Email</label>
+                            <label class="form-label"
+                                for="authorEmail">Email</label>
                             <input type="text" id="authorEmail"
                                 class="form-input" name="authorEmail"
                                 placeholder="Ej: name@example.com">
@@ -238,7 +240,7 @@
                         <div class="group-button">
                             <button type="submit"
                                 class="btn btn-primary form-button">
-                                Guardar autor
+                                Guardar
                             </button>
                         </div>
                     </form>
@@ -456,95 +458,135 @@
             </section>
 
         </main>
+        <footer>
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer-section">
+                        <h3 class="foo-title"><i
+                                class="fas fa-envelope-open-text ml-5"></i>Únete
+                            a
+                            nuestra comunidad</h3>
 
-        <footer class="footer">
-            <div class="container flex-c">
-                <div class="footer__content">
-                    <div class="flex-c w-100 m-500">
-                        <div class="footer__description">
-                            <h3>Suscribete</h3>
-                            <p>Recibe la ultimas novedades</p>
-                        </div>
+                        <p class="foo-message">Recibe las últimas novedades,
+                            reseñas exclusivas y
+                            recomendaciones personalizadas.</p>
 
-                        <form method="post" class="footer__form">
-                            <input type="email" id="email" name="email" required
-                                placeholder="Ingresa tu email"
-                                autocomplete="off"
-                                class="form-input footer-input">
-                            <button type="submit" class="footer-btn">
-                                <svg fill="#fff" height="20px" width="20px"
-                                    version="1.1" id="Capa_1"
-                                    viewBox="0 0 488.4 488.4"
-                                    xml:space="preserve">
-                                    <g>
-                                        <g>
-                                            <path
-                                                d="M0,203.25c0,112.1,91.2,203.2,203.2,203.2c51.6,0,98.8-19.4,134.7-51.2l129.5,129.5c2.4,2.4,5.5,3.6,8.7,3.6
-			s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-129.6-129.5c31.8-35.9,51.2-83,51.2-134.7c0-112.1-91.2-203.2-203.2-203.2
-			S0,91.15,0,203.25z M381.9,203.25c0,98.5-80.2,178.7-178.7,178.7s-178.7-80.2-178.7-178.7s80.2-178.7,178.7-178.7
-			S381.9,104.65,381.9,203.25z" />
-                                        </g>
-                                    </g>
-                                </svg>
+                        <form class="newsletter-form">
+                            <div class="form-group">
+                                <input type="email" id="email" name="email"
+                                    required
+                                    placeholder="Ingresa tu email"
+                                    autocomplete="off"
+                                    class="form-input">
+                            </div>
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="nuevas-novelas"
+                                        checked>
+                                    <label for="nuevas-novelas">Nuevas
+                                        novelas</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="reseñas">
+                                    <label for="reseñas">Reseñas
+                                        destacadas</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="eventos">
+                                    <label for="eventos">Eventos
+                                        exclusivos</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane ml-5"></i>
+                                Suscribirme
                             </button>
                         </form>
                     </div>
-                    <div class="footer__navlinks">
-                        <div class="footer__socials w-100">
-
-                            <a>
-                                <img width="30px" height="30px"
-                                    src="./assets/icons/instagram-svgrepo-com.svg"
-                                    alt="instagram" loading="lazy">
-                            </a>
-
-                            <a>
-                                <img width="30px" height="30px"
-                                    src="./assets/icons/twitter-svgrepo-com.svg"
-                                    alt>
-                            </a>
-                            <a>
-                                <img width="30'px" height="30px"
-                                    src="./assets/icons/linkedin-svgrepo-com.svg"
-                                    alt>
-                            </a>
-
-                        </div>
-                        <h3>Descubre más</h3>
-                        <nav>
-                            <ul>
-                                <li class="nav-item">
-                                    <a href="#home">Inicio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#novels">Novelas</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#about">Nosotros</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#community">Comunidad</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#contact">Contácto</a>
-                                </li>
-                            </ul>
-                        </nav>
+                    <div class="footer-section">
+                        <h3 class="foo-title"><i
+                                class="fas fa-compass ml-5"></i>Explora más</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-fire"></i> Géneros
+                                    populares</a></li>
+                            <li><a href="#"><i class="fas fa-star"></i> Top
+                                    rated</a></li>
+                            <li><a href="#"><i class="fas fa-clock"></i> Recién
+                                    actualizadas</a></li>
+                            <li><a href="#"><i class="fas fa-trophy"></i>
+                                    Premios DreamScape</a></li>
+                            <li><a href="#"><i class="fas fa-book-open"></i>
+                                    Guía de lectura</a></li>
+                            <li><a href="#"><i class="fas fa-blog"></i> Blog de
+                                    la comunidad</a></li>
+                            <li><a href="#"><i
+                                        class="fas fa-question-circle"></i>
+                                    Centro de ayuda</a></li>
+                        </ul>
                     </div>
-
+                    <div class="footer-section">
+                        <h3 class="foo-title"><i class="fas fa-users ml-5"></i>
+                            Únete al club</h3>
+                        <p class="foo-message">
+                            Contecta con otros lectores, interactua con
+                            autores y traductores de la comunidad sin perderte
+                            de
+                            nada.
+                        </p>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" title="discord">
+                                <i class="fa-brands fa-discord"></i>
+                            </a>
+                            <a href="#" class="social-icon" title="twitch">
+                                <i class="fa-brands fa-twitch"></i>
+                            </a>
+                            <a href="#" class="social-icon"
+                                title="instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon" title="reddit">
+                                <i class="fa-brands fa-reddit"></i>
+                            </a>
+                        </div>                       
+                    </div>
+                    <div>
+                         <h3 class="foo-title"><i
+                                class="fas fa-mobile-alt ml-5"></i>
+                            Descarga la app
+                        </h3>
+                        <div class="app-download">
+                            <a href="#" class="app-button">
+                                <i class="fab fa-google-play ml-5"></i>
+                                <span>Play Store</span>
+                            </a>
+                            <a href="#" class="app-button">
+                                <i class="fab fa-app-store ml-5"></i>
+                                <span>App Store</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="footer__copyright">
-                    <p class="footer__motto">“Donde cada historia encuentra
-                        un lector”</p>
-                    <p> &copy;DreamScape 2025. Todos los
-                        derechos reservados.</p>
-
+            </div>
+            <div class="footer-bottom">
+                <h3 class="footer-motto">
+                    “Donde cada historia encuentra
+                    un lector”
+                </h3>
+                <div class="footer-legal">
+                    <div>
+                        <p>
+                            &copy;DreamScape 2025. Todos los
+                            derechos reservados.
+                        </p>
+                    </div>
+                    <div class="legal-links">
+                        <a href="#">Términos de uso</a>
+                        <a href="#">Política de privacidad</a>
+                        <a href="#">Cookies</a>
+                        <a href="#">Contacto</a>
+                    </div>
                 </div>
             </div>
         </footer>
-        <script type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-        <script type="module" src="./js/main.js"></script>
     </body>
-
 </html>
