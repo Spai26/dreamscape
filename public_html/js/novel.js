@@ -65,10 +65,10 @@ export function createCard(novel) {
     p.textContent = novel.short_description || "";
 
     const stats = createDiv("novel-stats");
-    const itemStar = createDiv("stat-item");
-    const view = createDiv("stat-item");
+    const itemStar = createDiv("novel-item");
+    const view = createDiv("novel-item");
     const valueView = createSpan(novel.reviews);
-    const itemHeart = createDiv("stat-item");
+    const itemHeart = createDiv("novel-item");
     const rating = createDiv("rating-stars")
     const valueRating = createSpan(novel.rating);
 

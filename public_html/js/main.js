@@ -1,6 +1,6 @@
 import { initDetailPage } from "./detail.js";
 import { fetchResult, handlerToSearch, loadAllNovels } from "./filter.js";
-import { loadCountriesOption, loadlanguageOption } from "./helpers.js";
+import { animateStatisctic, loadCountriesOption, loadlanguageOption } from "./helpers.js";
 import { authors, loadMinNovels } from "./novel.js";
 import { getFieldsID, validation } from "./validator.js";
 
@@ -125,10 +125,10 @@ function setupModalForm() {
                 language: form_register_author.authorLanguages.value,
                 country: form_register_author.authorCountry.value
             }
-            
+
             const errors = validation(formValues);
 
-            Object.keys(formValues).forEach((key) => { 
+            Object.keys(formValues).forEach((key) => {
                 if (errors[key]) {
                     showErrors(key, errors[key]);
                 } else {
@@ -147,10 +147,10 @@ function setupModalForm() {
                     country: formValues.country
                 }
 
-                authors.push(newAuthor);                
+                authors.push(newAuthor);
                 localStorage.setItem('authors', JSON.stringify(authors));
 
-                
+
                 notification("Registro realizado!")
                 form_register_author.reset();
                 closeLabel(modal_author);
@@ -218,6 +218,26 @@ function setupActiveLink() {
     });
 }
 
+function setupAnimation() {
+    const stats = document.querySelectorAll(".stats-grid");
+
+    const animationObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting &&
+                !entry.target.dataset.statsAnimated) {
+                animateStatisctic();
+                entry.target.dataset.statsAnimated = "true";
+            }
+        })
+    }, {
+        threshold: 0.5
+    })
+
+    stats.forEach(grid => {
+        animationObserver.observe(grid)
+    })
+}
+
 function setupMobileMenu() {
     const navMenu = document.getElementById("topnav-menu");
     navLinks.forEach(link => {
@@ -272,7 +292,7 @@ function createSpanError(fieldname) {
 }
 
 const initFunctions = () => {
-    const body = document.body;    
+    const body = document.body;
     setupEventHeader();
     setupActiveLink();
     setupMobileMenu();
@@ -280,6 +300,7 @@ const initFunctions = () => {
 
     if (body.classList.contains("page-home")) {
         console.log("home");
+        setupAnimation()
         loadCountriesOption();
         loadlanguageOption();
         setupModalForm();

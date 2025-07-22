@@ -50,3 +50,32 @@ export const loadlanguageOption = () => {
         languageSelect.appendChild(option);
     })
 }
+
+export const animateStatisctic = () => {
+    const statsNumbers = document.querySelectorAll(".stat-number[data-target]");
+
+    statsNumbers.forEach((stat) => {
+        if (stat.dataset.animated === "true") return;
+
+        const target = parseFloat(stat.getAttribute("data-target"));
+        let suffix = stat.textContent.includes("K") ? "K+" : stat.textContent.includes("M") ? "M+" : stat.textContent.includes("%") ? "%" : "";
+        
+        let current = 0;
+        const increment = target / 60;
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer)
+            }
+
+            if (suffix === "M+") {
+                stat.textContent = current.toFixed(1) + suffix;
+            } else {
+                stat.textContent = Math.floor(current) + suffix
+            }
+        }, 30)
+    })
+}
+

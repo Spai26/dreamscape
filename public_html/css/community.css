@@ -182,11 +182,6 @@
     margin-top: 0.5rem;
 }
 
-.community-cta h3 {
-    color: var(--cyan-accent);
-    margin-bottom: 1rem;
-}
-
 .cta-buttons {
     display: flex;
     gap: 1rem;

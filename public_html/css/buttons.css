@@ -71,3 +71,18 @@
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(162, 89, 255, 0.3);
 }
+
+.btn-baner {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: var(--color-button-acent); 
+  border: none;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  color: var(--color-text-base);
+  margin-top: 1rem;
+}

@@ -81,7 +81,7 @@
 .shape-cyan {
     bottom: 0;
     right: 2px;
-    background-color: var(--cyan);
+    background-color: var(--cyan-accent);
     z-index: 2;
 }
 
