@@ -6,6 +6,7 @@
 @import url("./buttons.css");
 @import url("./modal.css");
 @import url("./footer.css");
+@import url("./community.css");
 
 *,
 *::before,
@@ -225,8 +226,6 @@ body::before {
     flex-wrap: wrap;
 }
 
-
-
 /* ======== Animaciones ======== */
 @keyframes fadeInUp {
     from {
@@ -309,121 +308,6 @@ body::before {
     }
 }
 
-/*==========Comunidad=========*/
-.community {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
-}
-
-.community h1 {
-    text-align: center;
-}
-
-.community p {
-    text-align: center;
-}
-
-.contenedor-coment {
-    display: flex;
-    justify-content: center;
-    gap: 3.75rem;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
-
-}
-
-.comentarios {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 30px 20px;
-    width: 400px;
-    border-radius: 15px;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-}
-
-.comentarios:hover {
-    transform: scale(1.06);
-}
-
-.comentarios h3 {
-    color: #a259ff;
-}
-
-.img-user {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: -60px auto 20px;
-    background-color: white;
-}
-
-.img-user img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/*-------------Preguntas------------*/
-.tabla-preguntas {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
- 
-
-
-.tabla-preguntas td {
-    padding-bottom: 15px;
-}
-
-.tabla-preguntas label{
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    color: var(--color10);
-}
-
-.preguntas {
-    display: block;
-    padding: 15px 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    cursor: pointer;
-    font-weight: bold;
-    color: white;
-    transition: background-color 0.3s ease;
-}
-
-.preguntas:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.respuesta {
-    max-height: 0;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 0 0 12px 12px;
-    color: white;
-    padding: 0 20px;
-    transition: max-height 0.4s ease, padding 0.4s ease;
-}
-
-.tabla-preguntas  input[type="checkbox"] {
-    display: none;
-}
-
-.tabla-preguntas input[type="checkbox"]:checked ~ .respuesta {
-    max-height: 200px;
-    padding: 15px 20px;
-}
 /*==========contacto===========*/
 .contact__main {
     width: 100%;
@@ -446,22 +330,6 @@ body::before {
     width: 100%;
     height: auto;
 }
-
-/* ================= */
-.flex-c {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(0.09rem, 2vw, 1rem);
-}
-
-.w-100 {
-    width: 100%;
-}
-
-.m-500 {
-    max-width: 400px;
-}
-
 
 /*======= nosotros ==========*/
 .nosotros__flex {

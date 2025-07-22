@@ -158,13 +158,8 @@
                         novelas de autores emergentes y establecidos de todo el
                         mundo</p>
                     <div class="hero-actions">
-                        <a href="#novels" class="btn btn-primary">Explorar
-                            Novelas</a>
-                        <button id="AuthorRegister" class="btn btn-secondary"
-                            aria-controls="modal-author"
-                            aria-expanded="false">
-                            Únete como Autor
-                        </button>
+                        <a href="#novels" class="btn btn-primary">
+                            Explorar Novelas</a>
                     </div>
                 </div>
                 <!-- Indicador de scroll -->
@@ -314,67 +309,161 @@
                 </div>
             </section>
 
-            <section id="community" class="h-100 pt-8 pb-8 community">
+            <section id="community" class="h-100 community">
                 <div class="container">
-                    <div class="contenedor-coment">
-                        <div>
-                            <h1 class="form-title">Comunidad</h1>
-                            <p>Crea, comparte y comenta. Aquí, cada idea cuenta
-                                y
-                                cada
-                                historia puede inspirar a alguien más. </p>
-                        </div>
-                        <div class="comentarios">
-                            <div class="img-user">
-                                <img src="assets/comunidad/astronaut.png"
-                                    alt="comentario de comunidad"
-                                    loading="lazy">
+                    <!-- statistic -->
+                    <div class="community-section">
+                        <h1 class="form-title">
+                            <i class="fas fa-chart-line ml-5"></i>
+                            Nuestra Comunidad
+                        </h1>
+                        <div class="stats-container">
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <span class="stat-number">15K+</span>
+                                    <span class="stat-label">Novelas</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">250K+</span>
+                                    <span class="stat-label">Lectores</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">1.2M+</span>
+                                    <span class="stat-label">Capítulos</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">98%</span>
+                                    <span class="stat-label">Satisfacción</span>
+                                </div>
                             </div>
-                            <h3>Traductor</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur
-                                adipiscing
-                                elit,
-                                sed do eiusmod tempor incididunt ut labore et
-                                dolore
-                                magna
-                                aliqua.</p>
-                        </div>
+                            <div class="community-cta">
+                                <h3><i class="fas fa-heart ml-5"></i>
+                                    ¡Únete a nuestra familia literaria!
+                                </h3>
+                                <p class="foo-message">
+                                    Crea, comparte y comenta. Aquí, cada idea
+                                    cuenta
+                                    y cada historia puede inspirar a alguien
+                                    más.
+                                </p>
+                                <p>
+                                    Encuentra tus autores y traductores
+                                    favoritos
+                                </p>
 
-                        <div class="comentarios">
-                            <div class="img-user">
-                                <img src="assets/comunidad/astronaut.png"
-                                    alt="comentario de comunidad"
-                                    loading="lazy">
+                                <div class="cta-buttons">
+                                    <a id="AuthorRegister" href="#"
+                                        class="btn btn-cta"
+                                        aria-controls="modal-author"
+                                        aria-expanded="false"
+                                        aria-label="Registro autor">
+                                        <i class="fas fa-user-plus ml-5"></i>
+                                        Ser Autor
+                                    </a>
+                                    <a aria-label="Registro traductor"
+                                        id="TraductorRegister" href="#"
+                                        class="btn btn-cta">
+                                        <i class="fas fa-language ml-5"></i>
+                                        Ser Traductor
+                                    </a>
+                                    <a aria-label="Registro usuario" href="#"
+                                        class="btn btn-cta">
+                                        <i class="fas fa-book-reader ml-5"></i>
+                                        Solo Leer
+                                    </a>
+                                </div>
                             </div>
-                            <h3>Autor</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur
-                                adipiscing
-                                elit,
-                                sed do eiusmod tempor incididunt ut labore et
-                                dolore
-                                magna
-                                aliqua</p>
-                        </div>
-
-                        <div class="comentarios">
-                            <div class="img-user">
-                                <img src="assets/comunidad/astronaut.png"
-                                    alt="comentario de comunidad"
-                                    loading="lazy">
-                            </div>
-                            <h3>Traductor</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur
-                                adipiscing
-                                elit,
-                                sed do eiusmod tempor incididunt ut labore et
-                                dolore
-                                magna
-                                aliqua</p>
                         </div>
                     </div>
-                    <br><br><br>
+                    <!-- testimonials -->
+                    <div class="community-section">
+                        <h2 class="form-title">
+                            <i class="fas fa-users ml-5"></i>
+                            Voces de Nuestra Comuinidad
+                        </h2>
+                        <div class="testimonials-grid">
+                            <div class="comment">
+                                <div class="img-user">
+                                    <img
+                                        src="https://avatar.iran.liara.run/public/54"
+                                        alt="María González - Traductora"
+                                        loading="lazy">
+                                </div>
+                                <h3>
+                                    <span>María González</span>
+                                    <span class="role">Traductora</span>
+                                </h3>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="comment-text">
+                                    DreamScape me ayudó a
+                                    descubrir géneros que nunca pensé que me
+                                    gustarían. La comunidad es increíble y
+                                    siempre hay apoyo para los traductores.
+                                </p>
+                            </div>
+
+                            <div class="comment">
+                                <div class="img-user">
+                                    <img
+                                        src="https://avatar.iran.liara.run/public/41"
+                                        alt="Carlos Ruiz - Autor"
+                                        loading="lazy">
+                                </div>
+                                <h3>
+                                    <span>Carlos Ruiz</span>
+                                    <span class="role">Autor</span>
+                                </h3>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="comment-text">
+                                    Como autor, encuentro en
+                                    DreamScape el espacio perfecto para
+                                    compartir mis historias. Los lectores son
+                                    muy participativos y el feedback es
+                                    invaluable.
+                                </p>
+                            </div>
+
+                            <div class="comment">
+                                <div class="img-user">
+                                    <img
+                                        src="https://avatar.iran.liara.run/public/26"
+                                        alt="Ana Martínez - Lectora"
+                                        loading="lazy">
+                                </div>
+                                <h3>
+                                    <span>Ana Martínez</span>
+                                    <span class="role">Lectora VIP</span>
+                                </h3>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="comment-text">
+                                    La variedad de géneros
+                                    es impresionante. Siempre encuentro algo
+                                    nuevo que leer, y la calidad de las
+                                    traducciones es excepcional.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Preguntas frecuentes -->
-                    <div class="container">
+                    <div class>
                         <h1 class="form-title">Preguntas Frecuentes</h1>
                         <table class="tabla-preguntas">
                             <tr>
@@ -422,8 +511,7 @@
                     </div>
                 </div>
             </section>
-
-            <section id="contact" class="h-100 pt-8">
+            <section id="contact" class="h-100">
                 <div class="container">
 
                     <div class="contact__main">
@@ -456,138 +544,144 @@
                     </div>
                 </div>
             </section>
-
-        </main>
-        <footer>
-            <div class="container">
-                <div class="footer-top">
-                    <div class="footer-section">
-                        <h3 class="foo-title"><i
-                                class="fas fa-envelope-open-text ml-5"></i>
+            <footer>
+                <div class="container">
+                    <div class="footer-top">
+                        <div class="footer-section">
+                            <h3 class="foo-title"><i
+                                    class="fas fa-envelope-open-text ml-5"></i>
                                 Únete a nuestra comunidad</h3>
 
-                        <p class="foo-message">
-                            Recibe las últimas novedades,
-                            reseñas exclusivas y
-                            recomendaciones personalizadas.
-                        </p>
+                            <p class="foo-message">
+                                Recibe las últimas novedades,
+                                reseñas exclusivas y
+                                recomendaciones personalizadas.
+                            </p>
 
-                        <form class="newsletter-form">
-                            <div class="form-group">
-                                <input type="email" id="email" name="email"
-                                    required
-                                    placeholder="Ingresa tu email"
-                                    autocomplete="off"
-                                    class="form-input">
+                            <form class="newsletter-form">
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email"
+                                        required
+                                        placeholder="Ingresa tu email"
+                                        autocomplete="off"
+                                        class="form-input">
+                                </div>
+                                <div class="checkbox-group">
+                                    <div class="checkbox-item">
+                                        <input type="checkbox"
+                                            id="nuevas-novelas"
+                                            checked>
+                                        <label for="nuevas-novelas">Nuevas
+                                            novelas</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="reseñas">
+                                        <label for="reseñas">Reseñas
+                                            destacadas</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="eventos">
+                                        <label for="eventos">Eventos
+                                            exclusivos</label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane ml-5"></i>
+                                    Suscribirme
+                                </button>
+                            </form>
+                        </div>
+                        <div class="footer-section">
+                            <h3 class="foo-title"><i
+                                    class="fas fa-compass ml-5"></i>Explora
+                                más</h3>
+                            <ul class="footer-links">
+                                <li><a href="#"><i class="fas fa-fire"></i>
+                                        Géneros
+                                        populares</a></li>
+                                <li><a href="#"><i class="fas fa-star"></i> Top
+                                        rated</a></li>
+                                <li><a href="#"><i class="fas fa-clock"></i>
+                                        Recién
+                                        actualizadas</a></li>
+                                <li><a href="#"><i class="fas fa-trophy"></i>
+                                        Premios DreamScape</a></li>
+                                <li><a href="#"><i class="fas fa-book-open"></i>
+                                        Guía de lectura</a></li>
+                                <li><a href="#"><i class="fas fa-blog"></i> Blog
+                                        de
+                                        la comunidad</a></li>
+                                <li><a href="#"><i
+                                            class="fas fa-question-circle"></i>
+                                        Centro de ayuda</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-section">
+                            <h3 class="foo-title"><i
+                                    class="fas fa-users ml-5"></i>
+                                Únete al club</h3>
+                            <p class="foo-message">
+                                Contecta con otros lectores, interactua con
+                                autores y traductores de la comunidad sin
+                                perderte
+                                de
+                                nada.
+                            </p>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon" title="discord">
+                                    <i class="fa-brands fa-discord"></i>
+                                </a>
+                                <a href="#" class="social-icon" title="twitch">
+                                    <i class="fa-brands fa-twitch"></i>
+                                </a>
+                                <a href="#" class="social-icon"
+                                    title="instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-icon" title="reddit">
+                                    <i class="fa-brands fa-reddit"></i>
+                                </a>
                             </div>
-                            <div class="checkbox-group">
-                                <div class="checkbox-item">
-                                    <input type="checkbox" id="nuevas-novelas"
-                                        checked>
-                                    <label for="nuevas-novelas">Nuevas
-                                        novelas</label>
-                                </div>
-                                <div class="checkbox-item">
-                                    <input type="checkbox" id="reseñas">
-                                    <label for="reseñas">Reseñas
-                                        destacadas</label>
-                                </div>
-                                <div class="checkbox-item">
-                                    <input type="checkbox" id="eventos">
-                                    <label for="eventos">Eventos
-                                        exclusivos</label>
-                                </div>
+                            <h3 class="foo-title"><i
+                                    class="fas fa-mobile-alt ml-5"></i>
+                                Descarga la app
+                            </h3>
+                            <div class="app-download">
+                                <a href="#" class="app-button">
+                                    <i class="fab fa-google-play ml-5"></i>
+                                    <span>Play Store</span>
+                                </a>
+                                <a href="#" class="app-button">
+                                    <i class="fab fa-app-store ml-5"></i>
+                                    <span>App Store</span>
+                                </a>
                             </div>
-                            <button type="submit" class="btn btn-primary">
-                                <i class="fas fa-paper-plane ml-5"></i>
-                                Suscribirme
-                            </button>
-                        </form>
-                    </div>
-                    <div class="footer-section">
-                        <h3 class="foo-title"><i
-                                class="fas fa-compass ml-5"></i>Explora más</h3>
-                        <ul class="footer-links">
-                            <li><a href="#"><i class="fas fa-fire"></i> Géneros
-                                    populares</a></li>
-                            <li><a href="#"><i class="fas fa-star"></i> Top
-                                    rated</a></li>
-                            <li><a href="#"><i class="fas fa-clock"></i> Recién
-                                    actualizadas</a></li>
-                            <li><a href="#"><i class="fas fa-trophy"></i>
-                                    Premios DreamScape</a></li>
-                            <li><a href="#"><i class="fas fa-book-open"></i>
-                                    Guía de lectura</a></li>
-                            <li><a href="#"><i class="fas fa-blog"></i> Blog de
-                                    la comunidad</a></li>
-                            <li><a href="#"><i
-                                        class="fas fa-question-circle"></i>
-                                    Centro de ayuda</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h3 class="foo-title"><i class="fas fa-users ml-5"></i>
-                            Únete al club</h3>
-                        <p class="foo-message">
-                            Contecta con otros lectores, interactua con
-                            autores y traductores de la comunidad sin perderte
-                            de
-                            nada.
-                        </p>
-                        <div class="social-icons">
-                            <a href="#" class="social-icon" title="discord">
-                                <i class="fa-brands fa-discord"></i>
-                            </a>
-                            <a href="#" class="social-icon" title="twitch">
-                                <i class="fa-brands fa-twitch"></i>
-                            </a>
-                            <a href="#" class="social-icon"
-                                title="instagram">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="#" class="social-icon" title="reddit">
-                                <i class="fa-brands fa-reddit"></i>
-                            </a>
-                        </div>   
-                        <h3 class="foo-title"><i
-                                class="fas fa-mobile-alt ml-5"></i>
-                            Descarga la app
-                        </h3>
-                        <div class="app-download">
-                            <a href="#" class="app-button">
-                                <i class="fab fa-google-play ml-5"></i>
-                                <span>Play Store</span>
-                            </a>
-                            <a href="#" class="app-button">
-                                <i class="fab fa-app-store ml-5"></i>
-                                <span>App Store</span>
-                            </a>
-                        </div>                    
-                    </div>
-                   
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <h3 class="footer-motto">
-                    “Donde cada historia encuentra
-                    un lector”
-                </h3>
-                <div class="footer-legal">
-                    <div>
-                        <p>
-                            &copy;DreamScape 2025. Todos los
-                            derechos reservados.
-                        </p>
-                    </div>
-                    <div class="legal-links">
-                        <a href="#">Términos de uso</a>
-                        <a href="#">Política de privacidad</a>
-                        <a href="#">Cookies</a>
-                        <a href="#">Contacto</a>
+                        </div>
+
                     </div>
                 </div>
-            </div>
-        </footer>
-         <script type="module" src="./js/main.js"></script>
+                <div class="footer-bottom">
+                    <h3 class="footer-motto">
+                        “Donde cada historia encuentra
+                        un lector”
+                    </h3>
+                    <div class="footer-legal">
+                        <div>
+                            <p>
+                                &copy;DreamScape 2025. Todos los
+                                derechos reservados.
+                            </p>
+                        </div>
+                        <div class="legal-links">
+                            <a href="#">Términos de uso</a>
+                            <a href="#">Política de privacidad</a>
+                            <a href="#">Cookies</a>
+                            <a href="#">Contacto</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+        <script type="module" src="./js/main.js"></script>
     </body>
 </html>

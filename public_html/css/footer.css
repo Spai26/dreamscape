@@ -15,8 +15,10 @@
     background-clip: text;
 }
 
-.foo-message {
+.foo-message {    
     margin-bottom: 0.5rem;
+    max-width: 600px;
+    text-align: start;
 }
 
 .footer-links {

@@ -95,8 +95,8 @@
 
 .form-title {
     background: linear-gradient(135deg, var(--color7), var(--color6), var(--color5));
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
     background-clip: text;
 }
 
