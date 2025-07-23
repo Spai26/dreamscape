@@ -7,6 +7,7 @@
 @import url("./modal.css");
 @import url("./footer.css");
 @import url("./community.css");
+@import url("./contact.css");
 
 *,
 *::before,
@@ -110,22 +111,12 @@ body::before {
 }
 
 /* === simulate landing sections======= */
-.h-100 {
-    min-height: 100vh;
-    position: relative;
-    z-index: 5;
-}
-
-.pt-8 {
-    padding-top: 8vh;
-}
-
-.pb-8 {
-    padding-bottom: 8vh;
-}
-
-.ml-4 {
-    margin-left: 4px;
+.separator{
+    min-height: calc(100vh - 8vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding: 4rem 0; 
 }
 
 .title-primary {
@@ -306,29 +297,6 @@ body::before {
     60% {
         transform: translateX(-50%) translateY(-5px);
     }
-}
-
-/*==========contacto===========*/
-.contact__main {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.contact__image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    order: 1;
-}
-
-.contact__image img {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
 }
 
 /*======= nosotros ==========*/

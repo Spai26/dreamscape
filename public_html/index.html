@@ -141,7 +141,7 @@
             </div>
         </header>
         <main class="group-relative">
-            <section class="parallax pt-8" id="home">
+            <section class="parallax separator" id="home">
 
                 <img class="parallax__top" src="./assets/landscape/top.svg" alt>
 
@@ -242,9 +242,12 @@
                 </div>
             </section>
 
-            <section id="about" class="h-100">
+            <section id="about" class="separator">
                 <div class="container">
-                    <h1 class="form-title">Acerca de Nosotros</h1>
+                    <h1 class="form-title">
+                        <i class="fa-solid fa-signature ml-5"></i>
+                        Acerca de Nosotros
+                    </h1>
                     <div class="nosotros__flex">
                         <div class="nosotros__tarjetas">
                             <!-- Tarjeta 1 -->
@@ -285,9 +288,11 @@
                 </div>
             </section>
 
-            <section id="novels" class="h-100 novels-section">
+            <section id="novels" class="separator ">
                 <div class="container">
-                    <h1 class="title-primary novel-title">Nuestras Novelas</h1>
+                    <h2 class="form-title novel-title">
+                        <i class="fa-solid fa-book ml-5"></i>
+                        Nuestras Novelas</h2>
                     <div class="novels-grid">
                         <!-- Las tarjetas de novelas se generarán dinámicamente aquí -->
                     </div>
@@ -309,7 +314,7 @@
                 </div>
             </section>
 
-            <section id="community" class="h-100 community">
+            <section id="community" class="separator community">
                 <div class="container">
                     <!-- statistic -->
                     <div class="community-section">
@@ -519,36 +524,47 @@
                 </div>
             </section>
 
-            <section id="contact" class="h-100">
+            <section id="contact" class="separator">
                 <div class="container">
-
-                    <div class="contact__main">
-                        <div class="contact__image">
-                            <img src="./assets/images/hana.webp" alt>
-                        </div>
-
-                        <form action method class="form-container">
-                            <div class="from-header">
-                                <h1 class="form-title">Contáctanos</h1>
-                                <p class="form-subtitle">
-                                    Si deseas publicar o
-                                    eres tradutor de alguna novela puedes
-                                    contactarnos por aquí
+                    <div class="contact-grid">     
+                        <form class="contact-form">
+                            <div class="form-header">
+                                <h2 class="form-title">
+                                    <i class="fa-solid fa-envelope ml-5"></i>
+                                    Contáctanos
+                                </h2>
+                                <p class="foo-message">
+                                    ¿Eres autor o traductor? Escríbenos y te
+                                    ayudaremos con tu proyecto literario.
                                 </p>
                             </div>
-
-                            <input type="email" placeholder="Ingresa tu email"
-                                class="form-input">
-                            <input type="text" placeholder="Ingresa tu nombre"
-                                class="form-input">
-                            <textarea name="description"
-                                placeholder="Escribe tu mensaje"
-                                class="form-input form-textarea">
+                            <div class="form-group">
+                                <input type="text"
+                                    placeholder="Ingresa tu nombre"
+                                    class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <input type="email"
+                                    placeholder="Ingresa tu email"
+                                    class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="description"
+                                    placeholder="Escribe tu mensaje"
+                                    class="form-input form-textarea">
                             </textarea>
+                            </div>
 
                             <button type="submit"
-                                class="btn btn-primary btn btn-flex">Enviar</button>
+                                class="btn btn-primary">
+                                <i class="fas fa-paper-plane ml-5"></i>Enviar
+                            </button>
                         </form>
+                         <div class="contact-image-wrapper">
+                            <img src="./assets/landscape/girl.png"
+                                alt="imagen de contacto" loading="lazy"
+                                class="contact-image">
+                        </div>
                     </div>
                 </div>
             </section>

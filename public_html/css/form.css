@@ -14,6 +14,10 @@
     gap: clamp(0.5rem, 2vw, 0.75rem);
 }
 
+.form-header{
+    margin-bottom: 1rem;
+}
+
 .group-button{
     display: flex;
     justify-content: center;
