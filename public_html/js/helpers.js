@@ -1,3 +1,6 @@
+import { loadAllNovels } from "./filter.js";
+import { createDiv } from "./novel.js";
+
 export const authors = [];
 
 const languages = [
@@ -79,3 +82,19 @@ export const animateStatisctic = () => {
     })
 }
 
+export const setupPagination =() => {
+    const CARD_PER_PAGE = 8;
+    let current = 1;
+    const totalPage = loadAllNovels(current, CARD_PER_PAGE);
+    
+    let pagination = document.querySelector(".pagination");
+
+    if (!pagination) {
+        pagination = createDiv("pagination");
+        document.querySelector(".novels-grid").insertAdjacentElement("afterend", pagination);
+    }
+
+    
+}
+
+setupPagination()

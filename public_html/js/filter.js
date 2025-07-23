@@ -21,7 +21,7 @@ export const loadFilterGenre = () => {
     }));
 }
 
-export const loadAllNovels = () => {
+export const loadAllNovels = (page = 1, cardsPerPage = 8) => {
     const novelsGrid = document.querySelector('.novels-grid');
     if (!novelsGrid) {
         console.log("no se encontro el contenedor novels-grid");
@@ -30,8 +30,15 @@ export const loadAllNovels = () => {
 
     novelsGrid.innerHTML = "";
 
-    novels.forEach((novel) => {
+    const totalPage = Math.ceil(novels.length / cardsPerPage);
+    const startIndex = (page - 1) * cardsPerPage;
+    const endIndex = startIndex + cardsPerPage;
+    const novelToShow = novels.slice(startIndex, endIndex);
+
+    novelToShow.forEach((novel) => { 
         const card = createCard(novel);
         novelsGrid.appendChild(card);
     })
+
+    return Math.ceil(novels.length / cardsPerPage);
 }
