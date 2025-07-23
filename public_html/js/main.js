@@ -291,6 +291,25 @@ function createSpanError(fieldname) {
     return errorElement;
 }
 
+const animateScrollTop = () => {
+    const scrollToTop = document.getElementById("scrollToTopBtn");
+
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 1000) {
+            openLabel(scrollToTop);
+        } else {
+            closeLabel(scrollToTop);
+        }
+    })
+
+    scrollToTop.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    })
+}
+
 const initFunctions = () => {
     const body = document.body;
     setupEventHeader();
@@ -300,6 +319,7 @@ const initFunctions = () => {
 
     if (body.classList.contains("page-home")) {
         console.log("home");
+        animateScrollTop();
         setupAnimation()
         loadCountriesOption();
         loadlanguageOption();
