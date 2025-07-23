@@ -1,10 +1,6 @@
 /*==========Comunidad=========*/
-.community {
-    width: 100%;
-    padding: 80px 20px;
-}
-
 .community-section {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;

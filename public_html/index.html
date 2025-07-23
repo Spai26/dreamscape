@@ -245,7 +245,7 @@
             <section id="about" class="separator">
                 <div class="container">
                     <h1 class="form-title">
-                        <i class="fa-solid fa-signature ml-5"></i>
+                        <i class="fa-solid fa-signature mr-5"></i>
                         Acerca de Nosotros
                     </h1>
                     <div class="nosotros__flex">
@@ -290,36 +290,47 @@
 
             <section id="novels" class="separator ">
                 <div class="container">
-                    <h2 class="form-title novel-title">
-                        <i class="fa-solid fa-book ml-5"></i>
-                        Nuestras Novelas</h2>
+                    <header class="section-header">
+                        <h2 class="form-title novel-title">
+                            <i class="fa-solid fa-book mr-5"></i>
+                            Nuestras Novelas
+                        </h2>
+                        <p class="foo-message">
+                            Descubre historias que te
+                            transportarán a otros mundos
+                        </p>
+                    </header>
+
                     <div class="novels-grid">
                         <!-- Las tarjetas de novelas se generarán dinámicamente aquí -->
                     </div>
 
                     <div class="banner-novel">
                         <div class="banner-novel__content">
-                            <p class="banner-text">
-                                ¿Te quedaste con ganas de más
-                                historias?
-                            </p>
-                            <p class="banner-stat">
-                                Explora más de <strong>120 novelas</strong> en
-                                nuestro catálogo
-                            </p>
+                            <div class="banner-text-wrapper">
+                                <p class="banner-text">
+                                    ¿Te quedaste con ganas de más
+                                    historias?
+                                </p>
+                                <div class="banner-divider"></div>
+                                <p class="banner-stat">
+                                    Explora más de<strong><span class="counter" data-target="120"> 120 </span> novelas</strong> esperándote
+                                </p>
+                            </div>
+
                             <a href="./p/novels/index.html"
-                                class="btn-primary btn-baner">Ver más...</a>
+                                class="btn btn-primary">Explorar más <i class="fas fa-arrow-right ml-5"></i></a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="community" class="separator community">
+            <section id="community" class="separator">
                 <div class="container">
                     <!-- statistic -->
                     <div class="community-section">
                         <h1 class="form-title">
-                            <i class="fas fa-chart-line ml-5"></i>
+                            <i class="fas fa-chart-line mr-5"></i>
                             Nuestra Comunidad
                         </h1>
                         <div class="stats-container">
@@ -348,7 +359,7 @@
                             </div>
                             <div class="community-cta">
                                 <h3 class="title-secondary"><i
-                                        class="fas fa-heart ml-5"></i>
+                                        class="fas fa-heart mr-5"></i>
                                     ¡Únete a nuestra familia literaria!
                                 </h3>
                                 <p class="foo-message">
@@ -368,18 +379,18 @@
                                         aria-controls="modal-author"
                                         aria-expanded="false"
                                         aria-label="Registro autor">
-                                        <i class="fas fa-user-plus ml-5"></i>
+                                        <i class="fas fa-user-plus mr-5"></i>
                                         Ser Autor
                                     </button>
                                     <button aria-label="Registro traductor"
                                         id="TraductorRegister"
                                         class="btn btn-cta">
-                                        <i class="fas fa-language ml-5"></i>
+                                        <i class="fas fa-language mr-5"></i>
                                         Ser Traductor
                                     </button>
                                     <button aria-label="Registro usuario"
                                         class="btn btn-cta">
-                                        <i class="fas fa-book-reader ml-5"></i>
+                                        <i class="fas fa-book-reader mr-5"></i>
                                         Solo Leer
                                     </button>
 
@@ -390,7 +401,7 @@
                     <!-- testimonials -->
                     <div class="community-section">
                         <h2 class="form-title">
-                            <i class="fas fa-users ml-5"></i>
+                            <i class="fas fa-users mr-5"></i>
                             Voces de Nuestra Comuinidad
                         </h2>
                         <div class="testimonials-grid">
@@ -526,11 +537,11 @@
 
             <section id="contact" class="separator">
                 <div class="container">
-                    <div class="contact-grid">     
+                    <div class="contact-grid">
                         <form class="contact-form">
                             <div class="form-header">
                                 <h2 class="form-title">
-                                    <i class="fa-solid fa-envelope ml-5"></i>
+                                    <i class="fa-solid fa-envelope mr-5"></i>
                                     Contáctanos
                                 </h2>
                                 <p class="foo-message">
@@ -557,10 +568,10 @@
 
                             <button type="submit"
                                 class="btn btn-primary">
-                                <i class="fas fa-paper-plane ml-5"></i>Enviar
+                                <i class="fas fa-paper-plane mr-5"></i>Enviar
                             </button>
                         </form>
-                         <div class="contact-image-wrapper">
+                        <div class="contact-image-wrapper">
                             <img src="./assets/landscape/girl.png"
                                 alt="imagen de contacto" loading="lazy"
                                 class="contact-image">
@@ -574,7 +585,7 @@
                     <div class="footer-top">
                         <div class="footer-section">
                             <h3 class="foo-title"><i
-                                    class="fas fa-envelope-open-text ml-5"></i>
+                                    class="fas fa-envelope-open-text mr-5"></i>
                                 Únete a nuestra comunidad</h3>
 
                             <p class="foo-message">
@@ -611,14 +622,14 @@
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="fas fa-paper-plane ml-5"></i>
+                                    <i class="fas fa-paper-plane mr-5"></i>
                                     Suscribirme
                                 </button>
                             </form>
                         </div>
                         <div class="footer-section">
                             <h3 class="foo-title"><i
-                                    class="fas fa-compass ml-5"></i>Explora
+                                    class="fas fa-compass mr-5"></i>Explora
                                 más</h3>
                             <ul class="footer-links">
                                 <li><a href="#"><i class="fas fa-fire"></i>
@@ -643,7 +654,7 @@
                         </div>
                         <div class="footer-section">
                             <h3 class="foo-title"><i
-                                    class="fas fa-users ml-5"></i>
+                                    class="fas fa-users mr-5"></i>
                                 Únete al club</h3>
                             <p class="foo-message">
                                 Contecta con otros lectores, interactua con
@@ -668,16 +679,16 @@
                                 </a>
                             </div>
                             <h3 class="foo-title"><i
-                                    class="fas fa-mobile-alt ml-5"></i>
+                                    class="fas fa-mobile-alt mr-5"></i>
                                 Descarga la app
                             </h3>
                             <div class="app-download">
                                 <a href="#" class="app-button">
-                                    <i class="fab fa-google-play ml-5"></i>
+                                    <i class="fab fa-google-play mr-5"></i>
                                     <span>Play Store</span>
                                 </a>
                                 <a href="#" class="app-button">
-                                    <i class="fab fa-app-store ml-5"></i>
+                                    <i class="fab fa-app-store mr-5"></i>
                                     <span>App Store</span>
                                 </a>
                             </div>

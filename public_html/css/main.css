@@ -392,8 +392,12 @@ body::before {
     font-weight: bold;
 }
 
-.mb-10 {
-    padding-bottom: 25rem;
+.ml-5{
+    margin-left: 0.5rem;
+}
+
+.mr-5 {
+    margin-right: 0.5rem;
 }
 
 /* ========== small movile ========= */

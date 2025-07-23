@@ -68,10 +68,6 @@
     cursor: pointer;
 }
 
-.ml-5 {
-    margin-right: 0.5rem;
-}
-
 .social-icons {
     display: flex;
     gap: 1rem;
