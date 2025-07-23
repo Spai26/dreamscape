@@ -144,21 +144,36 @@
                 </div>
             </div>
         </header>
-        <main class="container separator">
-            <div class="list-section">
-                <h2 class="foo-title">
-                    <i class="fa-solid fa-book mr-5"></i>
-                    Biblioteca de novelas
-                </h2>
-                <section>
-                    <div>
+        <main class="container">
+
+            <section class="list-section">
+                <header class="list-header">
+                    <h2 class="foo-title">
+                        <i class="fa-solid fa-book mr-5"></i>
+                        Biblioteca de novelas
+                    </h2>
+                    <div class="list-filtered">
+                        <p>Genres</p>
+                        <div>
+                            <select name="genres" id="genres"></select>
+                        </div>
+                        <div>
+                            <p>alphabetic</p>
+                            <select name="alpha" id="alpha"></select>
+                        </div>
 
                     </div>
-                    <div class="novels-grid">
-                    </div>
-                    
-                </section>
-            </div>
+                </header>
+                <div class="novels-grid">
+                    <!-- novels filtered -->
+                </div>
+
+                <div class="list-pagination">
+                    <!-- button paginated -->
+
+                </div>
+            </section>
+
         </main>
         <script type="module" src="../../js/main.js" defer></script>
     </body>

@@ -1,7 +1,14 @@
-import { loadAllNovels } from "./filter.js";
-import { createDiv } from "./novel.js";
-
 export const authors = [];
+
+export const orderData = [
+  { id: 1, name: "ascending" },
+  { id: 2, name: "descending" },
+];
+
+export const alphabeticOrder = [
+  { id: 1, name: "a-z" },
+  { id: 2, name: "z-a" },
+];
 
 const languages = [
     { language: "Español", value: "es" },
@@ -41,6 +48,18 @@ export const loadCountriesOption = () => {
     })
 }
 
+export const loadAlphabeticOption = () => {
+    const alpha = document.getElementById("alpha");
+    alpha.innerHTML = `<option value="reset">reset</option>`;
+
+    alphabeticOrder.forEach((ord) => {
+        const option = document.createElement("option");
+        option.value = ord.name;
+        option.textContent = ord.name;
+        alpha.appendChild(option);
+    })
+}
+
 export const loadlanguageOption = () => {
     const languageSelect = document.getElementById("authorLanguages");
 
@@ -51,7 +70,7 @@ export const loadlanguageOption = () => {
         option.value = lang.value
         option.textContent = lang.language
         languageSelect.appendChild(option);
-    })
+    });
 }
 
 export const animateStatisctic = () => {
@@ -81,20 +100,3 @@ export const animateStatisctic = () => {
         }, 30)
     })
 }
-
-export const setupPagination =() => {
-    const CARD_PER_PAGE = 8;
-    let current = 1;
-    const totalPage = loadAllNovels(current, CARD_PER_PAGE);
-    
-    let pagination = document.querySelector(".pagination");
-
-    if (!pagination) {
-        pagination = createDiv("pagination");
-        document.querySelector(".novels-grid").insertAdjacentElement("afterend", pagination);
-    }
-
-    
-}
-
-setupPagination()

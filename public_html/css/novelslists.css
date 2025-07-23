@@ -3,4 +3,36 @@
     flex-direction: column;
     align-items: center;
     margin-top: 2rem;
+    padding: 4rem 0;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
 }
+
+.list-pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 240px;
+    max-width: 900px;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.page{
+    background: var(--black-acent);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: var(--color-base-text);
+    font-weight: 700;
+}
+
+.page:hover:not(.activePage){
+    background: var(--black);
+}
+.activePage{
+    background: var(--black);
+    border: 2px solid var(--n-input-border);
+}
+

@@ -1,6 +1,6 @@
 import { initDetailPage } from "./detail.js";
-import { fetchResult, handlerToSearch, loadAllNovels } from "./filter.js";
-import { animateStatisctic, loadCountriesOption, loadlanguageOption } from "./helpers.js";
+import { handlerToSearch, loadFilteredGenres, setupPagination } from "./filter.js";
+import { animateStatisctic, loadAlphabeticOption, loadCountriesOption, loadlanguageOption } from "./helpers.js";
 import { authors, loadMinNovels } from "./novel.js";
 import { getFieldsID, validation } from "./validator.js";
 
@@ -329,7 +329,9 @@ const initFunctions = () => {
 
     if (body.classList.contains("page-novel-list")) {
         console.log("list");
-        loadAllNovels();
+        loadAlphabeticOption();
+        setupPagination();
+        loadFilteredGenres();
     }
 
     if (body.classList.contains("page-novel-detail")) {
