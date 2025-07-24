@@ -7,6 +7,14 @@
     gap: 40px;
 }
 
+.about-section{
+    margin-top: 2rem;
+}
+
+.about-section h2{
+text-align: center;
+}
+
 /* Contenedor de tarjetas a la izquierda */
 .nosotros__tarjetas {
     flex: 1 1 55%;
@@ -17,11 +25,11 @@
 
 /* Tarjetas con animación */
 .nosotros__card {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: var(--input-bg);
     /* fondo transparente suave */
     backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
+    border: 1px solid var(--n-input-border);
+    border-radius: var(--2xl-border);
     padding: 1.5rem;
     color: #ffffff;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -36,17 +44,11 @@
     box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
 }
 
-/* Títulos dentro de las tarjetas */
-.nosotros__titulo {
-    font-size: 2rem;
-    margin-bottom: 15px;
-
-}
 
 .nosotros__subtitulo {
     font-size: 1.4rem;
     margin-bottom: 10px;
-    color: var(--color10);
+    color: var(--cyan-accent);
 }
 
 .nosotros__card p {

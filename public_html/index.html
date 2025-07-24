@@ -255,45 +255,50 @@
 
             <section id="about" class="separator">
                 <div class="container">
-                    <h1 class="form-title">
-                        <i class="fa-solid fa-signature mr-5"></i>
-                        Acerca de Nosotros
-                    </h1>
-                    <div class="nosotros__flex">
-                        <div class="nosotros__tarjetas">
-                            <!-- Tarjeta 1 -->
-                            <div class="nosotros__card">
-                                <h3 class="nosotros__subtitulo">Misión</h3>
-                                <p>
-                                    Brindar acceso a los autores y traductores
-                                    una
-                                    plataforma accesible y moderna donde puedan
-                                    publicar y difundir sus obras a una
-                                    audiencia
-                                    global.
-                                </p>
+                    <div class="about-section">
+                        <h2 class="form-title">
+                            <i class="fa-solid fa-signature mr-5"></i>
+                            Acerca de Nosotros
+                        </h2>
+                        <div class="nosotros__flex">
+                            <div class="nosotros__tarjetas">
+                                <!-- Tarjeta 1 -->
+                                <div class="nosotros__card">
+                                    <h3 class="nosotros__subtitulo">Misión</h3>
+                                    <p>
+                                        Brindar acceso a los autores y
+                                        traductores
+                                        una
+                                        plataforma accesible y moderna donde
+                                        puedan
+                                        publicar y difundir sus obras a una
+                                        audiencia
+                                        global.
+                                    </p>
+                                </div>
+
+                                <!-- Tarjeta 2 -->
+                                <div class="nosotros__card">
+                                    <h3 class="nosotros__subtitulo">Visión</h3>
+                                    <p>
+                                        Convertirnos en una comunidad literaria
+                                        digital
+                                        accesible y envolvente, donde cada
+                                        historia
+                                        tenga un espacio y cada lector una
+                                        experiencia
+                                        envolvente.
+                                    </p>
+                                </div>
                             </div>
 
-                            <!-- Tarjeta 2 -->
-                            <div class="nosotros__card">
-                                <h3 class="nosotros__subtitulo">Visión</h3>
-                                <p>
-                                    Convertirnos en una comunidad literaria
-                                    digital
-                                    accesible y envolvente, donde cada historia
-                                    tenga un espacio y cada lector una
-                                    experiencia
-                                    envolvente.
-                                </p>
+                            <!-- Imagen a la derecha -->
+                            <div class="nosotros__imagen-container">
+                                <img
+                                    src="assets/images/joven-anime-removebg-preview.png"
+                                    alt="Imagen de anime"
+                                    class="nosotros__imagen">
                             </div>
-                        </div>
-
-                        <!-- Imagen a la derecha -->
-                        <div class="nosotros__imagen-container">
-                            <img
-                                src="assets/images/joven-anime-removebg-preview.png"
-                                alt="Imagen de anime"
-                                class="nosotros__imagen">
                         </div>
                     </div>
                 </div>
@@ -500,51 +505,116 @@
                         </div>
                     </div>
                     <!-- Preguntas frecuentes -->
-                    <div class>
-                        <h1 class="form-title">Preguntas Frecuentes</h1>
-                        <table class="tabla-preguntas">
-                            <tr>
-                                <td>
-                                    <input type="checkbox" id="pregunta1">
-                                    <label class="preguntas" for="pregunta1">
-                                        ¿Cómo puedo unirme a la comunidad?
-                                    </label>
-                                    <div class="respuesta">
-                                        Solo debes registrarte con tu correo y
-                                        recibirás las ultimas novedades.
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="checkbox" id="pregunta2">
-                                    <label class="preguntas" for="pregunta2">
-                                        ¿Cómo puedo publicar una novela?
-                                    </label>
-                                    <div class="respuesta">
-                                        Solo debes contactarnos e indicar si
-                                        deseas
-                                        publicar una novela o puedes registrarte
-                                        como un nuevo autor.
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="checkbox" id="pregunta3">
-                                    <label class="preguntas" for="pregunta3">
-                                        ¿Puedo ser traductor?
-                                    </label>
-                                    <div class="respuesta">
-                                        Sí, puedes contactarnos para ser autor o
-                                        traductor
-                                        y así contribuir creando o traduciendo
-                                        historias
-                                        dentro de la plataforma.
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
+                    <div class="community-section">
+                        <div class="faq-section">
+                            <h1 class="form-title">
+                                <i class="fa-solid fa-circle-question mr-5"></i>
+                                Preguntas Frecuentes
+                            </h1>
+                            <table class="tabla-preguntas">
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="pregunta1"
+                                            class="faq-toggle">
+                                        <label class="preguntas"
+                                            for="pregunta1">
+                                            <span class="faq-icon"><i
+                                                    class="fa-solid fa-plus"></i></span>
+                                            ¿Cómo puedo unirme a la comunidad?
+                                        </label>
+                                        <div class="respuesta">
+                                            <div class="respuesta-contenido">
+                                                Solo debes registrarte con tu
+                                                correo
+                                                electrónico y podrás acceder
+                                                a todas las funcionalidades de
+                                                nuestra plataforma. Recibirás
+                                                las
+                                                últimas novedades y podrás
+                                                interactuar con otros miembros
+                                                de la
+                                                comunidad literaria.
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="pregunta2"
+                                            class="faq-toggle">
+                                        <label class="preguntas"
+                                            for="pregunta2">
+                                            <span class="faq-icon"><i
+                                                    class="fa-solid fa-plus"></i></span>
+                                            ¿Cómo puedo publicar una novela?
+                                        </label>
+                                        <div class="respuesta">
+                                            <div class="respuesta-contenido">
+                                                <p>Tenemos dos opciones para
+                                                    publicar:</p>
+                                                <ol>
+                                                    <li>Puedes contactar
+                                                        directamente a nuestro
+                                                        equipo editorial</li>
+                                                    <li>Si te registras como
+                                                        autor,
+                                                        tendrás acceso a nuestro
+                                                        panel de
+                                                        auto-publicación</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="pregunta3"
+                                            class="faq-toggle">
+                                        <label class="preguntas"
+                                            for="pregunta3">
+                                            <span class="faq-icon">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </span>
+                                            ¿Puedo ser traductor?
+                                        </label>
+                                        <div class="respuesta">
+                                            <div class="respuesta-contenido">
+                                                <p>¡Absolutamente! Buscamos
+                                                    traductores talentosos
+                                                    para:</p>
+                                                <ul>
+                                                    <li>Traducir obras
+                                                        existentes</li>
+                                                    <li>Colaborar en proyectos
+                                                        comunitarios</li>
+                                                    <li>Trabajar con autores
+                                                        directamente</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="pregunta4"
+                                            class="faq-toggle">
+                                        <label for="pregunta4"
+                                            class="preguntas">
+                                            <span class="faq-icon"><i
+                                                    class="fa-solid fa-plus"></i></span>
+                                            ¿Hay algún costo por publicar?
+                                        </label>
+                                        <div class="respuesta">
+                                            <div class="respuesta-contenido">
+                                                Nuestra plataforma ofrece
+                                                opciones
+                                                tanto gratuitas como premium.
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </section>
