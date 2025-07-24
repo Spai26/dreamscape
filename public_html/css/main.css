@@ -118,7 +118,7 @@ body::before {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
 .title-primary {
@@ -342,6 +342,10 @@ body::before {
     .form-select {
         border-radius: var(--xs-border);
     }
+
+    .separator{
+        padding: 1rem 0;
+    }
 }
 
 /* ========== movile ========= */
@@ -363,6 +367,10 @@ body::before {
     .form-select {
         border-radius: var(--sm-border);
     }
+
+     .separator{
+        padding: 1.5rem 0;
+    }
 }
 
 /* ========== tablet ========= */
@@ -383,6 +391,10 @@ body::before {
     .form-input,
     .form-select {
         border-radius: var(--lg-border);
+    }
+
+     .separator{
+        padding: 2rem 0;
     }
 }
 

@@ -37,13 +37,11 @@ text-align: center;
     order: 1;
 }
 
-
 /* Hover animado en las tarjetas */
 .nosotros__card:hover {
     transform: scale(1.05) rotate(1deg);
     box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
 }
-
 
 .nosotros__subtitulo {
     font-size: 1.4rem;
@@ -91,4 +89,12 @@ text-align: center;
     color: var(--color-acento, #ff5e5e);
     /* usa la variable global si existe */
     font-weight: bold;
+}
+
+@media (max-width:768px) {
+    .nosotros__flex {
+        gap: 1.5rem;
+    }
+
+    
 }

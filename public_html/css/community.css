@@ -9,7 +9,11 @@
 }
 
 .faq-section{
-    padding: 4rem;
+    padding: 2rem;
+}
+
+.tc{
+     text-align: center;
 }
 
 .testimonials-grid {
@@ -100,7 +104,6 @@
     border:1px solid var(--n-input-border);
     border-radius: var(--2xl-border);
     backdrop-filter: blur(10px);
-    overflow: hidden;
     transition: all 0.3s ease;
 }
 
@@ -237,6 +240,12 @@
 }
 
 @media (max-width: 768px) {
+    .faq-section{
+    padding: 1rem;
+}
+    .tabla-preguntas{
+        margin: 0;
+    }
     .preguntas {
         font-size: 1.1rem;
         padding: 15px 20px;
@@ -244,5 +253,9 @@
     
     .respuesta-contenido {
         padding: 0 20px 20px;
+    }
+
+    .testimonials-grid{
+        padding: 1rem;
     }
 }
