@@ -75,7 +75,7 @@ project-root/
 
 # Creditos de imagen
 https://pixabay.com/es/users/andsproject-26081561/
-
+https://avatar-placeholder.iran.liara.run/avatars
 
 
 # Data Author Test
