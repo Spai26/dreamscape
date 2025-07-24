@@ -170,75 +170,86 @@
             </section>
 
             <section class="modal-author" data-visible="false">
-                <div class="group-relative modal-content ">
-                    <button class="toogle-close" aria-controls="modal-author"
-                        aria-expanded="true"
-                        aria-label="cerra registro autor">
-                        <span class="icon white">
-                            <svg width="800px" height="800px"
-                                viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z"
-                                    fill="currentColor" />
-                            </svg>
-                        </span>
-                    </button>
-                    <h3 class="form-title">
-                        Registrar Nuevo Colaborador
-                    </h3>
-                    <form id="author-register" class="form form-group">
-                        <div class="form-group">
-                            <label class="form-label" for="authorName">Nombre
-                                completo</label>
-                            <input type="text" id="authorName"
-                                class="form-input" name="authorName"
-                                placeholder="Ej: María González"
-                                autocomplete="off">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label"
-                                for="authorEmail">Email</label>
-                            <input type="text" id="authorEmail"
-                                class="form-input" name="authorEmail"
-                                placeholder="Ej: name@example.com">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="authorImage">Foto del
-                                autor (URL o
-                                archivo)</label>
-                            <input type="url" id="authorImage"
-                                class="form-input" name="authorImage"
-                                placeholder="https://..." autocomplete="off">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label"
-                                for="authorCountry">País</label>
-                            <select id="authorCountry" class="form-select"
-                                name="authorCountry"></select>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label"
-                                for="authorLanguages">Idioma</label>
-                            <select name="authorLanguages" id="authorLanguages"
-                                class="form-select">
-                            </select>
+                <div class="modal-content">
+                    <header class="modal-header">
+                        <h3 class="title-secondary">
+                            Registrar Nuevo Colaborador
+                        </h3>
+                        <button class="toogle-close"
+                            aria-controls="modal-author"
+                            aria-expanded="true"
+                            aria-label="cerra registro autor">
+                            <span class="icon white">
+                                <svg width="800px" height="800px"
+                                    viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </span>
+                        </button>
+                    </header>
+                    <div class="modal-body">
+                        <form id="author-register" class="form form-group">
 
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label"
-                                for="authorBio">Biografía</label>
-                            <textarea id="authorBio" name="authorBio" rows="4"
-                                placeholder="Escribe una breve biografía del autor"
-                                class="form-input form-textarea"></textarea>
-                        </div>
-                        <div class="group-button">
-                            <button type="submit"
-                                class="btn btn-primary form-button">
-                                Guardar
-                            </button>
-                        </div>
-                    </form>
+                            <div class="form-group">
+                                <label class="form-label"
+                                    for="authorName">Nombre
+                                    completo</label>
+                                <input type="text" id="authorName"
+                                    class="form-input" name="authorName"
+                                    placeholder="Ej: María González"
+                                    autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label"
+                                    for="authorEmail">Email</label>
+                                <input type="text" id="authorEmail"
+                                    class="form-input" name="authorEmail"
+                                    placeholder="Ej: name@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="authorImage">Foto
+                                    del
+                                    autor (URL o
+                                    archivo)</label>
+                                <input type="url" id="authorImage"
+                                    class="form-input" name="authorImage"
+                                    placeholder="https://..."
+                                    autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label"
+                                    for="authorCountry">País</label>
+                                <select id="authorCountry" class="form-select"
+                                    name="authorCountry"></select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label"
+                                    for="authorLanguages">Idioma</label>
+                                <select name="authorLanguages"
+                                    id="authorLanguages"
+                                    class="form-select">
+                                </select>
+
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label"
+                                    for="authorBio">Biografía</label>
+                                <textarea id="authorBio" name="authorBio"
+                                    rows="4"
+                                    placeholder="Escribe una breve biografía del autor"
+                                    class="form-input form-textarea"></textarea>
+                            </div>
+                            <div class="group-button">
+                                <button type="submit"
+                                    class="btn btn-primary form-button">
+                                    Guardar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </section>
 
@@ -314,12 +325,15 @@
                                 </p>
                                 <div class="banner-divider"></div>
                                 <p class="banner-stat">
-                                    Explora más de<strong><span class="counter" data-target="120"> 120 </span> novelas</strong> esperándote
+                                    Explora más de<strong><span class="counter"
+                                            data-target="120"> 120 </span>
+                                        novelas</strong> esperándote
                                 </p>
                             </div>
 
                             <a href="./p/novels/index.html"
-                                class="btn btn-primary">Explorar más <i class="fas fa-arrow-right ml-5"></i></a>
+                                class="btn btn-primary">Explorar más <i
+                                    class="fas fa-arrow-right ml-5"></i></a>
                         </div>
                     </div>
                 </div>

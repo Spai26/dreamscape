@@ -60,8 +60,6 @@ export const loadFilteredGenres = () => {
 
     document.querySelectorAll(".genre-option").forEach((option) => {
         option.addEventListener("click", () => {
-            const checkbox = option.querySelector("input");
-
             filterNovelsByGenres();
         })
     })
@@ -84,13 +82,11 @@ function filterNovelsByGenres() {
         });
     }
 
-    console.log("Novelas filtradas:", showFiltered);
     currentPage = 1;
     renderPagination();
 }
 
 export const setupPagination = () => {
-    console.log("renderizo")
     renderPagination();
 };
 
