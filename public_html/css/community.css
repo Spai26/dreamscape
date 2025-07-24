@@ -180,8 +180,8 @@
 }
 
 .tabla-preguntas input[type="checkbox"]:checked~.respuesta {
-    max-height: 200px;
-    padding: 15px 20px;
+    max-height: fit-content;
+    padding: 15px 10px;
 }
 
 /*====== statistic =======*/
