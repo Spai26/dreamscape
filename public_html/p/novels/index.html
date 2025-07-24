@@ -145,23 +145,57 @@
             </div>
         </header>
         <main class="container">
-
             <section class="list-section">
                 <header class="list-header">
                     <h2 class="foo-title">
-                        <i class="fa-solid fa-book mr-5"></i>
                         Biblioteca de novelas
                     </h2>
-                    <div class="list-filtered">
-                        <p>Genres</p>
-                        <div>
-                            <select name="genres" id="genres"></select>
-                        </div>
-                        <div>
-                            <p>alphabetic</p>
-                            <select name="alpha" id="alpha"></select>
+                    <div class="filters-container">
+                        <div class="filters-header">
+                            <h3 class="title-secondary">
+                                <i class="fas fa-sliders-h ml-5"></i>
+                                Ordenar por:
+                            </h3>
                         </div>
 
+                        <div class="filter-group">
+                            <button id="dropdownGenreButton"
+                                aria-expanded="false"
+                                data-dropdown-toggle="dropdownGenre"
+                                type="button"
+                                class="genre-dropdown-button">
+                                Géneros
+                                <svg class="dropdown-icon"
+                                    aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="m1 1 4 4 4-4" />
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownGenre" class="genre-dropdown-menu">
+                                <ul class="genre-list" 
+                                role="listbox"
+                                data-visible="false"
+                                aria-multiselectable="true"
+                                aria-labelledby="dropdownGenreButton"
+                                aria-label="Filtro por géneros">
+                                    <li class="genre-item">
+                                        <div class="genre-option">
+                                            <input 
+                                                type="checkbox"
+                                                class="genre-checkbox">
+                                            <label class="genre-label">
+                                                Cyberpunk
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </header>
                 <div class="novels-grid">
@@ -173,7 +207,6 @@
 
                 </div>
             </section>
-
         </main>
         <script type="module" src="../../js/main.js" defer></script>
     </body>

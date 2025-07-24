@@ -1,16 +1,16 @@
 import { initDetailPage } from "./detail.js";
-import { handlerToSearch, loadFilteredGenres, setupPagination } from "./filter.js";
+import { handlerToSearch, loadFilteredGenres, setupFilteredGenre, setupPagination } from "./filter.js";
 import { animateStatisctic, loadAlphabeticOption, loadCountriesOption, loadlanguageOption } from "./helpers.js";
 import { authors, loadMinNovels } from "./novel.js";
 import { getFieldsID, validation } from "./validator.js";
 
 const navLinks = document.querySelectorAll(".nav-link");
 
-const openLabel = (target) => {
+export const openLabel = (target) => {
     target.setAttribute("data-visible", "true");
 }
 
-const closeLabel = (target) => {
+export const closeLabel = (target) => {
     target.setAttribute("data-visible", "false");
 }
 
@@ -331,6 +331,7 @@ const initFunctions = () => {
         console.log("list");
         loadAlphabeticOption();
         setupPagination();
+        setupFilteredGenre();
         loadFilteredGenres();
     }
 

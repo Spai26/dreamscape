@@ -223,6 +223,10 @@
     flex-direction: column;
 }
 
+.banner-text-wrapper{
+    padding: 1.5rem;
+}
+
 .banner-text {
   font-size: 1.1rem;
   margin-bottom: 1rem;

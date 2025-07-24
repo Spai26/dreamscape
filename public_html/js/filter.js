@@ -1,9 +1,9 @@
-import { createCard } from "./novel.js";
+import { closeLabel, openLabel } from "./main.js";
+import { createCard, createDiv } from "./novel.js";
 import { novels } from "./novels-data.js";
 
 // lista de novelas a modificar.
 let filteredList = [...novels];
-
 
 /**
  * Variables para paginación
@@ -15,24 +15,82 @@ const pageToShow = [];
 const COUNT_CARD_PAGE = 8;
 let currentPage = 1;
 
-export const loadFilteredGenres = () => {
-    const genreSelect = document.getElementById("genres");
-    
-    const genres = new Set();
-    
-    novels.forEach((novel) => novel.genres.forEach((genre) => genres.add(genre)));
-    
-    genreSelect.innerHTML = `<option value="all">Todos</option>`;
+export const setupFilteredGenre = () => {
+    const dropdownButton = document.getElementById("dropdownGenreButton");
+    const dropdpwnMenu = document.getElementById("dropdownGenre");
 
-    Array.from(genres).forEach((genre) => {
-        const option = document.createElement("option");
-        option.value = genre;
-        option.textContent = genre;
-        genreSelect.appendChild(option);
-    });
+    dropdownButton.addEventListener("click", () => {
+        const isExpanded = dropdownButton.getAttribute("aria-expanded") === "true";
+
+        dropdownButton.setAttribute("aria-expanded", !isExpanded);
+        openLabel(dropdpwnMenu);
+
+        if (!isExpanded) {
+            dropdpwnMenu.style.opacity = "1";
+            dropdpwnMenu.style.visibility = "visible";
+        } else {
+            dropdpwnMenu.style.opacity = "0";
+            dropdpwnMenu.style.visibility = "hidden";
+        }
+    })
+
+}
+
+export const loadFilteredGenres = () => {
+    const genreList = document.querySelector(".genre-list");
+
+    if (!genreList) return;
+
+    const genres = new Set();
+
+    novels.forEach((novel) => novel.genres.forEach((genre) => genres.add(genre)));
+
+    genreList.innerHTML = Array.from(genres).map((genre, index) => {
+        const genreID = `genre-${index + 1}-${genre.toLowerCase()}`;
+
+        return `<li class="genre-item">
+                <div class="genre-option">
+                    <input id="${genreID}" type="checkbox" value="${genre}"      class="genre-checkbox">
+                        <label for="${genreID}" class="genre-label">
+                            ${genre}
+                        </label>
+                     </div>
+               </li>`;
+    }).join("");
+
+    document.querySelectorAll(".genre-option").forEach((option) => {
+        option.addEventListener("click", () => {
+            const checkbox = option.querySelector("input");
+
+            filterNovelsByGenres();
+        })
+    })
+}
+
+function filterNovelsByGenres() {
+    const selectedGenres = [];
+    let showFiltered = []
+    document.querySelectorAll(".genre-checkbox:checked").forEach((checkbox) => {
+        selectedGenres.push(checkbox.value);
+    })
+
+    console.log("generos seleccionados", selectedGenres)
+
+    if (selectedGenres.length === 0) {
+        filteredList = [...novels];
+    } else {
+        filteredList = novels.filter((novel) => {
+           return novel.genres.some(genre => selectedGenres.includes(genre));
+        });
+    }
+
+    console.log("Novelas filtradas:", showFiltered);
+    currentPage = 1;
+    renderPagination();
 }
 
 export const setupPagination = () => {
+    console.log("renderizo")
     renderPagination();
 };
 
@@ -76,7 +134,7 @@ function createPagination(totalPages) {
     prevBtn.addEventListener('click', () => {
         currentPage--;
         renderPagination();
-        window.scrollTo({ top: 0, behavior: "smooth"});
+        window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
     pagination.appendChild(prevBtn);
@@ -92,7 +150,7 @@ function createPagination(totalPages) {
         pageBtn.addEventListener('click', () => {
             currentPage = i;
             renderPagination();
-            window.scrollTo({ top: 0, behavior: "smooth"});
+            window.scrollTo({ top: 0, behavior: "smooth" });
         });
         pagination.appendChild(pageBtn);
     }
@@ -105,7 +163,7 @@ function createPagination(totalPages) {
     nextBtn.addEventListener('click', () => {
         currentPage++;
         renderPagination();
-        window.scrollTo({ top: 0, behavior: "smooth"});
+        window.scrollTo({ top: 0, behavior: "smooth" });
     });
     pagination.appendChild(nextBtn);
 }

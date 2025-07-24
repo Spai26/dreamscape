@@ -1,0 +1,92 @@
+/*======= nosotros ==========*/
+.nosotros__flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Contenedor de tarjetas a la izquierda */
+.nosotros__tarjetas {
+    flex: 1 1 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Tarjetas con animación */
+.nosotros__card {
+    background-color: rgba(255, 255, 255, 0.05);
+    /* fondo transparente suave */
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    color: #ffffff;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    order: 1;
+}
+
+
+/* Hover animado en las tarjetas */
+.nosotros__card:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
+}
+
+/* Títulos dentro de las tarjetas */
+.nosotros__titulo {
+    font-size: 2rem;
+    margin-bottom: 15px;
+
+}
+
+.nosotros__subtitulo {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--color10);
+}
+
+.nosotros__card p {
+    line-height: 1.6;
+}
+
+/* Imagen a la derecha */
+.nosotros__imagen-container {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nosotros__imagen {
+    width: 100%;
+    max-width: 500px;
+    object-fit: cover;
+    border-radius: 0;
+    /* sin bordes redondeados */
+    box-shadow: none;
+    /* sin sombra */
+}
+
+.nosotros__imagen img {
+    min-width: 400px;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+/* Título principal de la sección */
+.nosotros__titulo-grande {
+    font-size: 2.8rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Color naranja para "DREAMSCAPE" */
+.destacado {
+    color: var(--color-acento, #ff5e5e);
+    /* usa la variable global si existe */
+    font-weight: bold;
+}

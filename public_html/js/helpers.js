@@ -49,6 +49,7 @@ export const loadCountriesOption = () => {
 }
 
 export const loadAlphabeticOption = () => {
+    /*
     const alpha = document.getElementById("alpha");
     alpha.innerHTML = `<option value="reset">reset</option>`;
 
@@ -57,7 +58,7 @@ export const loadAlphabeticOption = () => {
         option.value = ord.name;
         option.textContent = ord.name;
         alpha.appendChild(option);
-    })
+    })*/
 }
 
 export const loadlanguageOption = () => {
