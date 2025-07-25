@@ -12,7 +12,6 @@ export function getFieldsID(fieldname) {
 }
 
 export function validation(values, singleField = null) {
-    console.log(values)
     const defaultMessage = "Este campo es requerido";
     let errors = [];
     const regexName = /^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ'´\-.\s]{5,20}$/;
@@ -66,6 +65,5 @@ export function validation(values, singleField = null) {
             errors.language = defaultMessage;
         } 
     }
-    console.log(errors)
     return errors;
 }

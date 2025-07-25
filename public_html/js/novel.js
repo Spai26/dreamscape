@@ -3,10 +3,7 @@ export const authors = [];
 // section banner index.html
 export const loadMinNovels = () => {
     const novelsGrid = document.querySelector('.novels-grid');
-    if (!novelsGrid) {
-        console.log("no se encontro el contenedor novels-grid");
-        return;
-    }
+    if (!novelsGrid) return
 
     novelsGrid.innerHTML = "";
 

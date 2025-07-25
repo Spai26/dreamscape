@@ -72,8 +72,6 @@ function filterNovelsByGenres() {
         selectedGenres.push(checkbox.value);
     })
 
-    console.log("generos seleccionados", selectedGenres)
-
     if (selectedGenres.length === 0) {
         filteredList = [...novels];
     } else {
@@ -166,8 +164,6 @@ function createPagination(totalPages) {
 
 export function handlerToSearch(input) {
     const params = new URLSearchParams(window.location.search);
-    console.log("params", params.get("search"));
-    console.log(input)
 }
 
 /*
